@@ -98,7 +98,7 @@ cv_auc = cross_val_score(logreg, X, y, cv=5, scoring='roc_auc')
 print("AUC scores computed using 5-fold cross-validation: {}".format(cv_auc))
 ```
 
-## [Hyperparameter tuning with GridSearchCV](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=11)
+## [Hyperparameter tuning with GridSearchCV](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=10)
 
 ```
 
