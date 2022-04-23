@@ -4,7 +4,7 @@ In this chapter, you will be introduced to classification problems and learn how
 
 <br>
 
-### k-Nearest Neighbors: Fit
+### [k-Nearest Neighbors: Fit] (https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=7)
 
 ```
 
