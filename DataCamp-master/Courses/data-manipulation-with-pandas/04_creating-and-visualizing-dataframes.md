@@ -1,10 +1,10 @@
-## Creating and Visualizing DataFrames 
+## [Creating and Visualizing DataFrames](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes)
 
 Learn to visualize the contents of your DataFrames, handle missing data values, and import data from and export data to CSV files.
 
 <br>
 
-### Which avocado size is most popular?
+### [Which avocado size is most popular?](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=2)
 
 ```
 # Import matplotlib.pyplot with alias plt
@@ -23,7 +23,7 @@ nb_sold_by_size.plot(kind="bar")
 plt.show()
 ```
 
-### Changes in sales over time
+### [Changes in sales over time](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=3)
 
 ```
 # Import matplotlib.pyplot with alias plt
@@ -39,7 +39,7 @@ nb_sold_by_date.plot(kind="line")
 plt.show()
 ```
 
-### Avocado supply and demand
+### [Avocado supply and demand](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=4)
 
 ```
 # Scatter plot of nb_sold vs avg_price with title
@@ -49,23 +49,51 @@ avocados.plot(x="nb_sold", y="avg_price", kind="scatter", title="Number of avoca
 plt.show()
 ```
 
-### Price of conventional vs. organic avocados
+### [Price of conventional vs. organic avocados](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=5)
 
 ```
-# Histogram of conventional avg_price 
-avocados[avocados["type"] == "conventional"]["avg_price"].hist(alpha=0.5, bins=20)
+# # Histogram of conventional avg_price 
+avocados[avocados["type"] == "conventional"]["avg_price"].hist()
 
 # Histogram of organic avg_price
-avocados[avocados["type"] == "organic"]["avg_price"].hist(alpha=0.5, bins=20)
+avocados[avocados["type"] == "organic"]["avg_price"].hist()
 
 # Add a legend
-plt.legend(["conventional","organic"])
+plt.legend(["conventional", "organic"])
+
+# Show the plot
+plt.show()
+
+#####################################################
+
+# Modify histogram transparency to 0.5 
+avocados[avocados["type"] == "conventional"]["avg_price"].hist(alpha=0.5)
+
+# Modify histogram transparency to 0.5
+avocados[avocados["type"] == "organic"]["avg_price"].hist(alpha=0.5)
+
+# Add a legend
+plt.legend(["conventional", "organic"])
+
+# Show the plot
+plt.show()
+
+#####################################################
+
+# # Histogram of conventional avg_price 
+avocados[avocados["type"] == "conventional"]["avg_price"].hist(bins=20, alpha=0.5)
+
+# Histogram of organic avg_price
+avocados[avocados["type"] == "organic"]["avg_price"].hist(bins=20, alpha=0.5)
+
+# Add a legend
+plt.legend(["conventional", "organic"])
 
 # Show the plot
 plt.show()
 ```
 
-### Finding missing values
+### [Finding missing values](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=7)
 
 ```
 # Import matplotlib.pyplot with alias plt
@@ -84,7 +112,7 @@ avocados_2016.isna().sum().plot(kind="bar")
 plt.show()
 ```
 
-### Removing missing values
+### [Removing missing values](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=8)
 
 ```
 # Remove rows with missing values
@@ -94,14 +122,24 @@ avocados_complete = avocados_2016.dropna()
 print(avocados_complete.isna().any())
 ```
 
-### Replacing missing values
+### [Replacing missing values](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=9)
 
 ```
 # List the columns with missing values
 cols_with_missing = ["small_sold", "large_sold", "xl_sold"]
 
 # Create histograms showing the distributions cols_with_missing
-avocados_2016[cols_with_missing].plot(kind="hist")
+avocados_2016[cols_with_missing].hist()
+
+# Show the plot
+plt.show()
+
+#####################################################
+
+# From previous step
+cols_with_missing = ["small_sold", "large_sold", "xl_sold"]
+avocados_2016[cols_with_missing].hist()
+plt.show()
 
 # Fill in missing values with 0
 avocados_filled = avocados_2016.fillna(0)
@@ -113,7 +151,7 @@ avocados_filled[cols_with_missing].hist()
 plt.show()
 ```
 
-### List of dictionaries
+### [List of dictionaries](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=11)
 
 ```
 # Create a list of dictionaries with new data
@@ -129,7 +167,7 @@ avocados_2019 = pd.DataFrame(avocados_list)
 print(avocados_2019)
 ```
 
-### Dictionary of lists
+### [Dictionary of lists](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=12)
 
 ```
 # Create a dictionary of lists with new data
@@ -146,7 +184,7 @@ avocados_2019 = pd.DataFrame(avocados_dict)
 print(avocados_2019)
 ```
 
-### CSV to DataFrame
+### [CSV to DataFrame](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=14)
 
 ```
 # Read CSV as DataFrame called airline_bumping
@@ -155,17 +193,38 @@ airline_bumping = pd.read_csv("airline_bumping.csv")
 # Take a look at the DataFrame
 print(airline_bumping.head())
 
+#####################################################
+
+# From previous step
+airline_bumping = pd.read_csv("airline_bumping.csv")
+print(airline_bumping.head())
+
 # For each airline, select nb_bumped and total_passengers and sum
 airline_totals = airline_bumping.groupby("airline")[["nb_bumped","total_passengers"]].sum()
 
+#####################################################
+
+# From previous steps
+airline_bumping = pd.read_csv("airline_bumping.csv")
+print(airline_bumping.head())
+airline_totals = airline_bumping.groupby("airline")[["nb_bumped", "total_passengers"]].sum()
+
 # Create new col, bumps_per_10k: no. of bumps per 10k passengers for each airline
+airline_totals["bumps_per_10k"] = airline_totals["nb_bumped"] / airline_totals["total_passengers"] * 10000
+
+#####################################################
+
+# From previous steps
+airline_bumping = pd.read_csv("airline_bumping.csv")
+print(airline_bumping.head())
+airline_totals = airline_bumping.groupby("airline")[["nb_bumped", "total_passengers"]].sum()
 airline_totals["bumps_per_10k"] = airline_totals["nb_bumped"] / airline_totals["total_passengers"] * 10000
 
 # Print airline_totals
 print(airline_totals)
 ```
 
-### DataFrame to CSV
+### [DataFrame to CSV(https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=15)
 
 ```
 # Create airline_totals_sorted
