@@ -135,7 +135,7 @@ sales_propn_by_type = [sales_A, sales_B, sales_C] / sales_all
 print(sales_propn_by_type)
 ```
 
-### [Calculations with .groupby]()(https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=11)
+### [Calculations with .groupby()](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=11)
 
 ```
 # Group by type; calc total weekly sales
