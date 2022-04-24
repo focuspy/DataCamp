@@ -189,7 +189,6 @@ plt.show()
 ### [Colors](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=17)
 
 ```
-
 # Specify c and alpha inside plt.scatter()
 plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2 , c = col, alpha = 0.8)
 
