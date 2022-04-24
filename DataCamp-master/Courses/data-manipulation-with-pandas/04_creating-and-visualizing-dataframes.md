@@ -224,7 +224,7 @@ airline_totals["bumps_per_10k"] = airline_totals["nb_bumped"] / airline_totals["
 print(airline_totals)
 ```
 
-### [DataFrame to CSV(https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=15)
+### [DataFrame to CSV](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=15)
 
 ```
 # Create airline_totals_sorted
