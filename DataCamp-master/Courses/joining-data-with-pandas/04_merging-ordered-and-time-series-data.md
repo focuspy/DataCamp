@@ -101,3 +101,51 @@ is_recession = ['r' if s=='recession' else 'g' for s in gdp_recession['econ_stat
 gdp_recession.plot(kind='bar', y='gdp', x='date', color=is_recession, rot=90)
 plt.show()
 ```
+
+### [Explore financials with .query()](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=10)
+
+```
+Q: Use the .query() method and the IPython shell to explore social_fin and select the True statement.
+A: There are 6 rows where the net income has a negative value.
+```
+
+### [Subsetting rows with .query()](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=11)
+
+```
+# Merge gdp and pop on date and country with fill
+gdp_pop = pd.merge_ordered(gdp, pop, on=['country','date'], fill_method='ffill')
+```
+```
+# Merge gdp and pop on date and country with fill
+gdp_pop = pd.merge_ordered(gdp, pop, on=['country','date'], fill_method='ffill')
+
+# Add a column named gdp_per_capita to gdp_pop that divides the gdp by pop
+gdp_pop['gdp_per_capita'] = gdp_pop['gdp'] / gdp_pop['pop']
+```
+```
+# Merge gdp and pop on date and country with fill
+gdp_pop = pd.merge_ordered(gdp, pop, on=['country','date'], fill_method='ffill')
+
+# Add a column named gdp_per_capita to gdp_pop that divides the gdp by pop
+gdp_pop['gdp_per_capita'] = gdp_pop['gdp'] / gdp_pop['pop']
+
+# Pivot data so gdp_per_capita, where index is date and columns is country
+gdp_pivot = gdp_pop.pivot_table('gdp_per_capita', 'date', 'country')
+```
+```
+# Merge gdp and pop on date and country with fill
+gdp_pop = pd.merge_ordered(gdp, pop, on=['country','date'], fill_method='ffill')
+
+# Add a column named gdp_per_capita to gdp_pop that divides the gdp by pop
+gdp_pop['gdp_per_capita'] = gdp_pop['gdp'] / gdp_pop['pop']
+
+# Pivot data so gdp_per_capita, where index is date and columns is country
+gdp_pivot = gdp_pop.pivot_table('gdp_per_capita', 'date', 'country')
+
+# Select dates equal to or greater than 1991-01-01
+recent_gdp_pop = gdp_pivot.query('date>="1991-01-01"')
+
+# Plot recent_gdp_pop
+recent_gdp_pop.plot(rot=90)
+plt.show()
+
