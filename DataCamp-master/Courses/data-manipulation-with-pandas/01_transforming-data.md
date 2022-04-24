@@ -1,10 +1,10 @@
-## Transforming Data
+## [Transforming Data](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes)
 
 Let’s master the pandas basics. Learn how to inspect DataFrames and perform fundamental manipulations, including sorting rows, subsetting, and adding new columns.
 
 <br>
 
-### Inspecting a DataFrame
+### [Inspecting a DataFrame](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=2)
 
 ```
 # Print the head of the homelessness data
@@ -20,7 +20,7 @@ print(homelessness.shape)
 print(homelessness.describe())
 ```
 
-### Parts of a DataFrame
+### [Parts of a DataFrame](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=3)
 
 ```
 # Import pandas using the alias pd
@@ -36,47 +36,86 @@ print(homelessness.columns)
 print(homelessness.index)
 ```
 
-### Sorting rows
+### [Sorting rows](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=5)
 
 ```
 # Sort homelessness by individual
 homelessness_ind = homelessness.sort_values("individuals")
 
+# Print the top few rows
+print(homelessness_ind.head())
+
+#####################################################
+
 # Sort homelessness by descending family members
 homelessness_fam = homelessness.sort_values("family_members", ascending=False)
 
+# Print the top few rows
+print (homelessness_fam.head())
+
+#####################################################
+
 # Sort homelessness by region, then descending family members
 homelessness_reg_fam = homelessness.sort_values(["region", "family_members"], ascending=[True, False])
+
+# Print the top few rows
+print(homelessness_reg_fam.head())
 ```
 
-### Subsetting columns
+### [Subsetting columns](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=6)
 
 ```
 # Select the individuals column
 individuals = homelessness["individuals"]
 
+# Print the head of the result
+print (individuals.head())
+
+#####################################################
+
 # Select the state and family_members columns
 state_fam = homelessness[["state", "family_members"]]
 
+# Print the head of the result
+print (state_fam.head())
+
+#####################################################
+
 # Select only the individuals and state columns, in that order
 ind_state = homelessness[["individuals", "state"]]
+
+# Print the head of the result
+print (ind_state.head())
 ```
 
-### Subsetting rows
+### [Subsetting rows](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=7)
 
 ```
 # Filter for rows where individuals is greater than 10000
 ind_gt_10k = homelessness[homelessness["individuals"] > 10000]
 
+# See the result
+print(ind_gt_10k)
+
+#####################################################
+
 # Filter for rows where region is Mountain
 mountain_reg = homelessness[homelessness["region"] == "Mountain"]
+
+# See the result
+print (mountain_reg)
+
+#####################################################
 
 # Filter for rows where family_members is less than 1000 
 # and region is Pacific
 fam_lt_1k_pac = homelessness[(homelessness["family_members"] < 1000) & (homelessness["region"]=="Pacific")]
+
+# See the result
+print(fam_lt_1k_pac)
 ```
 
-### Subsetting rows by categorical variables
+### [Subsetting rows by categorical variables](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=8)
 
 ```
 # Subset for rows in South Atlantic or Mid-Atlantic regions
@@ -85,6 +124,8 @@ south_mid_atlantic = homelessness[homelessness["region"].isin(["South Atlantic",
 # See the result
 print(south_mid_atlantic)
 
+#####################################################
+
 # The Mojave Desert states
 canu = ["California", "Arizona", "Nevada", "Utah"]
 
@@ -92,10 +133,10 @@ canu = ["California", "Arizona", "Nevada", "Utah"]
 mojave_homelessness = homelessness[homelessness["state"].isin(canu)]
 
 # See the result
-print(mojave_homelessness.head())
+print(mojave_homelessness)
 ```
 
-### Adding new columns
+### [Adding new columns](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=10)
 
 ```
 # Add total col as sum of individuals and family_members
@@ -104,10 +145,10 @@ homelessness["total"] = homelessness["individuals"] + homelessness["family_membe
 homelessness["p_individuals"] = homelessness["individuals"] / homelessness["total"]
 
 # See the result
-print(homelessness.head())
+print(homelessness)
 ```
 
-### Combo-attack!
+### [Combo-attack!](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=11)
 
 ```
 # Create indiv_per_10k col as homeless individuals per 10k state pop
