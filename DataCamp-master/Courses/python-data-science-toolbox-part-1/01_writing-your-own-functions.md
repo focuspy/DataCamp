@@ -1,10 +1,25 @@
-## Writing your own functions
+## [Writing your own functions](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=13)
 
 In this chapter, you'll learn how to write simple functions, as well as functions that accept multiple arguments and return multiple values. You'll also have the opportunity to apply these new skills to questions commonly encountered by data scientists.
 
 <br>
 
-### Write a simple function
+
+### [Strings in Python](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=13)
+
+```
+Q: What are the values in object1, object2, and object3, respectively?
+A: object1 contains "dataanalysisvisualization", object2 contains 3, object3 contains "111".
+```
+
+### [Recapping built-in functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/writing-your-own-functions?ex=3)
+
+```
+Q: What are the types of x, y1, and y2?
+A: x is a float, y1 is a str, and y2 is a NoneType.
+```
+
+### [Write a simple function](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/writing-your-own-functions?ex=4)
 
 ```
 # Define the function shout
@@ -20,7 +35,7 @@ def shout():
 shout()
 ```
 
-### Single-parameter functions
+### [Single-parameter functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/writing-your-own-functions?ex=5)
 
 ```
 # Define shout with the parameter, word
@@ -36,7 +51,7 @@ def shout(word):
 print(shout("congratulations"))
 ```
 
-### Functions that return single values
+### [Functions that return single values](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/writing-your-own-functions?ex=6)
 
 ```
 # Define shout with the parameter, word
@@ -55,7 +70,7 @@ yell = shout("congratulations")
 print(yell)
 ```
 
-### Functions with multiple parameters
+### [Functions with multiple parameters](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/writing-your-own-functions?ex=8)
 
 ```
 # Define shout with parameters word1 and word2
@@ -80,7 +95,7 @@ yell = shout("congratulations", "you")
 print(yell)
 ```
 
-### A brief introduction to tuples
+### [A brief introduction to tuples](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/writing-your-own-functions?ex=9)
 
 ```
 # Unpack nums into num1, num2, and num3
@@ -92,7 +107,7 @@ nums[0] = 2
 even_nums = (nums)
 ```
 
-### Functions that return multiple values
+### [Functions that return multiple values](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/writing-your-own-functions?ex=10)
 
 ```
 # Define shout_all with parameters word1 and word2
@@ -118,7 +133,7 @@ print(yell1)
 print(yell2)
 ```
 
-### Bringing it all together (1)
+### [Bringing it all together (1)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/writing-your-own-functions?ex=12)
 
 ```
 # Import pandas
@@ -147,7 +162,7 @@ for entry in col:
 print(langs_count)
 ```
 
-### Bringing it all together (2)
+### [Bringing it all together (2)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/writing-your-own-functions?ex=13)
 
 ```
 # Define count_entries()
