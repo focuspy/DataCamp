@@ -1,10 +1,10 @@
-## Quantitative comparisons and statistical visualizations
+## [Quantitative comparisons and statistical visualizations](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=2)
 
 Visualizations can be used to compare data in a quantitative manner. This chapter explains several methods for quantitative visualizations.
 
 <br>
 
-### Bar chart
+### [Bar chart](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=2)
 
 ```
 fig, ax = plt.subplots()
@@ -21,7 +21,7 @@ ax.set_ylabel('Number of medals')
 plt.show()
 ```
 
-### Stacked bar chart
+### [Stacked bar chart](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=3)
 
 ```
 # Add bars for "Gold" with the label "Gold"
@@ -39,7 +39,7 @@ ax.legend()
 plt.show()
 ```
 
-### Creating histograms
+### [Creating histograms](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=5)
 
 ```
 fig, ax = plt.subplots()
@@ -58,7 +58,7 @@ ax.set_ylabel('# of observations')
 plt.show()
 ```
 
-### "Step" histogram
+### ["Step" histogram](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=6)
 
 ```
 fig, ax = plt.subplots()
@@ -77,7 +77,7 @@ ax.legend()
 plt.show()
 ```
 
-### Adding error-bars to a bar chart
+### [Adding error-bars to a bar chart](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=8)
 
 ```
 fig, ax = plt.subplots()
@@ -94,7 +94,7 @@ ax.set_ylabel("Height (cm)")
 plt.show()
 ```
 
-### Adding error-bars to a plot
+### [Adding error-bars to a plot](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=9)
 
 ```
 fig, ax = plt.subplots()
@@ -111,7 +111,7 @@ ax.set_ylabel('Temperature (Fahrenheit)')
 plt.show()
 ```
 
-### Creating boxplots
+### [Creating boxplots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=10)
 
 ```
 fig, ax = plt.subplots()
@@ -128,7 +128,7 @@ ax.set_ylabel('Height (cm)')
 plt.show()
 ```
 
-### Simple scatter plot
+### [Simple scatter plot](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=12)
 
 ```
 fig, ax = plt.subplots()
@@ -145,7 +145,7 @@ ax.set_ylabel('Relative temperature (C)')
 plt.show()
 ```
 
-### Encoding time by color
+### [Encoding time by color](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=13)
 
 ```
 fig, ax = plt.subplots()
