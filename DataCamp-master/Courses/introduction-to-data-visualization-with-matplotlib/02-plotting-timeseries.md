@@ -1,10 +1,10 @@
-## Plotting time-series
+## [Plotting time-series](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series)
 
 Time series data is data that is recorded. Visualizing this type of data helps clarify trends and illuminates relationships between data.
 
 <br>
 
-### Read data with a time index
+### [Read data with a time index](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=2)
 
 ```
 # Import pandas as pd
@@ -14,7 +14,7 @@ import pandas as pd
 climate_change = pd.read_csv('climate_change.csv', parse_dates=['date'], index_col='date')
 ```
 
-### Plot time-series data
+### [Plot time-series data](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=3)
 
 ```
 import matplotlib.pyplot as plt
@@ -33,7 +33,7 @@ ax.set_ylabel('Relative temperature (Celsius)')
 plt.show()
 ```
 
-### Using a time index to zoom in
+### [Using a time index to zoom in](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=4)
 
 ```
 import matplotlib.pyplot as plt
@@ -51,7 +51,7 @@ ax.plot(seventies.index, seventies["co2"])
 plt.show()
 ```
 
-### Plotting two variables
+### [Plotting two variables](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=6)
 
 ```
 import matplotlib.pyplot as plt
@@ -71,7 +71,7 @@ ax2.plot(climate_change.index, climate_change['relative_temp'], color='r')
 plt.show()
 ```
 
-### Defining a function that plots time-series data
+### [Defining a function that plots time-series data](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=7)
 
 ```
 # Define a function called plot_timeseries
@@ -90,7 +90,7 @@ def plot_timeseries(axes, x, y, color, xlabel, ylabel):
   axes.tick_params('y', colors=color)
 ```
 
-### Using a plotting function
+### [Using a plotting function](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=8)
 
 ```
 fig, ax = plt.subplots()
@@ -107,7 +107,7 @@ plot_timeseries(ax2, climate_change.index, climate_change['relative_temp'], "red
 plt.show()
 ```
 
-### Annotating a plot of time-series data
+### [Annotating a plot of time-series data](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=10)
 
 ```
 fig, ax = plt.subplots()
@@ -121,7 +121,7 @@ ax.annotate('>1 degree', xy=(pd.Timestamp('2015-10-06'), 1))
 plt.show()
 ```
 
-### Plotting time-series: putting it all together
+### [Plotting time-series: putting it all together](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=11)
 
 ```
 fig, ax = plt.subplots()
