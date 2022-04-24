@@ -1,10 +1,10 @@
-## Matplotlib
+## [Matplotlib](https://campus.datacamp.com/courses/intermediate-python/matplotlib)
 
 Data visualization is a key skill for aspiring data scientists. Matplotlib makes it easy to create meaningful and insightful plots. In this chapter, you’ll learn how to build various types of plots, and customize them to be more visually appealing and interpretable.
 
 <br>
 
-### Line plot (1)
+### [Line plot (1)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=2)
 
 ```
 # Print the last item from year and pop
@@ -21,7 +21,7 @@ plt.plot(year, pop)
 plt.show()
 ```
 
-### Line plot (3)
+### [Line plot (3)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=4)
 
 ```
 # Print the last item of gdp_cap and life_exp
@@ -35,7 +35,7 @@ plt.plot(gdp_cap, life_exp)
 plt.show()
 ```
 
-### Scatter Plot (1)
+### [Scatter Plot (1)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=5)
 
 ```
 # Change the line plot below to a scatter plot
@@ -48,7 +48,7 @@ plt.xscale('log')
 plt.show()
 ```
 
-### Scatter plot (2)
+### [Scatter plot (2)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=6)
 
 ```
 # Import package
@@ -61,7 +61,7 @@ plt.scatter(pop, life_exp)
 plt.show()
 ```
 
-### Build a histogram (1)
+### [Build a histogram (1)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=8)
 
 ```
 # Create histogram of life_exp data
@@ -71,7 +71,7 @@ plt.hist(life_exp)
 plt.show()
 ```
 
-### Build a histogram (2): bins
+### [Build a histogram (2): bins](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=9)
 
 ```
 # Build histogram with 5 bins
@@ -89,7 +89,7 @@ plt.show()
 plt.clf()
 ```
 
-### Build a histogram (3): compare
+### [Build a histogram (3): compare](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=10)
 
 ```
 # Histogram of life_exp, 15 bins
@@ -107,7 +107,7 @@ plt.show()
 plt.clf()
 ```
 
-### Choose the right plot (1)
+### [Choose the right plot (1)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=11)
 
 ```
 Q: You're a professor teaching Data Science with Python, and you want to visually assess if the grades on your exam follow a particular distribution. Which plot do you use?
@@ -115,7 +115,7 @@ Q: You're a professor teaching Data Science with Python, and you want to visuall
 A: Histogram
 ```
 
-### Labels
+### [Labels](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=14)
 
 ```
 # Basic scatter plot, log scale
@@ -138,7 +138,7 @@ plt.title(title)
 plt.show()
 ```
 
-### Ticks
+### [Ticks](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=15)
 
 ```
 # Scatter plot
@@ -161,7 +161,7 @@ plt.xticks(tick_val, tick_lab)
 plt.show()
 ```
 
-### Sizes
+### [Sizes](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=16)
 
 ```
 # Import numpy as np
@@ -186,8 +186,25 @@ plt.xticks([1000, 10000, 100000],['1k', '10k', '100k'])
 # Display the plot
 plt.show()
 ```
+### [Colors](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=17)
 
-### Additional Customizations
+```
+
+# Specify c and alpha inside plt.scatter()
+plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2 , c = col, alpha = 0.8)
+
+# Previous customizations
+plt.xscale('log') 
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000,10000,100000], ['1k','10k','100k'])
+
+# Show the plot
+plt.show()
+```
+
+### [Additional Customizations] (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=18)
 
 ```
 # Scatter plot
