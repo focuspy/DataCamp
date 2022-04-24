@@ -4,7 +4,7 @@ This chapter introduces the Matplotlib visualization library and demonstrates ho
 
 <br>
 
-### Using the matplotlib.pyplot interface
+### [Using the matplotlib.pyplot interface](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=2)
 
 ```
 # Import the matplotlib.pyplot submodule and name it plt
@@ -17,7 +17,7 @@ fig, ax = plt.subplots()
 plt.show()
 ```
 
-### Adding data to an Axes object
+### [Adding data to an Axes object](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=3)
 
 ```
 # Import the matplotlib.pyplot submodule and name it plt
@@ -36,7 +36,7 @@ ax.plot(austin_weather["MONTH"], austin_weather["MLY-PRCP-NORMAL"])
 plt.show()
 ```
 
-### Customizing data appearance
+### [Customizing data appearance](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=5)
 
 ```
 # Plot Seattle data, setting data appearance
@@ -49,7 +49,7 @@ ax.plot(austin_weather["MONTH"], austin_weather["MLY-PRCP-NORMAL"], color='r', m
 plt.show()
 ```
 
-### Customizing axis labels and adding titles
+### [Customizing axis labels and adding titles](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=6)
 
 ```
 ax.plot(seattle_weather["MONTH"], seattle_weather["MLY-PRCP-NORMAL"])
@@ -68,13 +68,14 @@ ax.set_title('Weather patterns in Austin and Seattle')
 plt.show()
 ```
 
-### Creating a grid of subplots
+### [Creating a grid of subplots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=8)
 
 ```
-fig, ax = plt.subplots(3, 2)
+Q: How would you create a Figure with 6 Axes objects organized in 3 rows and 2 columns?
+A: fig, ax = plt.subplots(3, 2)
 ```
 
-### Creating small multiples with plt.subplots
+### [Creating small multiples with plt.subplots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=9)
 
 ```
 # Create a Figure and an array of subplots with 2 rows and 2 columns
@@ -95,7 +96,7 @@ ax[1, 1].plot(austin_weather['MONTH'], austin_weather['MLY-TAVG-NORMAL'])
 plt.show()
 ```
 
-### Small multiples with shared y axis
+### [Small multiples with shared y axis](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=10)
 
 ```
 # Create a figure and an array of axes: 2 rows, 1 column with shared y axis
