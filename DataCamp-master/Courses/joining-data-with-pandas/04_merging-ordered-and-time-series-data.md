@@ -136,7 +136,7 @@ gdp_pivot = gdp_pop.pivot_table('gdp_per_capita', 'date', 'country')
 
 #####################################################
 
-<red># Merge gdp and pop on date and country with fill<red>
+<span style="color:green;font-weight:700;font-size:20px"># Merge gdp and pop on date and country with fill</span>
 gdp_pop = pd.merge_ordered(gdp, pop, on=['country','date'], fill_method='ffill')
 
 # Add a column named gdp_per_capita to gdp_pop that divides the gdp by pop
