@@ -1,4 +1,4 @@
-## Introduction to Matplotlib
+## [Introduction to Matplotlib](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib)
 
 This chapter introduces the Matplotlib visualization library and demonstrates how to use it with data.
 
