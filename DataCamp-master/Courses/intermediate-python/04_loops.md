@@ -1,19 +1,17 @@
-## Loops
+## [Loops](https://campus.datacamp.com/courses/intermediate-python/loops)
 
 There are several techniques you can use to repeatedly execute Python code. While loops are like repeated if statements, the for loop iterates over all kinds of data structures. Learn all about them in this chapter.
 
 <br>
 
-### while: warming up
+### [while: warming up](https://campus.datacamp.com/courses/intermediate-python/loops?ex=2)
 
 ```
-x = 1
-while x < 4 :
-    print(x)
-    x = x + 1
+Q: Can you tell how many printouts the following while loop will do?
+A: 3
 ```
 
-### Basic while loop
+### [Basic while loop](https://campus.datacamp.com/courses/intermediate-python/loops?ex=3)
 
 ```
 # Initialize offset
@@ -26,7 +24,7 @@ while offset != 0:
     print(offset)
 ```
 
-### Add conditionals
+### [Add conditionals](https://campus.datacamp.com/courses/intermediate-python/loops?ex=4)
 
 ```
 # Initialize offset
@@ -42,8 +40,7 @@ while offset != 0 :
     print(offset)
 ```
 
-### Loop over a list
-
+### [Loop over a list](https://campus.datacamp.com/courses/intermediate-python/loops?ex=6)
 ```
 # areas list
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
@@ -53,7 +50,7 @@ for element in areas:
     print(element)
 ```
 
-### Indexes and values (1)
+### [Indexes and values (1)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=7)
 
 ```
 # areas list
@@ -64,7 +61,7 @@ for idx, a in enumerate(areas) :
     print("room {}: {}".format(idx,a))
 ```
 
-### Indexes and values (2)
+### [Indexes and values (2)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=8)
 
 ```
 # areas list
@@ -75,7 +72,7 @@ for index, area in enumerate(areas) :
     print("room " + str(index+1) + ": " + str(area))
 ```
 
-### Loop over list of lists
+### [Loop over list of lists](https://campus.datacamp.com/courses/intermediate-python/loops?ex=9)
 
 ```
 # house list of lists
@@ -90,7 +87,7 @@ for x,y in enumerate(house):
     print('the {} is {} sqm'.format(house[x][0],house[x][1]))
 ```
 
-### Loop over dictionary
+### [Loop over dictionary](https://campus.datacamp.com/courses/intermediate-python/loops?ex=11)
 
 ```
 # Definition of dictionary
@@ -102,7 +99,7 @@ for key, value in europe.items():
     print("the capital of {} is {}".format(key, str(value)))
 ```
 
-### Loop over Numpy array
+### [Loop over Numpy array](https://campus.datacamp.com/courses/intermediate-python/loops?ex=12)
 
 ```
 # Import numpy as np
@@ -117,7 +114,7 @@ for n in np.nditer(np_baseball):
     print(n)
 ```
 
-### Loop over DataFrame (1)
+### [Loop over DataFrame (1)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=14)
 
 ```
 # Import cars data
@@ -130,7 +127,7 @@ for lab, row in cars.iterrows():
     print(row)
 ```
 
-### Loop over DataFrame (2)
+### [Loop over DataFrame (2)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=15)
 
 ```
 # Import cars data
@@ -142,7 +139,7 @@ for lab, row in cars.iterrows() :
     print('{}: {}'.format(lab, row['cars_per_cap']))
 ```
 
-### Add column (1)
+### [Add column (1)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=16)
 
 ```
 # Import cars data
@@ -157,7 +154,7 @@ for lab, row in cars.iterrows():
 print(cars)
 ```
 
-### Add column (2)
+### [Add column (2)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=17)
 
 ```
 # Import cars data

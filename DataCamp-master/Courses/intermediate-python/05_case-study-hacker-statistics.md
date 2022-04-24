@@ -1,10 +1,10 @@
-## Case Study: Hacker Statistics
+## [Case Study: Hacker Statistics](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics)
 
 This chapter will allow you to apply all the concepts you've learned in this course. You will use hacker statistics to calculate your chances of winning a bet. Use random number generators, loops, and Matplotlib to gain a competitive edge!
 
 <br>
 
-### Random float
+### [Random float](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=2)
 
 ```
 # Import numpy as np
@@ -17,7 +17,7 @@ np.random.seed(123)
 print(np.random.rand())
 ```
 
-### Roll the dice
+### [Roll the dice](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=3)
 
 ```
 # Import numpy and set seed
@@ -31,7 +31,7 @@ print(np.random.randint(1,7))
 print(np.random.randint(1,7))
 ```
 
-### Determine your next move
+### [Determine your next move](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=4)
 
 ```
 # Numpy is imported, seed is set
@@ -55,7 +55,7 @@ print(dice)
 print(step)
 ```
 
-### The next step
+### [The next step](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=6)
 
 ```
 # Numpy is imported, seed is set
@@ -86,7 +86,7 @@ for x in range(100) :
 print(random_walk)
 ```
 
-### How low can you go?
+### [How low can you go?](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=7)
 
 ```
 # Numpy is imported, seed is set
@@ -111,7 +111,7 @@ for x in range(100) :
 print(random_walk)
 ```
 
-### Visualize the walk
+### [Visualize the walk](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=8)
 
 ```
 # Numpy is imported, seed is set
@@ -142,7 +142,7 @@ plt.plot(random_walk)
 plt.show()
 ```
 
-### Simulate multiple walks
+### [Simulate multiple walks](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=10)
 
 ```
 # Numpy is imported; seed is set
@@ -174,7 +174,7 @@ for i in range(10) :
 print(all_walks)
 ```
 
-### Visualize all walks
+### [Visualize all walks](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=11)
 
 ```
 # numpy and matplotlib imported, seed set.
@@ -213,7 +213,7 @@ plt.plot(np_aw_t)
 plt.show()
 ```
 
-### Implement clumsiness
+### [Implement clumsiness](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=12)
 
 ```
 # numpy and matplotlib imported, seed set
@@ -245,7 +245,7 @@ plt.plot(np_aw_t)
 plt.show()
 ```
 
-### Plot the distribution
+### [Plot the distribution](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=13)
 
 ```
 # numpy and matplotlib imported, seed set
@@ -279,8 +279,8 @@ plt.hist(ends)
 plt.show()
 ```
 
-### Calculate the odds
+### [Calculate the odds](https://campus.datacamp.com/courses/intermediate-python/case-study-hacker-statistics?ex=14)
 
 ```
-78.4%
+A: 78.4%
 ```

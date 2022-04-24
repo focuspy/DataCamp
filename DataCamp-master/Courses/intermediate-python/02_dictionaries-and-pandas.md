@@ -1,10 +1,10 @@
-## Dictionaries & Pandas
+## [Dictionaries & Pandas](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas)
 
 Learn about the dictionary, an alternative to the Python list, and the pandas DataFrame, the de facto standard to work with tabular data in Python. You will get hands-on practice with creating and manipulating datasets, and you’ll learn how to access the information you need from these data structures.
 
 <br>
 
-### Motivation for dictionaries
+### [Motivation for dictionaries](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=2)
 
 ```
 # Definition of countries and capital
@@ -18,7 +18,7 @@ ind_ger = countries.index('germany')
 print(capitals[ind_ger])
 ```
 
-### Create dictionary
+### [Create dictionary](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=3)
 
 ```
 # Definition of countries and capital
@@ -32,7 +32,7 @@ europe = { 'spain':'madrid', 'france':'paris', 'germany':'berlin', 'norway':'osl
 print(europe)
 ```
 
-### Access dictionary
+### [Access dictionary](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=4)
 
 ```
 # Definition of dictionary
@@ -45,7 +45,7 @@ print(europe.keys())
 print(europe['norway'])
 ```
 
-### Dictionary Manipulation (1)
+### [Dictionary Manipulation (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=6)
 
 ```
 # Definition of dictionary
@@ -64,7 +64,7 @@ europe.update({'poland':'warsaw'})
 print(europe)
 ```
 
-### Dictionary Manipulation (2)
+### [Dictionary Manipulation (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=7)
 
 ```
 # Definition of dictionary
@@ -82,7 +82,7 @@ del(europe['australia'])
 print(europe)
 ```
 
-### Dictionariception
+### [Dictionariception](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=8)
 
 ```
 # Dictionary of dictionaries
@@ -104,7 +104,7 @@ europe.update({'italy':data})
 print(europe)
 ```
 
-### Dictionary to DataFrame (1)
+### [Dictionary to DataFrame (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=10)
 
 ```
 # Pre-defined lists
@@ -125,7 +125,7 @@ cars = pd.DataFrame(my_dict)
 print(cars)
 ```
 
-### Dictionary to DataFrame (2)
+### [Dictionary to DataFrame (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=11)
 
 ```
 import pandas as pd
@@ -148,7 +148,7 @@ cars.index = row_labels
 print(cars)
 ```
 
-### CSV to DataFrame (1)
+### [CSV to DataFrame (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=12)
 
 ```
 # Import pandas as pd
@@ -161,7 +161,7 @@ cars = pd.read_csv('cars.csv')
 print(cars)
 ```
 
-### CSV to DataFrame (2)
+### [CSV to DataFrame (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=13)
 
 ```
 # Import pandas as pd
@@ -174,7 +174,7 @@ cars = pd.read_csv('cars.csv', index_col=0)
 print(cars)
 ```
 
-### Square Brackets (1)
+### [Square Brackets (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=15)
 
 ```
 # Import cars data
@@ -191,7 +191,7 @@ print(cars[['country']])
 print(cars[['country','drives_right']])
 ```
 
-### Square Brackets (2)
+### [Square Brackets (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=16)
 
 ```
 # Import cars data
@@ -205,7 +205,7 @@ print(cars[:3])
 print(cars[3:6])
 ```
 
-### loc and iloc (1)
+### [loc and iloc (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=17)
 
 ```
 # Import cars data
@@ -219,7 +219,7 @@ print(cars.loc['JPN'])
 print(cars.loc[['AUS','EG']])
 ```
 
-### loc and iloc (2)
+### [loc and iloc (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=18)
 
 ```
 # Import cars data
@@ -233,7 +233,7 @@ print(cars.loc['MOR', 'drives_right'])
 print(cars.loc[['RU','MOR'], ['country','drives_right']])
 ```
 
-### loc and iloc (3)
+### [loc and iloc (3)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=19)
 
 ```
 # Import cars data
