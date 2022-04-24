@@ -204,7 +204,7 @@ plt.xticks([1000,10000,100000], ['1k','10k','100k'])
 plt.show()
 ```
 
-### [Additional Customizations] (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=18)
+### [Additional Customizations](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=18)
 
 ```
 # Scatter plot
