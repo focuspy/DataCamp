@@ -4,7 +4,15 @@ You've learned how to import flat files, but there are many other file types you
 
 <br>
 
-### Loading a pickled file
+### [Not so flat any more](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=2)
+
+```
+Q: Check out the contents of your current directory and answer the following questions: (1) which file is in your directory and NOT an example of a flat file; (2) why is it not a flat file?
+A: battledeath.xlsx is not a flat because it is a spreadsheet consisting of many sheets, not a single table.
+```
+
+
+### [Loading a pickled file](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=3)
 
 ```
 # Import pickle package
@@ -21,7 +29,7 @@ print(d)
 print(type(d))
 ```
 
-### Listing sheets in Excel files
+### [Listing sheets in Excel files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=4)
 
 ```
 # Import pandas
@@ -37,7 +45,7 @@ xls = pd.ExcelFile(file)
 print(xls.sheet_names)
 ```
 
-### Importing sheets from Excel files
+### [Importing sheets from Excel files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=5)
 
 ```
 # Load a sheet into a DataFrame by name: df1
@@ -53,7 +61,7 @@ df2 = xls.parse(0)
 print(df2.head())
 ```
 
-### Customizing your spreadsheet import
+### [Customizing your spreadsheet import](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=6)
 
 ```
 # Parse the first sheet and rename the columns: df1
@@ -69,7 +77,14 @@ df2 = xls.parse(1, usecols=[0], skiprows=1, names=['Country'])
 print(df2.head())
 ```
 
-### Importing SAS files
+### [How to import SAS7BDAT](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=8)
+
+```
+Q: How do you correctly import the function SAS7BDAT() from the package sas7bdat?
+A: import SAS7BDAT from sas7bdat
+```
+
+### [Importing SAS files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=9)
 
 ```
 # Import sas7bdat package
@@ -88,7 +103,14 @@ plt.ylabel('count')
 plt.show()
 ```
 
-### Importing Stata files
+### [Using read_stata to import Stata files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=10)
+
+```
+Q: What is the correct way of using the read_stata() function to import disarea.dta into the object df?
+A: df = pd.read_stata('disarea.dta')
+```
+
+### [Importing Stata files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=11)
 
 ```
 # Import pandas
@@ -107,7 +129,7 @@ plt.ylabel('Number of countries')
 plt.show()
 ```
 
-### Using h5py to import HDF5 files
+### [Using h5py to import HDF5 files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=13)
 
 ```
 # Import packages
@@ -128,7 +150,7 @@ for key in data.keys():
     print(key)
 ```
 
-### Extracting data from your HDF5 file
+### [Extracting data from your HDF5 file](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=15)
 
 ```
 # Get the HDF5 group: group
@@ -154,7 +176,7 @@ plt.ylabel('strain')
 plt.show()
 ```
 
-### Loading .mat files
+### [Loading .mat files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=17)
 
 ```
 # Import package
@@ -167,7 +189,7 @@ mat = scipy.io.loadmat('albeck_gene_expression.mat')
 print(type(mat))
 ```
 
-### The structure of .mat in Python
+### [The structure of .mat in Python](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/importing-data-from-other-file-types-2?ex=18)
 
 ```
 # Print the keys of the MATLAB dictionary

@@ -4,7 +4,14 @@ In this chapter, you'll learn how to import data into Python from all types of f
 
 <br>
 
-### Importing entire text files
+### [Exploring your working directory](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=2)
+
+```
+Q: which of the following files is in your working directory?
+A: moby_dick.txt
+```
+
+### [Importing entire text files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=3)
 
 ```
 # Open a file: file
@@ -23,7 +30,7 @@ file.close()
 print(file.closed)
 ```
 
-### Importing text files line by line
+### [Importing text files line by line](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=4)
 
 ```
 # Read & print the first 3 lines
@@ -33,7 +40,28 @@ with open('moby_dick.txt') as file:
     print(file.readline())
 ```
 
-### Using NumPy to import flat files
+### [Pop quiz: examples of flat files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=6)
+
+```
+Q: Which of these file types below is NOT an example of a flat file?
+A: A .csv file.
+```
+
+### [Pop quiz: what exactly are flat files?](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=7)
+
+```
+Q: Which of the following statements about flat files is incorrect?
+A: Flat files consist of rows and each row is called a record.
+```
+
+### [Why we like flat files and the Zen of Python](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=8)
+
+```
+Q: The question you need to answer is: what is the 5th aphorism of the Zen of Python?
+A: Flat is better than nested.
+```
+
+### [Using NumPy to import flat files](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=10)
 
 ```
 # Import package
@@ -57,7 +85,7 @@ plt.imshow(im_sq, cmap='Greys', interpolation='nearest')
 plt.show()
 ```
 
-### Customizing your NumPy import
+### [Customizing your NumPy import](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=11)
 
 ```
 # Import numpy
@@ -73,32 +101,14 @@ data = np.loadtxt(file, delimiter='\t', skiprows=1, usecols=[0,2])
 print(data)
 ```
 
-### Importing different datatypes
+### [Importing different datatypes (1)](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=12)
 
 ```
-# Assign filename: file
-file = 'seaslug.txt'
-
-# Import file: data
-data = np.loadtxt(file, delimiter='\t', dtype=str)
-
-# Print the first element of data
-print(data[0])
-
-# Import data as floats and skip the first row: data_float
-data_float = np.loadtxt(file, delimiter='\t', dtype=float, skiprows=1)
-
-# Print the 10th element of data_float
-print(data_float[9])
-
-# Plot a scatterplot of the data
-plt.scatter(data_float[:, 0], data_float[:, 1])
-plt.xlabel('time (min.)')
-plt.ylabel('percentage of larvae')
-plt.show()
+Q: After importing the Titanic data as a structured array (as per the instructions above), print the entire column with the name Survived to the shell. What are the last 4 values of this column?
+A: 1,0,1,0.
 ```
 
-### Working with mixed datatypes (2)
+### [Working with mixed datatypes (2)](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=14)
 
 ```
 # Assign the filename: file
@@ -111,7 +121,7 @@ d = np.recfromcsv(file, delimiter=',', names=True, dtype=None)
 print(d[:3])
 ```
 
-### Using pandas to import flat files as DataFrames (1)
+### [Using pandas to import flat files as DataFrames (1)](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=16)
 
 ```
 # Import pandas as pd
@@ -127,7 +137,7 @@ df = pd.read_csv(file)
 print(df.head())
 ```
 
-### Using pandas to import flat files as DataFrames (2)
+### [Using pandas to import flat files as DataFrames (2)](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=17)
 
 ```
 # Assign the filename: file
@@ -143,7 +153,7 @@ data_array = np.array(data)
 print(type(data_array))
 ```
 
-### Customizing your pandas import
+### [Customizing your pandas import](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/introduction-and-flat-files-1?ex=18)
 
 ```
 # Import matplotlib.pyplot as plt
