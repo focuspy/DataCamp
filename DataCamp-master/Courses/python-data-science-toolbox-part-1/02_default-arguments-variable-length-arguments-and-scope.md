@@ -1,10 +1,18 @@
-## Default arguments, variable-length arguments and scope
+## [Default arguments, variable-length arguments and scope](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope)
 
 In this chapter, you'll learn to write functions with default arguments so that the user doesn't always need to specify them, and variable-length arguments so they can pass an arbitrary number of arguments on to your functions. You'll also learn about the essential concept of scope.
 
 <br>
 
-### The keyword global
+### [Pop quiz on understanding scope](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope)
+
+```
+Q: What are the values printed out when you call func1() and func2()?
+What is the value of num in the global scope after calling func1() and func2()?
+A: func1() prints out 3, func2() prints out 10, and the value of num in the global scope is 6.
+```
+
+### [The keyword global](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=3)
 
 ```
 # Create a string: team
@@ -30,7 +38,14 @@ change_team()
 print(team)
 ```
 
-### Nested Functions I
+### [Python's built-in scope](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=4)
+
+```
+Q: Which of the following names is NOT in the module builtins?
+A: 'array'
+```
+
+### [Nested Functions I](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=6)
 
 ```
 # Define three_shouts
@@ -50,7 +65,7 @@ def three_shouts(word1, word2, word3):
 print(three_shouts('a', 'b', 'c'))
 ```
 
-### Nested Functions II
+### [Nested Functions II](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=7)
 
 ```
 # Define echo
@@ -77,7 +92,7 @@ thrice = echo(3)
 print(twice('hello'), thrice('hello'))
 ```
 
-### The keyword nonlocal and nested functions
+### [The keyword nonlocal and nested functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=8)
 
 ```
 # Define echo_shout()
@@ -109,7 +124,7 @@ def echo_shout(word):
 echo_shout("hello")
 ```
 
-### Functions with one default argument
+### [Functions with one default argument](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=10)
 
 ```
 # Define shout_echo
@@ -137,7 +152,7 @@ print(no_echo)
 print(with_echo)
 ```
 
-### Functions with multiple default arguments
+### [Functions with multiple default arguments](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=11)
 
 ```
 # Define shout_echo
@@ -170,7 +185,7 @@ print(with_big_echo)
 print(big_no_echo)
 ```
 
-### Functions with variable-length arguments (*args)
+### [Functions with variable-length arguments (*args)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=12)
 
 ```
 # Define gibberish
@@ -198,7 +213,7 @@ print(one_word)
 print(many_words)
 ```
 
-### Functions with variable-length keyword arguments (**kwargs)
+### [Functions with variable-length keyword arguments (**kwargs)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=13)
 
 ```
 # Define report_status
@@ -221,7 +236,7 @@ report_status(name="luke", affiliation="jedi", status="missing")
 report_status(name="anakin", affiliation="sith lord", status="deceased")
 ```
 
-### Bringing it all together (1)
+### [Bringing it all together (1)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=15)
 
 ```
 # Define count_entries()
@@ -260,7 +275,7 @@ print(result1)
 print(result2)
 ```
 
-### Bringing it all together (2)
+### [Bringing it all together (2)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=16)
 
 ```
 # Define count_entries()

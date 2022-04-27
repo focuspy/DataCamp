@@ -1,10 +1,18 @@
-## Lambda functions and error-handling
+## [Lambda functions and error-handling](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling)
 
 Learn about lambda functions, which allow you to write functions quickly and on the fly. You'll also practice handling errors in your functions, which is an essential skill. Then, apply your new skills to answer data science questions.
 
 <br>
 
-### Writing a lambda function you already know
+### [Pop quiz on lambda functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=2)
+
+```
+Q: How would you write a lambda function add_bangs that adds three exclamation points '!!!' to the end of a string a?
+How would you call add_bangs with the argument 'hello'?
+A: The lambda function definition is: add_bangs = (lambda a: a + '!!!'), and the function call is: add_bangs('hello').
+```
+
+### [Writing a lambda function you already know](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=3)
 
 ```
 # Define echo_word as a lambda function: echo_word
@@ -17,7 +25,7 @@ result = echo_word("hey",5)
 print(result)
 ```
 
-### Map() and lambda functions
+### [Map() and lambda functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=4)
 
 ```
 # Create a list of strings: spells
@@ -33,7 +41,7 @@ shout_spells_list = list(shout_spells)
 print(shout_spells_list)
 ```
 
-### Filter() and lambda functions
+### [Filter() and lambda functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=5)
 
 ```
 # Create a list of strings: fellowship
@@ -49,7 +57,7 @@ result_list = list(result)
 print(result_list)
 ```
 
-### Reduce() and lambda functions
+### [Reduce() and lambda functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=6)
 
 ```
 # Import reduce from functools
@@ -65,7 +73,14 @@ result = reduce(lambda item1,item2: item1+item2, stark)
 print(result)
 ```
 
-### Error handling with try-except
+### [Pop quiz about errors](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=8)
+
+```
+Q: Which of the function calls raises an error and what type of error is raised?
+A: The call len(525600) raises a TypeError.
+```
+
+### [Error handling with try-except](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=9)
 
 ```
 # Define shout_echo
@@ -94,7 +109,7 @@ def shout_echo(word1, echo=1):
 shout_echo("particle", echo="accelerator")
 ```
 
-### Error handling by raising an error
+### [Error handling by raising an error](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=10)
 
 ```
 # Define shout_echo
@@ -119,7 +134,7 @@ def shout_echo(word1, echo=1):
 shout_echo("particle", echo=5)
 ```
 
-### Bringing it all together (1)
+### [Bringing it all together (1)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=12)
 
 ```
 # Select retweets from the Twitter DataFrame: result
@@ -133,7 +148,7 @@ for tweet in res_list:
     print(tweet)
 ```
 
-### Bringing it all together (2)
+### [Bringing it all together (2)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=13)
 
 ```
 # Define count_entries()
@@ -173,7 +188,7 @@ result1 = count_entries(tweets_df, 'lang')
 print(result1)
 ```
 
-### Bringing it all together (3)
+### [Bringing it all together (3)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=14)
 
 ```
 # Define count_entries()
@@ -209,4 +224,11 @@ result1 = count_entries(tweets_df, 'lang')
 
 # Print result1
 print(result1)
+```
+
+### [Bringing it all together: testing your error handling skills](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=15)
+
+```
+Q: What is the last line of the output?
+A: 'ValueError: The DataFrame does not have a lang1 column.'
 ```
