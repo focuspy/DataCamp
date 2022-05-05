@@ -1,27 +1,10 @@
-## Diving deep into the Twitter API
+## [Diving deep into the Twitter API](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api)
 
 In this chapter, you will consolidate your knowledge of interacting with APIs in a deep dive into the Twitter streaming API. You'll learn how to stream real-time Twitter data, and how to analyze and visualize it.
 
 <br>
 
-### API Authentication
-
-```
-# Import package
-import tweepy
-
-# Store OAuth authentication credentials in relevant variables
-access_token = "1092294848-aHN7DcRP9B4VMTQIhwqOYiB14YkW92fFO8k8EPy"
-access_token_secret = "X4dHmhPfaksHcQ7SCbmZa2oYBBVSD2g8uIHXsp5CTaksx"
-consumer_key = "nZ6EA0FxZ293SxGNg8g8aP0HM"
-consumer_secret = "fJGEodwe3KiKUnsYJC3VRndj7jevVvXbK2D5EiJ2nehafRgA6i"
-
-# Pass OAuth details to tweepy's OAuth handler
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
-```
-
-### Streaming tweets
+### [Streaming tweets](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=2)
 
 ```
 # Initialize Stream listener
@@ -34,7 +17,7 @@ stream = tweepy.Stream(auth, l)
 stream.filter(['clinton','trump','sanders','cruz'])
 ```
 
-### Load and explore your Twitter data
+### [Load and explore your Twitter data](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=3)
 
 ```
 # Import package
@@ -62,7 +45,7 @@ print(tweets_data[0].keys())
 
 ```
 
-### Twitter data to DataFrame
+### [Twitter data to DataFrame](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=4)
 
 ```
 # Import package
@@ -75,7 +58,7 @@ df = pd.DataFrame(tweets_data, columns=['text', 'lang'])
 print(df.head())
 ```
 
-### A little bit of Twitter text analysis
+### [A little bit of Twitter text analysis](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=5)
 
 ```
 # Initialize list to store tweet counts
@@ -91,7 +74,7 @@ for index, row in df.iterrows():
 
 ```
 
-### Plotting your Twitter data
+### [Plotting your Twitter data](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=6)
 
 ```
 # Import packages

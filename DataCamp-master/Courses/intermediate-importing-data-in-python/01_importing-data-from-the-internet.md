@@ -1,10 +1,10 @@
-## Importing data from the Internet
+## [Importing data from the Internet](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1)
 
 The web is a rich source of data from which you can extract various types of insights and findings. In this chapter, you will learn how to get data from the web, whether it is stored in files or in HTML. You'll also learn the basics of scraping and parsing web data.
 
 <br>
 
-### Importing flat files from the web: your turn!
+### [Importing flat files from the web: your turn!](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=2)
 
 ```
 # Import package
@@ -24,7 +24,7 @@ df = pd.read_csv('winequality-red.csv', sep=';')
 print(df.head())
 ```
 
-### Opening and reading flat files from the web
+### [Opening and reading flat files from the web](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=3)
 
 ```
 # Import packages
@@ -47,7 +47,7 @@ plt.ylabel('count')
 plt.show()
 ```
 
-### Importing non-flat files from the web
+### [Importing non-flat files from the web](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=4)
 
 ```
 # Import package
@@ -66,7 +66,7 @@ print(xls.keys())
 print(xls['1700'].head())
 ```
 
-### Performing HTTP requests in Python using urllib
+### [Performing HTTP requests in Python using urllib](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=6)
 
 ```
 # Import packages
@@ -88,7 +88,7 @@ print(type(response))
 response.close()
 ```
 
-### Printing HTTP request results in Python using urllib
+### [Printing HTTP request results in Python using urllib](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=7)
 
 ```
 # Import packages
@@ -113,7 +113,7 @@ print(html)
 response.close()
 ```
 
-### Performing HTTP requests in Python using requests
+### [Performing HTTP requests in Python using requests](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=8)
 
 ```
 # Import package
@@ -132,7 +132,7 @@ text = r.text
 print(text)
 ```
 
-### Parsing HTML with BeautifulSoup
+### [Parsing HTML with BeautifulSoup](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=10)
 
 ```
 # Import packages
@@ -158,7 +158,7 @@ pretty_soup = soup.prettify()
 print(pretty_soup)
 ```
 
-### Turning a webpage into data using BeautifulSoup: getting the text
+### [Turning a webpage into data using BeautifulSoup: getting the text](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=11)
 
 ```
 # Import packages
@@ -190,7 +190,7 @@ guido_text = soup.get_text()
 print(guido_text)
 ```
 
-### Turning a webpage into data using BeautifulSoup: getting the hyperlinks
+### [Turning a webpage into data using BeautifulSoup: getting the hyperlinks](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=12)
 
 ```
 # Import packages

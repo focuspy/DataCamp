@@ -1,10 +1,17 @@
-## Interacting with APIs to import data from the web
+## [Interacting with APIs to import data from the web](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2
 
 In this chapter, you will gain a deeper understanding of how to import data from the web. You will learn the basics of extracting data from APIs, gain insight on the importance of APIs, and practice extracting data by diving into the OMDB and Library of Congress APIs.
 
 <br>
 
-### Loading and exploring a JSON
+### [Pop quiz: What exactly is a JSON?](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=2)
+
+```
+Q:Which of the following is NOT true of the JSON file format?
+A:The function json.load() will load the JSON into Python as a list.
+```
+
+### [Loading and exploring a JSON](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=3)
 
 ```
 # Load JSON: json_data
@@ -16,7 +23,21 @@ for k in json_data.keys():
     print(k + ': ', json_data[k])
 ```
 
-### API requests
+### [Pop quiz: Exploring your JSON](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=4)
+
+```
+Q: Which of the following statements is true of the movie in question?
+A: The title is 'The Social Network' and the year is 2010.
+```
+
+### [Pop quiz: What's an API?](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=6)
+
+```
+Q: Which of the following statements about APIs is NOT true?
+A: All APIs transmit data only in the JSON file format.
+```
+
+### [API requests](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=7)
 
 ```
 # Import requests package
@@ -32,7 +53,7 @@ r = requests.get(url)
 print(r.text)
 ```
 
-### JSON–from the web to Python
+### [JSON–from the web to Python](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=8)
 
 ```
 # Import package
@@ -53,7 +74,7 @@ for k in json_data.keys():
 
 ```
 
-### Checking out the Wikipedia API
+### [Checking out the Wikipedia API](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=9)
 
 ```
 # Import package
