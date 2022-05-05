@@ -245,7 +245,7 @@ my_special_function = get_new_func(my_special_function)
 my_special_function()
 ```
 
-### [Using decorator syntax] (https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=12)
+### [Using decorator syntax](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=12)
 
 ```
 def my_function(a, b, c):
