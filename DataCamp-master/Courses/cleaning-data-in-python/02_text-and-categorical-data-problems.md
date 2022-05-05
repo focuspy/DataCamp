@@ -1,10 +1,10 @@
-## Text and categorical data problems
+## [Text and categorical data problems](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems)
 
 Categorical and text data can often be some of the messiest parts of a dataset due to their unstructured nature. In this chapter, you’ll learn how to fix whitespace and capitalization inconsistencies in category labels, collapse multiple categories into one, and reformat strings for consistency.
 
 <br>
 
-### Finding consistency
+### [Finding consistency](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=3)
 
 ```
 # Print categories DataFrame
@@ -29,7 +29,7 @@ print(airlines[~cat_clean_rows])
 
 ```
 
-### Inconsistent categories
+### [Inconsistent categories](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=6)
 
 ```
 # Print unique values of both columns
@@ -48,8 +48,7 @@ print(airlines['dest_region'].unique())
 print(airlines['dest_size'].unique())
 ```
 
-### Remapping categories
-
+### [Remapping categories](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=7)
 ```
 # Create ranges for categories
 label_ranges = [0, 60, 180, np.inf]
@@ -66,7 +65,7 @@ mappings = {'Monday':'weekday', 'Tuesday':'weekday', 'Wednesday': 'weekday', 'Th
 airlines['day_week'] = airlines['day'].replace(mappings)
 ```
 
-### Removing titles and taking names
+### [Removing titles and taking names](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=9)
 
 ```
 # Replace "Dr." with empty string ""
@@ -85,7 +84,7 @@ airlines['full_name'] = airlines['full_name'].str.replace("Ms.","")
 assert airlines['full_name'].str.contains('Ms.|Mr.|Miss|Dr.').any() == False
 ```
 
-### Keeping it descriptive
+### [Keeping it descriptive](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=10)
 
 ```
 # Store length of each row in survey_response column

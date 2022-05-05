@@ -1,10 +1,10 @@
-## [Common data problems](https://app.datacamp.com/learn/courses/cleaning-data-in-python)
+## [Common data problems](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1)
 
 In this chapter, you'll learn how to overcome some of the most common dirty data problems. You'll convert data types, apply range constraints to remove future data points, and remove duplicated data points to avoid double-counting.
 
 <br>
 
-### Numeric data or ... ?
+### [Numeric data or ... ?](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=3)
 
 ```
 # Print the information of ride_sharing
@@ -23,7 +23,7 @@ assert ride_sharing['user_type_cat'].dtype == 'category'
 print(ride_sharing['user_type_cat'].describe())
 ```
 
-### Summing strings and concatenating numbers
+### [Summing strings and concatenating numbers](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=4)
 
 ```
 # Strip duration of minutes
@@ -40,7 +40,7 @@ print(ride_sharing[['duration','duration_trim','duration_time']])
 print(ride_sharing['duration_time'].mean())
 ```
 
-### Tire size constraints
+### [Tire size constraints](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=6)
 
 ```
 # Convert tire_sizes to integer
@@ -56,7 +56,7 @@ ride_sharing['tire_sizes'] = ride_sharing['tire_sizes'].astype('category')
 print(ride_sharing['tire_sizes'].head())
 ```
 
-### Back to the future
+### [Back to the future](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=7)
 
 ```
 # Convert ride_date to date
@@ -72,7 +72,16 @@ ride_sharing.loc[ride_sharing['ride_dt'] > today, 'ride_dt'] = today
 print(ride_sharing['ride_dt'].max())
 ```
 
-### Finding duplicates
+### [How big is your subset?](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=9)
+
+```
+Q: Choose the correct usage of .duplicated() below
+A: loans.duplicated(subset = ['first_name', 'last_name'], keep = False)
+  Because subsetting on consumer metadata and not discarding any duplicate returns all duplicated rows.
+
+```
+
+### [Finding duplicates](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=10)
 
 ```
 # Find duplicates
@@ -85,7 +94,7 @@ duplicated_rides = ride_sharing[duplicates].sort_values('ride_id')
 print(duplicated_rides[['ride_id','duration','user_birth_year']])
 ```
 
-### Treating duplicates
+### [Treating duplicates](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=11)
 
 ```
 # Drop complete duplicates from ride_sharing
