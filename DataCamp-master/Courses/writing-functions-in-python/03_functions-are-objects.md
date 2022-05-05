@@ -1,10 +1,10 @@
-## Functions are objects
+## [Functions are objects](https://campus.datacamp.com/courses/writing-functions-in-python/decorators)
 
 In this chapter, you are going to learn about decorators, a powerful way of modifying the behavior of functions. But first, we need to build up some foundational concepts that will make decorators easier to understand. 
 
 <br>
 
-### Building a command line data app
+### [Building a command line data app](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=2)
 
 ```
 # Add the missing function references to the function map
@@ -24,7 +24,7 @@ func_name = get_user_input()
 function_map[func_name](data)
 ```
 
-### Reviewing your co-worker's code
+### [Reviewing your co-worker's code] (https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=3)
 
 ```
 # Call has_docstring() on the load_and_plot_data() function
@@ -35,7 +35,7 @@ if not ok:
 else:
   print("load_and_plot_data() looks ok")
 
-#######################
+#####################################################
 
 # Call has_docstring() on the as_2D() function
 ok = has_docstring(as_2D)
@@ -45,7 +45,7 @@ if not ok:
 else:
   print("as_2D() looks ok")
 
-#######################
+#####################################################
 
 # Call has_docstring() on the log_product() function
 ok = has_docstring(log_product)
@@ -56,7 +56,7 @@ else:
   print("log_product() looks ok")
 ```
 
-### Returning functions for a math game
+### [Returning functions for a math game](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=4)
 
 ```
 def create_math_function(func_name):
@@ -79,7 +79,14 @@ subtract = create_math_function('subtract')
 print('5 - 2 = {}'.format(subtract(5, 2)))
 ```
 
-### Understanding scope
+### [Understanding scope](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=6)
+
+```
+Q: What four values does this script print?
+A: 50, 30, 100, 30
+```
+
+### [Modifying variables outside local scope](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=7)
 
 ```
 call_count = 0
@@ -96,7 +103,7 @@ def my_function():
 for _ in range(20):
   my_function()
 
-#######################
+#####################################################
 
 def read_files():
   file_contents = None
@@ -116,7 +123,7 @@ def read_files():
 
 print('\n'.join(read_files()))
 
-#######################
+#####################################################
 
 def wait_until_done():
   def check_is_done():
@@ -135,7 +142,7 @@ wait_until_done()
 print('Work done? {}'.format(done))
 ```
 
-### Checking for closure
+### [Checking for closure](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=9)
 
 ```
 
@@ -150,7 +157,7 @@ my_func = return_a_func(2, 17)
 # Show that my_func()'s closure is not None
 print(my_func.__closure__ is not None)
 
-#######################
+#####################################################
 
 def return_a_func(arg1, arg2):
   def new_func():
@@ -165,7 +172,7 @@ print(my_func.__closure__ is not None)
 # Show that there are two variables in the closure
 print(len(my_func.__closure__) == 2)
 
-#######################
+#####################################################
 
 def return_a_func(arg1, arg2):
   def new_func():
@@ -185,7 +192,7 @@ closure_values = [
 print(closure_values == [2, 17])
 ```
 
-### Closures keep your values safe
+### [Closures keep your values safe](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=10)
 
 ```
 
@@ -205,7 +212,7 @@ def my_special_function():
 
 new_func()
 
-#######################
+#####################################################
 
 def my_special_function():
   print('You are running my_special_function()')
@@ -222,7 +229,7 @@ del(my_special_function)
 
 new_func()
 
-#######################
+#####################################################
 
 def my_special_function():
   print('You are running my_special_function()')
@@ -238,7 +245,7 @@ my_special_function = get_new_func(my_special_function)
 my_special_function()
 ```
 
-### Using decorator syntax
+### [Using decorator syntax] (https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=12)
 
 ```
 def my_function(a, b, c):
@@ -249,7 +256,7 @@ my_function = print_args(my_function)
 
 my_function(1, 2, 3)
 
-#######################
+#####################################################
 
 # Decorate my_function() with the print_args() decorator
 @print_args
@@ -259,7 +266,7 @@ def my_function(a, b, c):
 my_function(1, 2, 3)
 ```
 
-### Defining a decorator
+### [Defining a decorator](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=13)
 
 ```
 def print_before_and_after(func):

@@ -1,10 +1,10 @@
-## Best Practices
+## [Best Practices](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices)
 
 The goal of this course is to transform you into a Python expert, and so the first chapter starts off with best practices when writing functions. We'll cover docstrings and why they matter and how to know when you need to turn a chunk of code into a function. You will also learn the details of how Python passes arguments to functions, as well as some common gotchas that can cause debugging headaches when calling functions.
 
 <br>
 
-### Docstrings
+### [Docstrings](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=2)
 
 ```
 # Add a docstring to count_letter()
@@ -13,7 +13,9 @@ def count_letter(content, letter):
   if (not isinstance(letter, str)) or len(letter) != 1:
     raise ValueError('`letter` must be a single character string.')
   return len([char for char in content if char == letter])
------
+
+#####################################################
+
 def count_letter(content, letter):
   """Count the number of times `letter` appears in `content`.
 
@@ -64,10 +66,10 @@ def count_letter(content, letter):
   return len([char for char in content if char == letter])
 ```
 
-### Retrieving docstrings
+### [Retrieving docstrings](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=3)
 
 ```
-# Get the docstring with an attribute of count_letter()
+# Get the "count_letter" docstring by using an attribute of the function
 docstring = count_letter.__doc__
 
 border = '#' * 28
@@ -77,13 +79,15 @@ print('{}\n{}\n{}'.format(border, docstring, border))
 
 import inspect
 
-# Get the docstring with a function from the inspect module
+# Inspect the count_letter() function to get its docstring
 docstring = inspect.getdoc(count_letter)
 
 border = '#' * 28
 print('{}\n{}\n{}'.format(border, docstring, border))
 
 #####################################################
+
+import inspect
 
 def build_tooltip(function):
   """Create a tooltip for any function that shows the 
@@ -105,7 +109,14 @@ print(build_tooltip(range))
 print(build_tooltip(print))
 ```
 
-### Extract a function
+### [Docstrings to the rescue!](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=4)
+
+```
+Q: Examine each of these functions' docstrings in the IPython shell to determine which of them is actually numpy.histogram().
+A: numpy.fywdkxa()
+```
+
+### [Extract a function](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=6)
 
 ```
 def standardize(column):
@@ -128,7 +139,7 @@ df['y3_z'] = standardize(df.y3_gpa)
 df['y4_z'] = standardize(df.y4_gpa)
 ```
 
-### Split up a function
+### [Split up a function](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=7)
 
 ```
 def mean(values):
@@ -165,7 +176,14 @@ def median(values):
   return median
 ```
 
-### Best practice for default arguments
+### [Mutable or immutable?](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=9)
+
+```
+Q: What do you expect the values of d and s to be after the function is called?
+A: d = {'Hello': 'hello'}, s = 'Hello'
+```
+
+### [Best practice for default arguments](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=10)
 
 ```
 # Use an immutable variable for the default argument 
@@ -182,22 +200,9 @@ def better_add_column(values, df=None):
   Returns:
     DataFrame
   """
-  
   # Update the function to create a default DataFrame
   if df is None:
     df = pandas.DataFrame()
   df['col_{}'.format(len(df.columns))] = values
   return df
-
-# Open "alice.txt" and assign the file to "file"
-with open('alice.txt') as file:
-  text = file.read()
-
-n = 0
-for word in text.split():
-  if word.lower() in ['cat', 'cats']:
-    n += 1
-
-print('Lewis Carroll uses the word "cat" {} times'.format(n))
-
 ```

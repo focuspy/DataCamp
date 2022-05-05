@@ -1,10 +1,10 @@
-## Real-world examples
+## [Real-world examples](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators)
 
 You've learned a lot about how decorators work. This lesson will walk you through some real-world decorators so that you can start to recognize common decorator patterns. 
 
 <br>
 
-#### Print the return type
+#### [Print the return type](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=2)
 
 ```
 def print_return_type(func):
@@ -28,7 +28,7 @@ print(foo([1, 2, 3]))
 print(foo({'a': 42}))
 ```
 
-### Counter
+### [Counter](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=3)
 
 ```
 def counter(func):
@@ -51,7 +51,7 @@ foo()
 print('foo() was called {} times.'.format(foo.count))
 ```
 
-### Decorators and metadata
+### [Preserving docstrings when decorating functions](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=5)
 
 ```
 def add_hello(func):
@@ -70,7 +70,7 @@ print_sum(10, 20)
 print_sum_docstring = print_sum.__doc__
 print(print_sum_docstring)
 
-#######################
+#####################################################
 
 def add_hello(func):
   # Add a docstring to wrapper
@@ -110,7 +110,7 @@ print_sum(10, 20)
 print_sum_docstring = print_sum.__doc__
 print(print_sum_docstring)
 
-#######################
+#####################################################
 
 from functools import wraps
 def add_hello(func):
@@ -134,7 +134,7 @@ print(print_sum_docstring)
 print(print_sum.__name__)
 ```
 
-### Measuring decorator overhead
+### [Measuring decorator overhead](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=6)
 
 ```
 @check_everything
@@ -157,7 +157,7 @@ print('Decorated time: {:.5f}s'.format(decorated_time))
 print('Undecorated time: {:.5f}s'.format(undecorated_time))
 ```
 
-#### Run_n_times()
+#### [Run_n_times()](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=8)
 
 ```
 
@@ -168,7 +168,7 @@ def print_sum(a, b):
   
 print_sum(15, 20)
 
-#######################
+#####################################################
 
 # Use run_n_times() to create the run_five_times() decorator
 run_five_times = run_n_times(5)
@@ -179,7 +179,7 @@ def print_sum(a, b):
   
 print_sum(4, 100)
 
-#######################
+#####################################################
 
 # Modify the print() function to always run 20 times
 print = run_n_times(20)(print)
@@ -187,7 +187,7 @@ print = run_n_times(20)(print)
 print('What is happening?!?!')
 ```
 
-### HTML Generator
+### [HTML Generator](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=9)
 
 ```
 
@@ -202,16 +202,16 @@ def html(open_tag, close_tag):
   # Return the decorator
   return decorator
 
-#######################
+#####################################################
 
- # Make hello() return bolded text
+# Make hello() return bolded text
 @html('<b>', '</b>')
 def hello(name):
   return 'Hello {}!'.format(name)
 
 print(hello('Alice'))
 
-#######################
+#####################################################
 
 # Make goodbye() return italicized text
 @html('<i>', '</i>')
@@ -220,7 +220,7 @@ def goodbye(name):
   
 print(goodbye('Alice'))
 
-#######################
+#####################################################
 
 # Wrap the result of hello_goodbye() in <div> and </div>
 @html('<div>','</div>')
@@ -230,7 +230,7 @@ def hello_goodbye(name):
 print(hello_goodbye('Alice'))
 ```
 
-###  Tag your functions
+###  [Tag your functions](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=11)
 
 ```
 
@@ -253,7 +253,7 @@ def foo():
 
 print(foo.tags)
 ```
-### Check the return type
+### [Check the return type](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=12)
 
 ```
 
@@ -274,7 +274,7 @@ try:
 except AssertionError:
   print('foo() did not return a dict!')
 
-#######################
+#####################################################
 
 def returns(return_type):
   # Complete the returns() decorator

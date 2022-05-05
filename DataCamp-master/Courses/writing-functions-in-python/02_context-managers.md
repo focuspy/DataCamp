@@ -1,10 +1,10 @@
-## Context Managers
+## [Context Managers](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers)
 
 If you've ever seen the "with" keyword in Python and wondered what its deal was, then this is the chapter for you! Context managers are a convenient way to provide connections in Python and guarantee that those connections get cleaned up when you are done using them. This chapter will show you how to use context managers, as well as how to write your own.
 
 <br>
 
-### The number of cats
+### [The number of cats](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=2)
 
 ```
 # Open "alice.txt" and assign the file to "file"
@@ -19,7 +19,7 @@ for word in text.split():
 print('Lewis Carroll uses the word "cat" {} times'.format(n))
 ```
 
-### The speed of cats
+### [The speed of cats](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=3)
 
 ```
 image = get_image_from_instagram()
@@ -35,7 +35,7 @@ with timer():
   process_with_pytorch(image)
 ```
 
-### The timer() context manager
+### [The timer() context manager](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=5)
 
 ```
 # Add a decorator that will make timer() a context manager
@@ -57,7 +57,7 @@ with timer():
   time.sleep(0.25)
 ```
 
-### A read-only open() context manager
+### [A read-only open() context manager](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=6)
 
 ```
 @contextlib.contextmanager
@@ -80,7 +80,14 @@ with open_read_only('my_file.txt') as my_file:
   print(my_file.read())
 ```
 
-### Scraping the NASDAQ
+### [Context manager use cases](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=8)
+
+```
+Q: Which of the following would NOT be a good opportunity to use a context manager?
+A: A function that prints all of the prime numbers between 2 and some value n.
+```
+
+### [Scraping the NASDAQ](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=9)
 
 ```
 # Use the "stock('NVDA')" context manager
@@ -94,7 +101,7 @@ with stock("NVDA") as nvda:
       f_out.write('{:.2f}\n'.format(value))
 ```
 
-### Changing the working directory
+### [Changing the working directory](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=10)
 
 ```
 def in_dir(directory):
