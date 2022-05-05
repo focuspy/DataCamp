@@ -24,7 +24,7 @@ func_name = get_user_input()
 function_map[func_name](data)
 ```
 
-### [Reviewing your co-worker's code] (https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=3)
+### [Reviewing your co-worker's code](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=3)
 
 ```
 # Call has_docstring() on the load_and_plot_data() function
