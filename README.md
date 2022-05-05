@@ -1,4 +1,4 @@
-# [DataCamp@2022](https://www.datacamp.com/)
+# [2022@DataCamp](https://www.datacamp.com/)
 
 Personal repository to all DataCamp exercises and projects.
 
