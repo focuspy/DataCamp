@@ -1,10 +1,10 @@
-## Easy and Powerful: Dates and Times in Pandas
+## [Easy and Powerful: Dates and Times in Pandas](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas)
 
 To conclude this course, you'll apply everything you've learned about working with dates and times in standard Python to working with dates and times in Pandas. With additional information about each bike ride, such as what station it started and stopped at and whether or not the rider had a yearly membership, you'll be able to dig much more deeply into the bike trip data. In this chapter, you'll cover powerful Pandas operations, such as grouping and plotting results by time.
 
 <br>
 
-### Loading a csv file in Pandas
+### [Loading a csv file in Pandas](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas?ex=2)
 
 ```
 # Import pandas
@@ -18,7 +18,7 @@ rides = pd.read_csv('capital-onebike.csv',
 print(rides.iloc[0])
 ```
 
-### Making timedelta columns
+### [Making timedelta columns](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas?ex=3)
 
 ```
 # Subtract the start date from the end date
@@ -30,7 +30,7 @@ rides['Duration'] = ride_durations.dt.total_seconds()
 print(rides['Duration'].head())
 ```
 
-### How many joyrides?
+### [How many joyrides?](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas?ex=5)
 
 ```
 # Create joyrides
@@ -48,7 +48,7 @@ print("The median duration for joyrides was {:.2f} seconds"\
       .format(rides[joyrides]['Duration'].median()))
 ```
 
-### It's getting cold outside, W20529
+### [It's getting cold outside, W20529](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas?ex=6)
 
 ```
 # Import matplotlib
@@ -59,6 +59,14 @@ rides.resample('D', on = 'Start date')\
   .size()\
   .plot(ylim = [0, 15])
 
+# Show the results
+plt.show()
+
+#####################################################
+
+# Import matplotlib
+import matplotlib.pyplot as plt
+
 # Resample rides to monthly, take the size, plot the results
 rides.resample('M', on = 'Start date')\
   .size()\
@@ -68,7 +76,7 @@ rides.resample('M', on = 'Start date')\
 plt.show()
 ```
 
-### Members vs casual riders over time
+### [Members vs casual riders over time](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas?ex=7)
 
 ```
 # Resample rides to be monthly on the basis of Start date
@@ -78,7 +86,7 @@ monthly_rides = rides.resample('M',on='Start date')['Member type']
 print(monthly_rides.value_counts() / monthly_rides.size())
 ```
 
-### Combining groupby() and resample()
+### [Combining groupby() and resample()](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas?ex=8)
 
 ```
 # Group rides by member type, and resample to the month
@@ -89,11 +97,20 @@ grouped = rides.groupby('Member type')\
 print(grouped['Duration'].median())
 ```
 
-### Timezones in Pandas
+### [Timezones in Pandas](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas?ex=10)
 
 ```
 # Localize the Start date column to America/New_York
 rides['Start date'] = rides['Start date'].dt.tz_localize('America/New_York', ambiguous='NaT')
+
+# Print first value
+print(rides['Start date'].iloc[0])
+
+#####################################################
+
+# Localize the Start date column to America/New_York
+rides['Start date'] = rides['Start date'].dt.tz_localize('America/New_York', 
+                                						 ambiguous='NaT')
 
 # Print first value
 print(rides['Start date'].iloc[0])
@@ -105,7 +122,7 @@ rides['Start date'] = rides['Start date'].dt.tz_convert('Europe/London')
 print(rides['Start date'].iloc[0])
 ```
 
-### How long per weekday?
+### [How long per weekday?](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas?ex=11)
 
 ```
 # Add a column for the weekday of the start of the ride
@@ -115,7 +132,7 @@ rides['Ride start weekday'] = rides['Start date'].dt.weekday_name
 print(rides.groupby('Ride start weekday')['Duration'].median())
 ```
 
-### How long between rides?
+### [How long between rides?](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/easy-and-powerful-dates-and-times-in-pandas?ex=12)
 
 ```
 # Shift the index of the end date up one; now subract it from the start date

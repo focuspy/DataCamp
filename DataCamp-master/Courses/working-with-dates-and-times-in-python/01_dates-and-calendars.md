@@ -1,23 +1,36 @@
-## Dates in Python
+## [Dates in Python](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars)
 
 Dates are everywhere in data science. Stock prices go up and down, experiments begin and end, people are born, politicians take votes, and on and on. All these events happen at a particular point in time. Knowing how to analyze data over time is a core data science skill. 
 
 <br>
 
-### Which day of the week?
+### [Which day of the week?](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=2)
 
 ```
 # Import date from datetime
 from datetime import date
-# Counter for how many before June 1
-early_hurricanes = 0
+
+#####################################################
+
+# Import date from datetime
+from datetime import date
+
 # Create a date object
 hurricane_andrew = date(1992,8,24)
+
+#####################################################
+
+# Import date from datetime
+from datetime import date
+
+# Create a date object
+hurricane_andrew = date(1992, 8, 24)
+
 # Which day of the week is the date?
 print(hurricane_andrew.weekday())
 ```
 
-### How many hurricanes come early?
+### [How many hurricanes come early?](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=3)
 
 ```
 # Counter for how many before June 1
@@ -32,7 +45,7 @@ for hurricane in florida_hurricane_dates:
 print(early_hurricanes)
 ```
 
-### Subtracting dates
+### [Subtracting dates](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=5)
 
 ```
 # Import date
@@ -48,7 +61,7 @@ end = date(2007, 12, 13)
 print((end - start).days)
 ```
 
-### Counting events per calendar month
+### [Counting events per calendar month](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=6)
 
 ```
 # A dictionary to count hurricanes per calendar month
@@ -65,9 +78,15 @@ for hurricane in florida_hurricane_dates:
 print(hurricanes_each_month)
 ```
 
-### Putting a list of dates in order
+### [Putting a list of dates in order](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=7)
 
 ```
+# Print the first and last scrambled dates
+print(dates_scrambled[0])
+print(dates_scrambled[-1])
+
+#####################################################
+
 # Print the first and last scrambled dates
 print(dates_scrambled[0])
 print(dates_scrambled[-1])
@@ -81,7 +100,7 @@ print(dates_ordered[-1])
 
 ```
 
-### Printing dates in a friendly format
+### [Printing dates in a friendly format](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=9)
 
 ```
 # Assign the earliest date to first_date
@@ -95,7 +114,7 @@ print("ISO: " + iso)
 print("US: " + us)
 ```
 
-### Representing dates in different ways
+### [Representing dates in different ways](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=10)
 
 ```
 # Import date
@@ -107,8 +126,24 @@ andrew = date(1992, 8, 26)
 # Print the date in the format 'YYYY-MM'
 print(andrew.strftime("%Y-%m"))
 
+#####################################################
+
+# Import date
+from datetime import date
+
+# Create a date object
+andrew = date(1992, 8, 26)
+
 # Print the date in the format 'MONTH (YYYY)'
 print(andrew.strftime('%B (%Y)'))
+
+#####################################################
+
+# Import date
+from datetime import date
+
+# Create a date object
+andrew = date(1992, 8, 26)
 
 # Print the date in the format 'YYYY-DDD'
 print(andrew.strftime('%Y-%j'))

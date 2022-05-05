@@ -1,9 +1,9 @@
-## Dates and times
+## [Dates and times](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times)
 In this chapter, you are going to move from only working with dates to working with both dates and times: the calendar day AND the time on the clock within that day. 
 
 <br>
 
-### Creating datetimes by hand
+### [Creating datetimes by hand](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=2)
 
 ```
 # Import datetime
@@ -11,6 +11,25 @@ from datetime import datetime
 
 # Create a datetime object
 dt = datetime(2017, 10, 1, 15, 26, 26)
+
+# Print the results in ISO 8601 format
+print(dt.isoformat())
+
+#####################################################
+
+# Import datetime
+from datetime import datetime
+
+# Create a datetime object
+dt = datetime(2017, 12, 31, 15, 19, 13)
+
+# Print the results in ISO 8601 format
+print(dt.isoformat())
+
+#####################################################
+
+# Import datetime
+from datetime import datetime
 
 # Create a datetime object
 dt = datetime(2017, 12, 31, 15, 19, 13)
@@ -22,7 +41,7 @@ dt_old = dt.replace(year=1917)
 print(dt_old)
 ```
 
-#### Counting events before and after noon
+#### [Counting events before and after noon](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=3)
 
 ```
 # Create dictionary to hold results
@@ -42,7 +61,7 @@ print(trip_counts)
 
 ```
 
-### Turning strings into datetimes
+### [Turning strings into datetimes](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=5)
 
 ```
 # Import the datetime class
@@ -59,7 +78,9 @@ d = datetime.strptime(s, fmt)
 
 # Print d
 print(d)
--------------
+
+#####################################################
+
 # Import the datetime class
 from datetime import datetime
 
@@ -74,7 +95,9 @@ d = datetime.strptime(s, fmt)
 
 # Print d
 print(d)
--------------
+
+#####################################################
+
 # # Import the datetime class
 from datetime import datetime
 
@@ -91,7 +114,7 @@ d = datetime.strptime(s, fmt)
 print(d)
 ```
 
-### Parsing pairs of strings as datetimes
+### [Parsing pairs of strings as datetimes](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=6)
 
 ```
 # Write down the format string
@@ -109,7 +132,7 @@ for (start, end) in onebike_datetime_strings:
   onebike_datetimes.append(trip)`
 ```
 
-### Recreating ISO format with strftime()
+### [Recreating ISO format with strftime()](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=7)
 
 ```
 # Import datetime
@@ -126,7 +149,7 @@ print(first_start.isoformat())
 print(first_start.strftime(fmt))
 ```
 
-### Unix timestamps
+### [Unix timestamps](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=8)
 
 ```
 # Import datetime
@@ -146,7 +169,7 @@ for ts in timestamps:
 print(dts)
 ```
 
-### Turning pairs of datetimes into durations
+### [Turning pairs of datetimes into durations](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=10)
 
 ```
 # Initialize a list for all the trip durations
@@ -163,7 +186,7 @@ for trip in onebike_datetimes:
   onebike_durations.append(trip_length_seconds)
 ```
 
-### Average trip time
+### [Average trip time](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=11)
 
 ```
 # What was the total duration of all trips?
@@ -176,7 +199,7 @@ number_of_trips = len(onebike_durations)
 print(total_elapsed_time / number_of_trips)
 ```
 
-### The long and the short of why time is hard
+### [The long and the short of why time is hard](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=12)
 
 ```
 # Calculate shortest and longest trips

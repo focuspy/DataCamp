@@ -1,10 +1,10 @@
-## Time Zones and Daylight Saving
+## [Time Zones and Daylight Saving](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/time-zones-and-daylight-saving)
 
 In this chapter, you'll learn to confidently tackle the time-related topic that causes people the most trouble: time zones and daylight saving. Continuing with our bike data, you'll learn how to compare clocks around the world, how to gracefully handle "spring forward" and "fall back," and how to get up-to-date timezone data from the dateutil library.
 
 <br>
 
-### Creating timezone aware datetimes
+### [Creating timezone aware datetimes](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/time-zones-and-daylight-saving?ex=2)
 
 ```
 # Import datetime, timedelta, timezone
@@ -15,7 +15,9 @@ dt = datetime(2017, 10, 1, 15, 26, 26, tzinfo=timezone.utc)
 
 # Print results
 print(dt.isoformat())
-----
+
+#####################################################
+
 # Import datetime, timedelta, timezone
 from datetime import datetime, timedelta, timezone
 
@@ -27,7 +29,9 @@ dt = datetime(2017, 10, 1, 15, 26, 26, tzinfo=pst)
 
 # Print results
 print(dt.isoformat())
-----
+
+#####################################################
+
 # Import datetime, timedelta, timezone
 from datetime import datetime, timedelta, timezone
 
@@ -41,7 +45,7 @@ dt = datetime(2017, 10, 1, 15, 26, 26, tzinfo=aedt)
 print(dt.isoformat())
 ```
 
-### Setting timezones
+### [Setting timezones](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/time-zones-and-daylight-saving?ex=3)
 
 ```
 # Create a timezone object corresponding to UTC-4
@@ -54,7 +58,7 @@ for trip in onebike_datetimes[:10]:
   trip['end'] = trip['end'].replace(tzinfo=edt)
 ```
 
-### What time did the bike leave in UTC?
+### [What time did the bike leave in UTC?](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/time-zones-and-daylight-saving?ex=4)
 
 ```
 # Loop over the trips
@@ -68,7 +72,7 @@ for trip in onebike_datetimes[:10]:
   print('Original:', trip['start'], '| UTC:', dt.isoformat())
 ```
 
-### Putting the bike trips into the right time zone
+### [Putting the bike trips into the right time zone](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/time-zones-and-daylight-saving?ex=6)
 
 ```
 # Import tz
@@ -84,12 +88,40 @@ for trip in onebike_datetimes[:10]:
   trip['end'] = trip['end'].replace(tzinfo=et)
 ```
 
-### What time did the bike leave? (Global edition)
+### [What time did the bike leave? (Global edition)](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/time-zones-and-daylight-saving?ex=7)
 
 ```
 # Create the timezone object
 uk = tz.gettz('Europe/London')
+
+# Pull out the start of the first trip
+local = onebike_datetimes[0]['start']
+
+# What time was it in the UK?
+notlocal = local.astimezone(uk)
+
+# Print them out and see the difference
+print(local.isoformat())
+print(notlocal.isoformat())
+
+#####################################################
+
+# Create the timezone object
 ist = tz.gettz('Asia/Kolkata')
+
+# Pull out the start of the first trip
+local = onebike_datetimes[0]['start']
+
+# What time was it in India?
+notlocal = local.astimezone(ist)
+
+# Print them out and see the difference
+print(local.isoformat())
+print(notlocal.isoformat())
+
+#####################################################
+
+# Create the timezone object
 sm = tz.gettz('Pacific/Apia')
 
 # Pull out the start of the first trip
@@ -115,6 +147,31 @@ start = datetime(2017, 3, 12, tzinfo = tz.gettz('America/New_York'))
 end = start + timedelta(hours=6)
 print(start.isoformat() + " to " + end.isoformat())
 
+#####################################################
+
+# Import datetime, timedelta, tz, timezone
+from datetime import datetime, timedelta, timezone
+from dateutil import tz
+
+# Start on March 12, 2017, midnight, then add 6 hours
+start = datetime(2017, 3, 12, tzinfo = tz.gettz('America/New_York'))
+end = start + timedelta(hours=6)
+print(start.isoformat() + " to " + end.isoformat())
+
+# How many hours have elapsed?
+print((end - start).total_seconds()/(60*60))
+
+#####################################################
+
+# Import datetime, timedelta, tz, timezone
+from datetime import datetime, timedelta, timezone
+from dateutil import tz
+
+# Start on March 12, 2017, midnight, then add 6 hours
+start = datetime(2017, 3, 12, tzinfo = tz.gettz('America/New_York'))
+end = start + timedelta(hours=6)
+print(start.isoformat() + " to " + end.isoformat())
+
 # How many hours have elapsed?
 print((end - start).total_seconds()/(60*60))
 
@@ -123,7 +180,7 @@ print((end.astimezone(timezone.utc) - start.astimezone(timezone.utc))\
       .total_seconds()/(60*60))
 ```
 
-### March 29, throughout a decade
+### [March 29, throughout a decade](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/time-zones-and-daylight-saving?ex=10)
 
 ```
 # Import datetime and tz
@@ -138,7 +195,7 @@ for y in range(2000, 2011):
   print(dt.replace(year=y).isoformat())
 ```
 
-### Finding ambiguous datetimes
+### [Finding ambiguous datetimes](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/time-zones-and-daylight-saving?ex=12)
 
 ```
 # Loop over trips
@@ -151,7 +208,7 @@ for trip in onebike_datetimes:
     print("Ambiguous end at " + str(trip['end']))
 ```
 
-### Cleaning daylight saving data with fold
+### [Cleaning daylight saving data with fold](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/time-zones-and-daylight-saving?ex=13)
 
 ```
 trip_durations = []
