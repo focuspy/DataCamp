@@ -1,10 +1,10 @@
-## Distributions
+## Distributions(https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions)
 
 In the first chapter, having cleaned and validated your data, you began exploring it by using histograms to visualize distributions. In this chapter, you'll learn how to represent distributions using Probability Mass Functions (PMFs) and Cumulative Distribution Functions (CDFs). You'll learn when to use each of them, and why, while working with a new dataset obtained from the General Social Survey.
 
 <br>
 
-### Make a PMF
+### [Make a PMF](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=2)
 
 ```
 # Compute the PMF for year
@@ -12,6 +12,11 @@ pmf_year = Pmf(gss['year'], normalize=False)
 
 # Print the result
 print(pmf_year)
+
+#####################################################
+
+Q: How many respondents were interviewed in 2016?
+A: 2867
 ```
 
 ### Plot a PMF
