@@ -1,13 +1,12 @@
-## Putting it all together: a case study
+## [Putting it all together: a case study](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study)
 
 Every year for the past 40-plus years, Peter and Rosemary Grant have gone to the Galápagos island of Daphne Major and collected data on Darwin's finches. Using your skills in statistical inference, you will spend this chapter with their data, and witness first hand, through data, evolution in action. It's an exhilarating way to end the course!
 
 <br>
 
-### EDA of beak depths of Darwin's finches
+### [EDA of beak depths of Darwin's finches](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=2)
 
 ```
-
 # Create bee swarm plot
 _ = sns.swarmplot(x='year', y='beak_depth', data=df)
 
@@ -19,10 +18,9 @@ _ = plt.ylabel('beak depth (mm)')
 plt.show()
 ```
 
-### ECDFs of beak depths
+### [ECDFs of beak depths](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=3)
 
 ```
-
 # Compute ECDFs
 x_1975, y_1975 = ecdf(bd_1975)
 x_2012, y_2012 = ecdf(bd_2012)
@@ -43,10 +41,9 @@ _ = plt.legend(('1975', '2012'), loc='lower right')
 plt.show()
 ```
 
-### Parameter estimates of beak depths
+### [Parameter estimates of beak depths](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=4)
 
 ```
-
 # Compute the difference of the sample means: mean_diff
 mean_diff = np.mean(bd_2012) - np.mean(bd_1975)
 
@@ -65,10 +62,9 @@ print('difference of means =', mean_diff, 'mm')
 print('95% confidence interval =', conf_int, 'mm')
 ```
 
-### Hypothesis test: Are beaks deeper in 2012?
+### [Hypothesis test: Are beaks deeper in 2012?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=5)
 
 ```
-
 # Compute mean of combined data set: combined_mean
 combined_mean = np.mean(np.concatenate((bd_1975, bd_2012)))
 
@@ -90,10 +86,9 @@ p = np.sum(bs_diff_replicates >= mean_diff) / len(bs_diff_replicates)
 print('p =', p)
 ```
 
-### EDA of beak length and depth
+### [EDA of beak length and depth](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=7)
 
 ```
-
 # Make scatter plot of 1975 data
 _ = plt.plot(bl_1975, bd_1975, marker='.',
              linestyle='none', color='blue', alpha=0.5)
@@ -111,10 +106,9 @@ _ = plt.legend(('1975', '2012'), loc='upper left')
 plt.show()
 ```
 
-### Linear regressions
+### [Linear regressions](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=8)
 
 ```
-
 # Compute the linear regressions
 slope_1975, intercept_1975 = np.polyfit(bl_1975, bd_1975, 1)
 slope_2012, intercept_2012 = np.polyfit(bl_2012, bd_2012, 1)
@@ -144,10 +138,9 @@ print('2012: intercept =', intercept_2012,
       'conf int =', intercept_conf_int_2012)
 ```
 
-### Displaying the linear regression results
+### [Displaying the linear regression results](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=9)
 
 ```
-
 # Make scatter plot of 1975 data
 _ = plt.plot(bl_1975, bd_1975, marker='.',
              linestyle='none', color='blue', alpha=0.5)
@@ -175,10 +168,9 @@ for i in range(100):
 plt.show()
 ```
 
-### Beak length to depth ratio
+### [Beak length to depth ratio](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=10)
 
 ```
-
 # Compute length-to-depth ratios
 ratio_1975 = bl_1975 / bd_1975
 ratio_2012 = bl_2012 / bd_2012
@@ -202,10 +194,16 @@ print('2012: mean ratio =', mean_ratio_2012,
       'conf int =', conf_int_2012)
 ```
 
-### EDA of heritability
+### [How different is the ratio?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=11)
 
 ```
+Q: The results of that calculation are shown graphically in the plot accompanying this problem. In addition to these results, what would you say about the ratio of beak length to depth?
+A: The mean beak length-to-depth ratio decreased by about 0.1, or 7%, from 1975 to 2012. The 99% confidence intervals are not even close to overlapping, so this is a real change. The beak shape changed.
+```
 
+### [EDA of heritability](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=13)
+
+```
 # Make scatter plots
 _ = plt.plot(bd_parent_fortis, bd_offspring_fortis,
              marker='.', linestyle='none', color='blue', alpha=0.5)
@@ -226,10 +224,9 @@ _ = plt.legend(('G. fortis', 'G. scandens'), loc='lower right')
 plt.show()
 ```
 
-### Correlation of offspring and parental data
+### [Correlation of offspring and parental data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=14)
 
 ```
-
 def draw_bs_pairs(x, y, func, size=1):
     """Perform pairs bootstrap for single statistic."""
 
@@ -248,10 +245,9 @@ def draw_bs_pairs(x, y, func, size=1):
     return bs_replicates
 ```
 
-### Pearson correlation of offspring and parental data
+### [Pearson correlation of offspring and parental data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=15)
 
 ```
-
 # Compute the Pearson correlation coefficients
 r_scandens = pearson_r(bd_parent_scandens, bd_offspring_scandens)
 r_fortis = pearson_r(bd_parent_fortis, bd_offspring_fortis)
@@ -271,10 +267,9 @@ print('G. scandens:', r_scandens, conf_int_scandens)
 print('G. fortis:', r_fortis, conf_int_fortis)
 ```
 
-### Measuring heritability
+### [Measuring heritability](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=16)
 
 ```
-
 def heritability(parents, offspring):
     """Compute the heritability from parent and offspring samples."""
     covariance_matrix = np.cov(parents, offspring)
@@ -301,10 +296,9 @@ print('G. scandens:', heritability_scandens, conf_int_scandens)
 print('G. fortis:', heritability_fortis, conf_int_fortis)
 ```
 
-### Is beak depth heritable at all in G. scandens?
+### [Is beak depth heritable at all in G. scandens?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/putting-it-all-together-a-case-study?ex=17)
 
 ```
-
 # Initialize array of replicates: perm_replicates
 perm_replicates = np.empty(10000)
 

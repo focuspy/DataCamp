@@ -1,10 +1,24 @@
-## Bootstrap confidence intervals
+## [Bootstrap confidence intervals](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals)
 
 To "pull yourself up by your bootstraps" is a classic idiom meaning that you achieve a difficult task by yourself with no help at all. In statistical inference, you want to know what would happen if you could repeat your data acquisition an infinite number of times. This task is impossible, but can we use only the data we actually have to get close to the same result as an infinitude of experiments? The answer is yes! The technique to do it is aptly called bootstrapping. This chapter will introduce you to this extraordinarily powerful tool.
 
 <br>
 
-### Visualizing bootstrap samples
+### [Getting the terminology down](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=2)
+
+```
+Q: What is a bootstrap replicate?
+A: A single value of a statistic computed from a bootstrap sample.
+```
+
+### [Bootstrapping by hand](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=3)
+
+```
+Q: How many unique bootstrap samples can be drawn (e.g., [-1, 0, 1] and [1, 0, -1] are unique), and what is the maximum mean you can get from a bootstrap sample?
+A: There are 27 unique samples, and the maximum mean is 1.
+```
+
+### [Visualizing bootstrap samples](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=4)
 
 ```
 for _ in range(50):
@@ -29,7 +43,7 @@ _ = plt.ylabel('ECDF')
 plt.show()
 ```
 
-## Generating many bootstrap replicates
+## [Generating many bootstrap replicates](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=6)
 
 ```
 def draw_bs_reps(data, func, size=1):
@@ -45,10 +59,9 @@ def draw_bs_reps(data, func, size=1):
     return bs_replicates
 ```
 
-## Bootstrap replicates of the mean and the SEM
+## [Bootstrap replicates of the mean and the SEM](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=7)
 
 ```
-
 # Take 10,000 bootstrap replicates of the mean: bs_replicates
 bs_replicates = draw_bs_reps(rainfall, np.mean, 10000)
 
@@ -69,10 +82,16 @@ _ = plt.ylabel('PDF')
 plt.show()
 ```
 
-## Bootstrap replicates of other statistics
+## [Confidence intervals of rainfall data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=8)
 
 ```
+Q: What is the 95% confidence interval?
+A: (780, 821) mm/year
+```
 
+## [Bootstrap replicates of other statistics](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=9)
+
+```
 # Generate 10,000 bootstrap replicates of the variance: bs_replicates
 bs_replicates = draw_bs_reps(rainfall, np.var, 10000)
 
@@ -88,10 +107,9 @@ _ = plt.ylabel('PDF')
 plt.show()
 ```
 
-## Confidence interval on the rate of no-hitters
+## [Confidence interval on the rate of no-hitters](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=10)
 
 ```
-
 # Draw bootstrap replicates of the mean no-hitter time (equal to tau): bs_replicates
 bs_replicates = draw_bs_reps(nohitter_times, np.mean, 10000)
 
@@ -110,7 +128,7 @@ _ = plt.ylabel('PDF')
 plt.show()
 ```
 
-## A function to do pairs bootstrap
+## [A function to do pairs bootstrap](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=12)
 
 ```
 def draw_bs_pairs_linreg(x, y, size=1):
@@ -132,10 +150,9 @@ def draw_bs_pairs_linreg(x, y, size=1):
     return bs_slope_reps, bs_intercept_reps
 ```
 
-## Pairs bootstrap of literacy/fertility data
+## [Pairs bootstrap of literacy/fertility data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=13)
 
 ```
-
 # Generate replicates of slope and intercept using pairs bootstrap
 bs_slope_reps, bs_intercept_reps = draw_bs_pairs_linreg(illiteracy, fertility, 1000)
 
@@ -150,10 +167,9 @@ plt.show()
 
 ```
 
-## Plotting bootstrap regressions
+## [Plotting bootstrap regressions](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=14)
 
 ```
-
 # Generate array of x-values for bootstrap lines: x
 x = np.array([0, 100])
 

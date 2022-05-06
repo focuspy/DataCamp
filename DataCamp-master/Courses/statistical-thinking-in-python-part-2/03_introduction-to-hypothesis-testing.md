@@ -1,13 +1,12 @@
-## Introduction to hypothesis testing
+## [Introduction to hypothesis testing](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing)
 
 You now know how to define and estimate parameters given a model. But the question remains: how reasonable is it to observe your data if a model is true? This question is addressed by hypothesis tests. They are the icing on the inference cake. After completing this chapter, you will be able to carefully construct and test hypotheses using hacker statistics.
 
 <br>
 
-### Generating a permutation sample
+### [Generating a permutation sample](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=2)
 
 ```
-
 def permutation_sample(data1, data2):
     """Generate a permutation sample from two data sets."""
 
@@ -24,10 +23,9 @@ def permutation_sample(data1, data2):
     return perm_sample_1, perm_sample_2
 ```
 
-### Visualizing permutation sampling
+### [Visualizing permutation sampling](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=3)
 
 ```
-
 for _ in range(50):
     # Generate permutation samples
     perm_sample_1, perm_sample_2 = permutation_sample(rain_june, rain_november)
@@ -56,10 +54,23 @@ _ = plt.ylabel('ECDF')
 plt.show()
 ```
 
-### Generating permutation replicates
+### [Test statistics](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=5)
 
 ```
+Q: When performing hypothesis tests, your choice of test statistic should be:
+A: be pertinent to the question you are seeking to answer in your hypothesis test.
+```
 
+### [What is a p-value?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=6)
+
+```
+Q: The p-value is generally a measure of:
+A: the probability of observing a test statistic equally or more extreme than the one you observed, given that the null hypothesis is true.
+```
+
+### [Generating permutation replicates](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=7)
+
+```
 def draw_perm_reps(data_1, data_2, func, size=1):
     """Generate multiple permutation replicates."""
 
@@ -76,10 +87,9 @@ def draw_perm_reps(data_1, data_2, func, size=1):
     return perm_replicates
 ```
 
-### Look before you leap: EDA before hypothesis testing
+### [Look before you leap: EDA before hypothesis testing](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=8)
 
 ```
-
 # Make bee swarm plot
 _ = sns.swarmplot(x=df.ID, y= df.impact_force, data = df)
 
@@ -91,10 +101,9 @@ _ = plt.ylabel('impact force (N)')
 plt.show()
 ```
 
-### Permutation test on frog data
+### [Permutation test on frog data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=9)
 
 ```
-
 def diff_of_means(data_1, data_2):
     """Difference in means of two arrays."""
 
@@ -117,10 +126,9 @@ p = np.sum(perm_replicates >= empirical_diff_means) / len(perm_replicates)
 print('p-value =', p)
 ```
 
-### A one-sample bootstrap hypothesis test
+### [A one-sample bootstrap hypothesis test](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=11)
 
 ```
-
 # Make an array of translated impact forces: translated_force_b
 translated_force_b = force_b - np.mean(force_b) + 0.55
 
@@ -134,10 +142,9 @@ p = np.sum(bs_replicates <= np.mean(force_b)) / 10000
 print('p = ', p)
 ```
 
-### A two-sample bootstrap hypothesis test for difference of means
+### [A two-sample bootstrap hypothesis test for difference of means](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=12)
 
 ```
-
 # Compute mean of all forces: mean_force
 mean_force = np.mean(forces_concat)
 
