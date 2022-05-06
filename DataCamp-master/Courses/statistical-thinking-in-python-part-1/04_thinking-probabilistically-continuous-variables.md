@@ -1,4 +1,4 @@
-# Thinking Probabilistically-- Continuous Variables
+# [Thinking Probabilistically-- Continuous Variables](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables)
 
 It’s time to move onto continuous variables, such as those that can take on any fractional value. Many of the principles are the same, but there are some subtleties. At the end of this final chapter, you will be speaking the probabilistic language you need to launch into the inference techniques covered in the sequel to this course.
 
