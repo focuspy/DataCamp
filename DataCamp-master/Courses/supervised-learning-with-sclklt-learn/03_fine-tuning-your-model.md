@@ -4,7 +4,7 @@ Having trained your model, your next task is to evaluate its performance. In thi
 
 <br>
 
-## [Metrics for classification](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=2)
+### [Metrics for classification](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=2)
 
 ```
 # Import necessary modules
@@ -28,7 +28,7 @@ print(confusion_matrix(y_test, y_pred))
 print(classification_report(y_test, y_pred))
 ```
 
-## [# Building a logistic regression model](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=4)
+### [# Building a logistic regression model](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=4)
 
 ```
 # Import the necessary modules
@@ -52,7 +52,7 @@ print(confusion_matrix(y_test, y_pred))
 print(classification_report(y_test, y_pred))
 ```
 
-## [Plotting an ROC curve](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=5)
+### [Plotting an ROC curve](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=5)
 
 ```
 # Import necessary modules
@@ -73,7 +73,14 @@ plt.title('ROC Curve')
 plt.show()
 ```
 
-## [AUC computation](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=8)
+### [Precision-recall Curve](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=6)
+
+```
+Q: Choose the one statement that is not true. Note that here, the class is positive (1) if the individual has diabetes.
+A: Precision and recall take true negatives into consideration.
+```
+
+### [AUC computation](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=8)
 
 ```
 from sklearn.model_selection import cross_val_score
@@ -94,7 +101,7 @@ cv_auc = cross_val_score(logreg, X, y, cv=5, scoring='roc_auc')
 print("AUC scores computed using 5-fold cross-validation: {}".format(cv_auc))
 ```
 
-## [Hyperparameter tuning with GridSearchCV](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=10)
+### [Hyperparameter tuning with GridSearchCV](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=10)
 
 ```
 # Import necessary modules
@@ -119,7 +126,7 @@ print("Tuned Logistic Regression Parameters: {}".format(logreg_cv.best_params_))
 print("Best score is {}".format(logreg_cv.best_score_))
 ```
 
-## [Hyperparameter tuning with RandomizedSearchCV](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=11)
+### [Hyperparameter tuning with RandomizedSearchCV](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=11)
 
 ```
 from scipy.stats import randint
@@ -146,7 +153,14 @@ print("Tuned Decision Tree Parameters: {}".format(tree_cv.best_params_))
 print("Best score is {}".format(tree_cv.best_score_))
 ```
 
-## [Hold-out set in practice I: Classification](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=14)
+### [Hold-out set reasoning](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=13)
+
+```
+Q: For which of the following reasons would you want to use a hold-out set for the very end?
+A: You want to be absolutely certain about your model's ability to generalize to unseen data.
+```
+
+### [Hold-out set in practice I: Classification](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=14)
 
 ```
 # Import necessary modules
@@ -175,7 +189,7 @@ print("Tuned Logistic Regression Parameter: {}".format(logreg_cv.best_params_))
 print("Tuned Logistic Regression Accuracy: {}".format(logreg_cv.best_score_))
 ```
 
-## [Hold-out set in practice II: Regression](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=15)
+### [Hold-out set in practice II: Regression](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=15)
 
 ```
 # Import necessary modules

@@ -4,7 +4,7 @@ This chapter introduces pipelines, and how scikit-learn allows for transformers 
 
 <br>
 
-## [Exploring categorical features](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=2)
+### [Exploring categorical features](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=2)
 
 ```
 # Import pandas
@@ -20,7 +20,7 @@ df.boxplot('life', 'Region', rot=60)
 plt.show()
 ```
 
-## [Creating dummy variables](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=3)
+### [Creating dummy variables](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=3)
 
 ```
 # Create dummy variables: df_region
@@ -36,7 +36,7 @@ df_region = pd.get_dummies(df, drop_first=True)
 print(df_region.columns)
 ```
 
-## [Regression with categorical features](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=4)
+### [Regression with categorical features](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=4)
 
 ```
 # Import necessary modules
@@ -53,7 +53,7 @@ ridge_cv = cross_val_score(ridge, X, y, cv=5)
 print(ridge_cv)
 ```
 
-## [Dropping missing data](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=6)
+### [Dropping missing data](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=6)
 
 ```
 # Convert '?' to NaN
@@ -72,7 +72,7 @@ df = df.dropna()
 print("Shape of DataFrame After Dropping All Rows with Missing Values: {}".format(df.shape))
 ```
 
-## [Imputing missing data in a ML Pipeline I](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=7)
+### [Imputing missing data in a ML Pipeline I](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=7)
 
 ```
 # Import the Imputer module
@@ -90,7 +90,7 @@ steps = [('imputation', imp),
         ('SVM', clf)]
 ```
 
-## [Imputing missing data in a ML Pipeline II](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=8)
+### [Imputing missing data in a ML Pipeline II](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=8)
 
 ```
 # Import necessary modules
@@ -118,7 +118,7 @@ y_pred = pipeline.predict(X_test)
 print(classification_report(y_test, y_pred))
 ```
 
-## [Centering and scaling your data](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=10)
+### [Centering and scaling your data](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=10)
 
 ```
 # Import scale
@@ -136,7 +136,7 @@ print("Mean of Scaled Features: {}".format(np.mean(X_scaled)))
 print("Standard Deviation of Scaled Features: {}".format(np.std(X_scaled)))
 ```
 
-## [Centering and scaling in a pipeline](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=11)
+### [Centering and scaling in a pipeline](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=11)
 
 ```
 # Import the necessary modules
@@ -164,7 +164,7 @@ print('Accuracy with Scaling: {}'.format(knn_scaled.score(X_test, y_test)))
 print('Accuracy without Scaling: {}'.format(knn_unscaled.score(X_test, y_test)))
 ```
 
-## [Bringing it all together I: Pipeline for classification](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=12)
+### [Bringing it all together I: Pipeline for classification](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=12)
 
 ```
 # Setup the pipeline
@@ -195,7 +195,7 @@ print(classification_report(y_test, y_pred))
 print("Tuned Model Parameters: {}".format(cv.best_params_))
 ```
 
-## [Bringing it all together II: Pipeline for regression](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=13)
+### [Bringing it all together II: Pipeline for regression](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=13)
 
 ```
 # Setup the pipeline steps: steps

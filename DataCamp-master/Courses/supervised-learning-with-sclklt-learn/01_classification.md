@@ -4,6 +4,27 @@ In this chapter, you will be introduced to classification problems and learn how
 
 <br>
 
+### [Which of these is a classification problem?](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=2)
+
+```
+Q: Which of these is a classification problem?
+A: Using labeled financial data to predict whether the value of a stock will go up or go down next week.
+```
+
+### [Numerical EDA](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=4)
+
+```
+Q: Get started with your EDA now by exploring this voting records dataset numerically. It has been pre-loaded for you into a DataFrame called df. Use pandas' .head(), .info(), and .describe() methods in the IPython Shell to explore the DataFrame, and select the statement below that is not true.
+A: There are 17 predictor variables, or features, in this DataFrame.
+```
+
+### [Visual EDA](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=5)
+
+```
+Q: Of these two bills, for which ones do Democrats vote resoundingly in favor of, compared to Republicans? 
+A: Both 'satellite' and 'missile'.
+```
+
 ### [k-Nearest Neighbors: Fit](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=7)
 
 ```

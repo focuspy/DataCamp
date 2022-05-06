@@ -4,6 +4,13 @@ In the previous chapter, you used image and political datasets to predict binary
 
 <br>
 
+### [Which of the following is a regression problem?](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=2)
+
+```
+Q: Given below are four example applications of machine learning. Your job is to pick the one that is best framed as a regression problem.
+A: A bike share company using time and weather data to predict the number of bikes being rented at any given hour.
+```
+
 ### [Importing data for supervised learning](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=3)
 
 ```
@@ -29,6 +36,13 @@ X_reshaped = X.reshape(-1, 1)
 # Print the dimensions of y_reshaped and X_reshaped
 print("Dimensions of y after reshaping: ", y_reshaped.shape)
 print("Dimensions of X after reshaping: ", X_reshaped.shape)
+```
+
+### [Exploring the Gapminder data](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=4)
+
+```
+Q: Which features are positively correlated with life, and which ones are negatively correlated? Does this match your intuition? 
+A: fertility is of type int64.
 ```
 
 ### [Fit & predict for regression](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=6)
@@ -121,7 +135,7 @@ cvscores_10 = cross_val_score(reg, X, y, cv = 10)
 print(np.mean(cvscores_10))
 ```
 
-## [Regularization I: Lasso](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=12)
+### [Regularization I: Lasso](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=12)
 
 ```
 # Import Lasso
@@ -146,7 +160,7 @@ plt.margins(0.02)
 plt.show()
 ```
 
-## [Regularization II: Ridge](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=13)
+### [Regularization II: Ridge](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=13)
 
 ```
 from sklearn.linear_model import Ridge
