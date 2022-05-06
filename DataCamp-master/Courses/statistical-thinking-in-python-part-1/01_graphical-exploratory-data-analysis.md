@@ -1,10 +1,24 @@
-## Graphical Exploratory Data Analysis
+## [Graphical Exploratory Data Analysis](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis)
 
 Before diving into sophisticated statistical inference techniques, you should first explore your data by plotting them and computing simple summary statistics. This process, called exploratory data analysis, is a crucial first step in statistical analysis of data.
 
 <br>
 
-### Plotting a histogram of iris data
+### [Tukey's comments on EDA](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=2)
+
+```
+Q: Which of the following quotes is not directly from Tukey?
+A: Often times EDA is too time consuming, so it is better to jump right in and do your hypothesis tests.
+```
+
+### [Advantages of graphical EDA](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=3)
+
+```
+Q: Which of the following is not true of graphical EDA?
+A: A nice looking plot is always the end goal of a statistical analysis.
+```
+
+### [Plotting a histogram of iris data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=5)
 
 ```
 # Import plotting modules
@@ -20,7 +34,8 @@ _ = plt.hist(versicolor_petal_length)
 # Show histogram
 plt.show()
 ```
-### Axis labels
+
+### [Axis labels](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=6)
 
 ```
 # Plot histogram of versicolor petal lengths
@@ -35,7 +50,7 @@ _ = plt.ylabel('count')
 plt.show()
 ```
 
-### Adjusting the number of bins in a histogram
+### [Adjusting the number of bins in a histogram](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=7)
 
 ```
 # Import numpy
@@ -61,7 +76,7 @@ _ = plt.ylabel('count')
 plt.show()
 ```
 
-### Bee swarm plot
+### [Bee swarm plot](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=9)
 
 ```
 # Create bee swarm plot with Seaborn's default settings
@@ -76,7 +91,14 @@ _ = plt.ylabel('petal length (cm)')
 plt.show()
 ```
 
-### Computing the ECDF
+### [Interpreting a bee swarm plot](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=10)
+
+```
+Q: Which of the following conclusions could you draw from the bee swarm plot of iris petal lengths you generated in the previous exercise? 
+A: I. virginica petals tend to be the longest, and I. setosa petals tend to be the shortest of the three species.
+```
+
+### [Computing the ECDF](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=12)
 
 ```
 def ecdf(data):
@@ -93,7 +115,7 @@ def ecdf(data):
     return x, y
 ```
 
-### Plotting the ECDF
+### [Plotting the ECDF](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=13)
 
 ```
 # Compute ECDF for versicolor data: x_vers, y_vers
@@ -110,7 +132,7 @@ _ = plt.ylabel('ECDF')
 plt.show()
 ```
 
-### Comparison of ECDFs
+### [Comparison of ECDFs](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=14)
 
 ```
 # Compute ECDFs

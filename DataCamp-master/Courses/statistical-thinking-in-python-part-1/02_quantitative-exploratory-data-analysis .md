@@ -4,7 +4,14 @@ In this chapter, you will compute useful summary statistics, which serve to conc
 
 <br>
 
-### Computing means
+### [Means and medians](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=2)
+
+```
+Q: Which one of the following statements is true about means and medians?
+A: An outlier can significantly affect the value of the mean, but not the median.
+```
+
+### [Computing means](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=3)
 
 ```
 # Compute the mean: mean_length_vers
@@ -14,7 +21,7 @@ mean_length_vers = np.mean(versicolor_petal_length)
 print('I. versicolor:', mean_length_vers, 'cm')
 ```
 
-### Computing percentiles
+### [Computing percentiles](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=5)
 
 ```
 # Specify array of percentiles: percentiles
@@ -27,7 +34,7 @@ ptiles_vers = np.percentile(versicolor_petal_length, percentiles)
 print(ptiles_vers)
 ```
 
-### Comparing percentiles to ECDF
+### [Comparing percentiles to ECDF](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=6)
 
 ```
 # Plot the ECDF
@@ -43,7 +50,7 @@ _ = plt.plot(ptiles_vers, percentiles/100, marker='D', color='red',
 plt.show()
 ```
 
-### Box-and-whisker plot
+### [Box-and-whisker plot](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=7)
 
 ```
 # Create box plot with Seaborn's default settings
@@ -58,7 +65,7 @@ _ = plt.ylabel('petal length (cm)')
 plt.show()
 ```
 
-### Computing the variance
+### [Computing the variance](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=9)
 
 ```
 # Array of differences to mean: differences
@@ -77,7 +84,7 @@ variance_np = np.var(versicolor_petal_length)
 print(variance_explicit, variance_np)
 ```
 
-### The standard deviation and the variance
+### [The standard deviation and the variance](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=10)
 
 ```
 # Compute the variance: variance
@@ -90,7 +97,7 @@ print(np.sqrt(variance))
 print(np.std(versicolor_petal_length))
 ```
 
-### Scatter plots
+### [Scatter plots](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=12)
 
 ```
 # Make a scatter plot
@@ -104,7 +111,14 @@ _ = plt.ylabel('petal width')
 plt.show()
 ```
 
-### Computing the covariance
+### [Variance and covariance by looking](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=13)
+
+```
+Q: Which has, respectively, the highest variance in the variable, the highest covariance and negative covariance?
+A: d, c, b
+```
+
+### [Computing the covariance](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=14)
 
 ```
 # Compute the covariance matrix: covariance_matrix
@@ -122,7 +136,7 @@ print(covariance_matrix)
 print(petal_cov)
 ```
 
-### Computing the Pearson correlation coefficient
+### [Computing the Pearson correlation coefficient](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis?ex=15)
 
 ```
 def pearson_r(x, y):
