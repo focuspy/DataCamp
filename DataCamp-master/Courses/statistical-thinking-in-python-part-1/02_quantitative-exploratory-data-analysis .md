@@ -1,4 +1,4 @@
-## Quantitative Exploratory Data Analysis
+## [Quantitative Exploratory Data Analysis](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/quantitative-exploratory-data-analysis)
 
 In this chapter, you will compute useful summary statistics, which serve to concisely describe salient features of a dataset with a few numbers.
 
