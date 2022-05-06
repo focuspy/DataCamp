@@ -7,7 +7,6 @@ In this chapter, you will be introduced to classification problems and learn how
 ### [k-Nearest Neighbors: Fit](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=7)
 
 ```
-
 # Import KNeighborsClassifier from sklearn.neighbors
 from sklearn.neighbors import KNeighborsClassifier 
 
@@ -25,7 +24,6 @@ knn.fit(X, y)
 ### [k-Nearest Neighbors: Fit](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=8)
 
 ```
-
 # Import KNeighborsClassifier from sklearn.neighbors
 from sklearn.neighbors import KNeighborsClassifier 
 
@@ -50,7 +48,6 @@ print("Prediction: {}".format(new_prediction))
 ### [The digits recognition dataset](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=10)
 
 ```
-
 # Import necessary modules
 from sklearn import datasets
 import matplotlib.pyplot as plt
@@ -74,7 +71,6 @@ plt.show()
 ### [Train/Test Split + Fit/Predict/Accuracy](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=11)
 
 ```
-
 # Import necessary modules
 from sklearn.neighbors import KNeighborsClassifier 
 from sklearn.model_selection import train_test_split
@@ -99,7 +95,6 @@ print(knn.score(X_test, y_test))
 ### [Overfitting and underfitting](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=12)
 
 ```
-
 # Setup arrays to store train and test accuracies
 neighbors = np.arange(1, 9)
 train_accuracy = np.empty(len(neighbors))
