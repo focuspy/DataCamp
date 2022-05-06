@@ -1,10 +1,10 @@
-## Relationships
+## [Relationships](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships)
 
 Up until this point, you've only looked at one variable at a time. In this chapter, you'll explore relationships between variables two at a time, using scatter plots and other visualizations to extract insights from a new dataset obtained from the Behavioral Risk Factor Surveillance Survey (BRFSS). You'll also learn how to quantify those relationships using correlation and simple regression.
 
 <br>
 
-### PMF of age
+### [PMF of age](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=2)
 
 ```
 # Extract AGE
@@ -20,7 +20,7 @@ plt.ylabel('PMF')
 plt.show()
 ```
 
-### Scatter plot
+### [Scatter plot](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=3)
 
 ```
 # Select the first 1000 respondents
@@ -39,7 +39,7 @@ plt.ylabel('Weight in kg')
 plt.show()
 ```
 
-### Jittering
+### [Jittering](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=4)
 
 ```
 # Select the first 1000 respondents
@@ -58,7 +58,7 @@ plt.ylabel('Weight in kg')
 plt.show()
 ```
 
-### Height and weight
+### [Height and weight](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=6)
 
 ```
 # Drop rows with missing data
@@ -77,7 +77,7 @@ plt.ylabel('Weight in kg')
 plt.show()
 ```
 
-### Distribution of income
+### [Distribution of income](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=7)
 
 ```
 # Extract income
@@ -92,7 +92,7 @@ plt.ylabel('PMF')
 plt.show()
 ```
 
-### Income and height
+### [Income and height](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=8)
 
 ```
 # Drop rows with missing data
@@ -108,7 +108,7 @@ plt.ylabel('Height in cm')
 plt.show()
 ```
 
-### Computing correlations
+### [Computing correlations](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=10)
 
 ```
 # Select columns
@@ -119,7 +119,14 @@ subset = brfss[columns]
 print(subset.corr())
 ```
 
-### Income and vegetables
+### [Interpreting correlations](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=11)
+
+```
+Q: Which of the following are correct interpretations of these results
+A: A and D only.
+```
+
+### [Income and vegetables](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=13)
 
 ```
 from scipy.stats import linregress
@@ -134,7 +141,7 @@ res = linregress(xs,ys)
 print(res)
 ```
 
-### Fit a line
+### [Fit a line](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=14)
 
 ```
 # Plot the scatter plot

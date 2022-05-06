@@ -50,9 +50,22 @@ plt.ylabel('PMF')
 plt.show()
 ```
 
-### Make a CDF
+### [Make a CDF](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=5)
 
 ```
+# Select the age column
+age = gss['age']
+
+#####################################################
+
+# Select the age column
+age = gss['age']
+
+# Compute the CDF of age
+cdf_age = Cdf(age)
+
+#####################################################
+
 # Select the age column
 age = gss['age']
 
@@ -61,11 +74,29 @@ cdf_age = Cdf(age)
 
 # Calculate the CDF of 30
 print(cdf_age(30))
+
+#####################################################
+
+Q: What fraction of the respondents in the GSS dataset are OLDER than 30?
+A: Approximately 75%
 ```
 
-### Compute IQR
+### [Compute IQR](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=6)
 
 ```
+# Calculate the 75th percentile 
+percentile_75th = cdf_income.inverse(0.75)
+
+#####################################################
+
+# Calculate the 75th percentile 
+percentile_75th = cdf_income.inverse(0.75)
+
+# Calculate the 25th percentile
+percentile_25th = cdf_income.inverse(0.25)
+
+#####################################################
+
 # Calculate the 75th percentile 
 percentile_75th = cdf_income.inverse(0.75)
 
@@ -77,9 +108,14 @@ iqr = percentile_75th - percentile_25th
 
 # Print the interquartile range
 print(iqr)
+
+#####################################################
+
+Q: What is the interquartile range (IQR) of income in the GSS dataset?
+A: Approximately 29676
 ```
 
-### Plot a CDF
+### [Plot a CDF](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=7)
 
 ```
 # Select realinc
@@ -97,7 +133,14 @@ plt.ylabel('CDF')
 plt.show()
 ```
 
-### Extract education levels
+### [Distribution of education](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=9)
+
+```
+Q: What fraction of respondents report that they have 12 years of education or fewer?
+A: Approximately 53%
+```
+
+### [Extract education levels](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=10)
 
 ```
 # Select educ
@@ -114,7 +157,7 @@ high = (educ <= 12)
 print(high.mean())
 ```
 
-### Plot income CDFs
+### [Plot income CDFs](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=11)
 
 ```
 income = gss['realinc']
@@ -131,7 +174,7 @@ plt.legend()
 plt.show()
 ```
 
-### Distribution of income
+### [Distribution of income](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=13)
 
 ```
 # Extract realinc and compute its log
@@ -148,7 +191,7 @@ from scipy.stats import norm
 dist = norm(mean,std)
 ```
 
-### Comparing CDFs
+### [Comparing CDFs](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=14)
 
 ```
 # Evaluate the model CDF
@@ -168,7 +211,7 @@ plt.ylabel('CDF')
 plt.show()
 ```
 
-### Comparing PDFs
+### [Comparing PDFs](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=15)
 
 ```
 # Evaluate the normal PDF

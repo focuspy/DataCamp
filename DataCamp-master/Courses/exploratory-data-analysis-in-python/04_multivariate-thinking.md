@@ -1,10 +1,17 @@
-## Multivariate Thinking
+## [Multivariate Thinking](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/multivariate-thinking)
 
 Explore multivariate relationships using multiple regression to describe non-linear relationships and logistic regression to explain and predict binary variables.
 
 <br>
 
-### Using StatsModels
+### [Regression and causation](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/multivariate-thinking?ex=2)
+
+```
+Q: Which of the following conclusions can we draw from this data?
+A: None of them.
+```
+
+### [Using StatsModels](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/multivariate-thinking?ex=3)
 
 ```
 from scipy.stats import linregress
@@ -22,7 +29,7 @@ results = smf.ols('_VEGESU1 ~ INCOME2', data=brfss).fit()
 print(results.params)
 ```
 
-### Plot income and education
+### [Plot income and education](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/multivariate-thinking?ex=5)
 
 ```
 # Group by educ
@@ -41,7 +48,7 @@ plt.ylabel('Income (1986 $)')
 plt.show()
 ```
 
-### Non-linear model of education
+### [Non-linear model of education](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/multivariate-thinking?ex=6)
 
 ```
 import statsmodels.formula.api as smf
@@ -56,7 +63,7 @@ results = smf.ols('realinc ~ educ + educ2 + age + age2', data=gss).fit()
 print(results.params)
 ```
 
-### Making predictions
+### [Making predictions](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/multivariate-thinking?ex=8)
 
 ```
 # Run a regression model with educ, educ2, age, and age2
@@ -74,7 +81,7 @@ pred = results.predict(df)
 print(pred.head())
 ```
 
-### Visualizing predictions
+### [Visualizing predictions](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/multivariate-thinking?ex=9)
 
 ```
 
@@ -95,9 +102,61 @@ plt.legend()
 plt.show()
 ```
 
-### Predicting a binary variable
+### [Predicting a binary variable](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/multivariate-thinking?ex=11)
 
 ```
+# Recode grass
+gss['grass'].replace(2, 0, inplace=True)
+
+# Run logistic regression
+results = smf.logit('grass ~ age + age2 + educ + educ2 + C(sex)', data=gss).fit()
+results.params
+
+#####################################################
+
+# Recode grass
+gss['grass'].replace(2, 0, inplace=True)
+
+# Run logistic regression
+results = smf.logit('grass ~ age + age2 + educ + educ2 + C(sex)', data=gss).fit()
+results.params
+
+# Make a DataFrame with a range of ages
+df = pd.DataFrame()
+df['age'] = np.linspace(18, 89)
+df['age2'] = df['age']**2
+
+# Set the education level to 12
+df['educ'] = 12
+df['educ2'] = df['educ']**2
+
+#####################################################
+
+# Recode grass
+gss['grass'].replace(2, 0, inplace=True)
+
+# Run logistic regression
+results = smf.logit('grass ~ age + age2 + educ + educ2 + C(sex)', data=gss).fit()
+results.params
+
+# Make a DataFrame with a range of ages
+df = pd.DataFrame()
+df['age'] = np.linspace(18, 89)
+df['age2'] = df['age']**2
+
+# Set the education level to 12
+df['educ'] = 12
+df['educ2'] = df['educ']**2
+
+# Generate predictions for men and women
+df['sex'] = 1
+pred1 = results.predict(df)
+
+df['sex'] = 2
+pred2 = results.predict(df)
+
+#####################################################
+
 # Recode grass
 gss['grass'].replace(2, 0, inplace=True)
 
