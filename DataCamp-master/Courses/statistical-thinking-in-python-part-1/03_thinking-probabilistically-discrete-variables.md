@@ -1,4 +1,4 @@
-# Thinking Probabilistically-- Discrete Variables
+# [Thinking Probabilistically-- Discrete Variables](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables)
 
 Statistical inference rests upon probability. Because we can very rarely say anything meaningful with absolute certainty from data, we use probabilistic language to make quantitative statements about data. In this chapter, you will learn how to think probabilistically about discrete quantities: those that can only take certain values, like integers.
 
