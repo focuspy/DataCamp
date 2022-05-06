@@ -1,10 +1,10 @@
-## Visual exploratory data analysis
+## [Visual exploratory data analysis](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis)
 
 Are you more likely to get arrested at a certain time of day? Are drug-related stops on the rise? In this chapter, you will answer these and other questions by analyzing the dataset visually, since plots can help you to understand trends in a way that examining the raw data cannot.
 
 <br>
 
-### Calculating the hourly arrest rate
+### [Calculating the hourly arrest rate](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=2)
 
 ```
 # Calculate the overall arrest rate
@@ -17,7 +17,7 @@ print(ri.groupby(ri.index.hour).is_arrested.mean())
 hourly_arrest_rate = ri.groupby(ri.index.hour).is_arrested.mean()
 ```
 
-### Plotting the hourly arrest rate
+### [Plotting the hourly arrest rate](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=3)
 
 ```
 # Import matplotlib.pyplot as plt
@@ -36,7 +36,7 @@ plt.show()
 
 ```
 
-### Plotting drug-related stops
+### [Plotting drug-related stops](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=5)
 
 ```
 # Calculate the annual rate of drug-related stops
@@ -52,7 +52,7 @@ plt.plot(annual_drug_rate)
 plt.show()
 ```
 
-### Comparing drug and search rates
+### [Comparing drug and search rates](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=6)
 
 ```
 # Calculate and save the annual search rate
@@ -68,7 +68,7 @@ annual.plot(subplots=True)
 plt.show()
 ```
 
-### Tallying violations by district
+### [Tallying violations by district](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=8)
 
 ```
 # Create a frequency table of districts and violations
@@ -84,11 +84,16 @@ print(all_zones.loc['Zone K1':'Zone K3'])
 k_zones = all_zones.loc['Zone K1':'Zone K3']
 ```
 
-### Plotting violations by district
+### [Plotting violations by district](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=9)
 
 ```
 # Create a bar plot of 'k_zones'
 k_zones.plot(kind='bar')
+
+# Display the plot
+plt.show()
+
+#####################################################
 
 # Create a stacked bar plot of 'k_zones'
 k_zones.plot(kind='bar', stacked=True)
@@ -97,7 +102,7 @@ k_zones.plot(kind='bar', stacked=True)
 plt.show()
 ```
 
-### Converting stop durations to numbers
+### [Converting stop durations to numbers](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=11)
 
 ```
 # Print the unique values in 'stop_duration'
@@ -113,7 +118,7 @@ ri['stop_minutes'] = ri.stop_duration.map(mapping)
 print(ri['stop_minutes'].unique())
 ```
 
-### Plotting stop length
+### [Plotting stop length](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=12)
 
 ```
 # Calculate the mean 'stop_minutes' for each value in 'violation_raw'

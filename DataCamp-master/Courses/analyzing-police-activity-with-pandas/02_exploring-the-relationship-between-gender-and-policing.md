@@ -14,7 +14,9 @@ print(ri.violation.value_counts())
 print(ri.violation.value_counts(normalize=True))
 ```
 
-### Comparing violations by gender
+
+
+### [Comparing violations by gender](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/exploring-the-relationship-between-gender-and-policing?ex=3)
 
 ```
 # Create a DataFrame of female drivers
@@ -30,7 +32,14 @@ print(female.violation.value_counts(normalize=True))
 print(male.violation.value_counts(normalize=True))
 ```
 
-### Comparing speeding outcomes by gender
+### [Filtering by multiple conditions](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/exploring-the-relationship-between-gender-and-policing?ex=5)
+
+```
+Q: Which one of these commands would filter the ri DataFrame to only include female drivers who were stopped for a speeding violation?
+A: ri[(ri.driver_gender == 'F') & (ri.violation == 'Speeding')]
+```
+
+### [Comparing speeding outcomes by gender](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/exploring-the-relationship-between-gender-and-policing?ex=6)
 
 ```
 # Create a DataFrame of female drivers stopped for speeding
@@ -46,7 +55,7 @@ print(female_and_speeding.stop_outcome.value_counts(normalize=True))
 print(male_and_speeding.stop_outcome.value_counts(normalize=True))
 ```
 
-### Calculating the search rate
+### [Calculating the search rate](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/exploring-the-relationship-between-gender-and-policing?ex=8)
 
 ```
 # Check the data type of 'search_conducted'
@@ -59,30 +68,36 @@ print(ri.search_conducted.value_counts(normalize=True))
 print(ri.search_conducted.mean())
 ```
 
-### Comparing search rates by gender
+### [Comparing search rates by gender](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/exploring-the-relationship-between-gender-and-policing?ex=9)
 
 ```
 # Calculate the search rate for female drivers
 print(ri[ri.driver_gender == 'F'].search_conducted.mean())
 
+#####################################################
+
 # Calculate the search rate for male drivers
 print(ri[ri.driver_gender == 'M'].search_conducted.mean())
+
+#####################################################
 
 # Calculate the search rate for both groups simultaneously
 print(ri.groupby('driver_gender').search_conducted.mean())
 ```
 
-### Adding a second factor to the analysis
+### [Adding a second factor to the analysis](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/exploring-the-relationship-between-gender-and-policing?ex=10)
 
 ```
 # Calculate the search rate for each combination of gender and violation
 print(ri.groupby(['driver_gender','violation']).search_conducted.mean())
 
+#####################################################
+
 # Reverse the ordering to group by violation before gender
 print(ri.groupby(['violation','driver_gender']).search_conducted.mean())
 ```
 
-### Counting protective frisks
+### [Counting protective frisks](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/exploring-the-relationship-between-gender-and-policing?ex=12)
 
 ```
 # Count the 'search_type' values
@@ -98,7 +113,7 @@ print(ri['frisk'].dtype)
 print(ri['frisk'].sum())
 ```
 
-### Comparing frisk rates by gender
+### [Comparing frisk rates by gender](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/exploring-the-relationship-between-gender-and-policing?ex=13)
 
 ```
 # Create a DataFrame of stops in which a search was conducted
