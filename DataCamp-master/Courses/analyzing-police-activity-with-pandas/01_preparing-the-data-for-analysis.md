@@ -1,10 +1,10 @@
-## Preparing the data for analysis
+## [Preparing the data for analysis](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis)
 
 Before beginning your analysis, it is critical that you first examine and clean the dataset, to make working with it a more efficient process. In this chapter, you will practice fixing data types, handling missing values, and dropping columns and rows while learning about the Stanford Open Policing Project dataset.
 
 <br>
 
-### Examining the dataset
+### [Examining the dataset](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=2)
 
 ```
 # Import the pandas library as pd
@@ -20,7 +20,7 @@ print(ri.head())
 print(ri.isnull().sum())
 ```
 
-### Dropping columns
+### [Dropping columns](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=3)
 
 ```
 # Examine the shape of the DataFrame
@@ -33,7 +33,7 @@ ri.drop(['county_name', 'state'], axis='columns', inplace=True)
 print(ri.shape)
 ```
 
-### Dropping rows
+### [Dropping rows](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=4)
 
 ```
 # Count the number of missing values in each column
@@ -49,7 +49,14 @@ print(ri.isnull().sum())
 print(ri.shape)
 ```
 
-### Fixing a data type
+### [Finding an incorrect data type](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=6)
+
+```
+Q: Your task is to explore the ri DataFrame in the IPython Shell to determine which column's data type should be changed.
+A: is_arrested should have a data type of bool
+```
+
+### [Fixing a data type](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=7)
 
 ```
 # Examine the head of the 'is_arrested' column
@@ -62,7 +69,7 @@ ri['is_arrested'] = ri.is_arrested.astype('bool')
 print(ri['is_arrested'].dtype)
 ```
 
-### Combining object columns
+### [Combining object columns](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=9)
 
 ```
 # Concatenate 'stop_date' and 'stop_time' (separated by a space)
@@ -75,7 +82,7 @@ ri['stop_datetime'] = pd.to_datetime(combined)
 print(ri.dtypes)
 ```
 
-### Setting the index
+### [Setting the index](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=10)
 
 ```
 # Set 'stop_datetime' as the index
