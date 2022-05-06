@@ -19,9 +19,22 @@ Q: How many respondents were interviewed in 2016?
 A: 2867
 ```
 
-### Plot a PMF
+### [Plot a PMF](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=3)
 
 ```
+# Select the age column
+age = gss['age']
+
+#####################################################
+
+# Select the age column
+age = gss['age']
+
+# Make a PMF of age
+pmf_age = Pmf(age)
+
+#####################################################
+
 # Select the age column
 age = gss['age']
 
