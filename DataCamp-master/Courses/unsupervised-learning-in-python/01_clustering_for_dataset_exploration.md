@@ -8,7 +8,7 @@ Learn how to discover the underlying groups (or "clusters") in a dataset. By the
 
 ```
 Q: How many clusters do you see?
-A: 3
+A: 3.
 ```
 
 ### [Clustering 2D points](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=3)
