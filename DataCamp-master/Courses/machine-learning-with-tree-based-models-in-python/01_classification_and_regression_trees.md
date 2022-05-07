@@ -60,3 +60,87 @@ plot_labeled_decision_regions(X_test, y_test, clfs)
 Q: Which of the following is not one of these rules?
 A: When an internal node is split, the split is performed in such a way so that information gain is minimized.
 ```
+
+### [Using entropy as a criterion](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=7)
+
+```
+# Import DecisionTreeClassifier from sklearn.tree
+from sklearn.tree import DecisionTreeClassifier
+
+# Instantiate dt_entropy, set 'entropy' as the information criterion
+dt_entropy = DecisionTreeClassifier(max_depth = 8, criterion='entropy', random_state=1)
+
+# Fit dt_entropy to the training set
+dt_entropy.fit(X_train, y_train)
+```
+
+### [Entropy vs Gini index](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=8)
+
+```
+# Import accuracy_score from sklearn.metrics
+from sklearn.metrics import accuracy_score
+
+# Use dt_entropy to predict test set labels
+y_pred = dt_entropy.predict(X_test)
+
+# Evaluate accuracy_entropy
+accuracy_entropy = accuracy_score(y_test, y_pred)
+
+# Print accuracy_entropy
+print(f'Accuracy achieved by using entropy: {accuracy_entropy:.3f}')
+
+# Print accuracy_gini
+print(f'Accuracy achieved by using the gini index: {accuracy_gini:.3f}')
+```
+
+### [Train your first regression tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=10)
+
+```
+# Import DecisionTreeRegressor from sklearn.tree
+from sklearn.tree import DecisionTreeRegressor
+
+# Instantiate dt
+dt = DecisionTreeRegressor(max_depth=8,
+             min_samples_leaf=0.13,
+            random_state=3)
+
+# Fit dt to the training set
+dt.fit(X_train, y_train)
+```
+
+### [Evaluate the regression tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=11)
+
+```
+from sklearn.metrics import mean_squared_error as MSE
+
+# Compute y_pred
+y_pred = dt.predict(X_test)
+
+# Compute mse_dt
+mse_dt = MSE(y_test, y_pred)
+
+# Compute rmse_dt
+rmse_dt = (mse_dt)**0.5
+
+# Print rmse_dt
+print("Test set RMSE of dt: {:.2f}".format(rmse_dt))
+```
+
+### [Linear regression vs regression tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=12)
+
+```
+# Predict test set labels 
+y_pred_lr = lr.predict(X_test)
+
+# Compute mse_lr
+mse_lr = MSE(y_test, y_pred_lr)
+
+# Compute rmse_lr
+rmse_lr = mse_lr**(1/2)
+
+# Print rmse_lr
+print('Linear Regression test set RMSE: {:.2f}'.format(rmse_lr))
+
+# Print rmse_dt
+print('Regression Tree test set RMSE: {:.2f}'.format(rmse_dt))
+```
