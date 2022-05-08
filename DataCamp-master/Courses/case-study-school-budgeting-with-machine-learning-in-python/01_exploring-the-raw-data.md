@@ -1,0 +1,5 @@
+## [Exploring the raw data](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data)
+
+In this chapter, you'll be introduced to the problem you'll be solving in this course. How do you accurately classify line-items in a school budget based on what that money is being used for? You will explore the raw text and numeric values in the dataset, both quantitatively and visually. And you'll learn how to measure success when trying to predict class labels for each row of the dataset.
+
+<br>

@@ -1,0 +1,5 @@
+## [Creating a simple first model](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/creating-a-simple-first-model)
+
+In this chapter, you'll build a first-pass model. You'll use numeric data only to train the model. Spoiler alert - throwing out all of the text data is bad for performance! But you'll learn how to format your predictions. Then, you'll be introduced to natural language processing (NLP) in order to start working with the large amounts of text in the data.
+
+<br>
