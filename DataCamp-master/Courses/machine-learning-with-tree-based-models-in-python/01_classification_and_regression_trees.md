@@ -58,7 +58,7 @@ plot_labeled_decision_regions(X_test, y_test, clfs)
 
 ```
 Q: Which of the following is not one of these rules?
-A: When an internal node is split, the split is performed in such a way so that information gain is minimized.
+A: When an internal node is split, the split is performed in such a way so that information gain is minimized
 ```
 
 ### [Using entropy as a criterion](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=7)

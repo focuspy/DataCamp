@@ -9,7 +9,7 @@ The bias-variance tradeoff is one of the fundamental concepts in supervised mach
 ```
 Q: Which of the following correctly describes the relationship between
 f's complexity and f's bias and variance terms?
-A: As the complexity of increases, the bias term decreases while the variance term increases.
+A: As the complexity of increases, the bias term decreases while the variance term increases
 ```
 
 ### [Overfitting and underfitting](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=3)
