@@ -2,7 +2,7 @@
 
 My notebooks [Datacamp](https://www.datacamp.com/profile/xinadev?tab=learning-history&id=projects) projects.
 
-| Chapter | Python | R | SQL |
+| Chapter | Python |
 |:-:|---|---|---|
 |  1  | [A Network analysis of Game of Thrones](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/A%20Network%20analysis%20of%20Game%20of%20Thrones/notebook.ipynb)  |
 |  2  | [Intermediate Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/02_intermediate-python)  |
@@ -27,3 +27,6 @@ My notebooks [Datacamp](https://www.datacamp.com/profile/xinadev?tab=learning-hi
 |  21  | [Machine Learning with Tree-Based Models in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/21_machine-learning-with-tree-based-models-in-python)  |
 |  22  | [Case Study: School Budgeting with Machine Learning in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/22_case-study-school-budgeting-with-machine-learning-in-python)  |
 |  23  | [Cluster Analysis in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/23_cluster-analysis-in-python)  |
+
+| R | SQL |
+|---|---|---|
