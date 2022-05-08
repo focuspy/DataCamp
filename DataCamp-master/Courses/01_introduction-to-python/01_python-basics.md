@@ -133,5 +133,5 @@ print (pi_float)
 
 ```
 Q: Now that you know something more about combining different sources of information, have a look at the four Python expressions below. Which one of these will throw an error?
-A: "The correct answer to this multiple choice exercise is answer number " + 2
+A: "The correct answer to this multiple choice exercise is answer number " + 2 .
 ```
