@@ -10,7 +10,7 @@ If you wish to use any of thing from this repository for purposes of your own th
 
 
 | Chapter | Description |
-|---------|------|
+|:-:|:-:|
 |  1  | [Introduction to Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/01_introduction-to-python)  |
 |  2  |   |
 |  3  |   |
