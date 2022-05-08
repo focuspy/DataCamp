@@ -3,7 +3,7 @@
 My notebooks [Datacamp](https://www.datacamp.com/profile/xinadev?tab=learning-history&id=projects) projects.
 
 | Chapter | Python | R | SQL |
-|:-:|---|
+|:-:|---|---|---|
 |  1  | [A Network analysis of Game of Thrones](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/A%20Network%20analysis%20of%20Game%20of%20Thrones/notebook.ipynb)  |
 |  2  | [Intermediate Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/02_intermediate-python)  |
 |  3  | [Data Manipulation with Pandas](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/03_data-manipulation-with-pandas)  |
