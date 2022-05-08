@@ -33,3 +33,4 @@ If you wish to use any of thing from this repository for purposes of your own th
 |  21  | [Machine Learning with Tree-Based Models in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/21_machine-learning-with-tree-based-models-in-python)  |
 |  22  | [Case Study: School Budgeting with Machine Learning in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/22_case-study-school-budgeting-with-machine-learning-in-python)  |
 |  23  | [Cluster Analysis in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/23_cluster-analysis-in-python)  |
+|  Projects  | Description  |
