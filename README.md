@@ -11,17 +11,17 @@ If you wish to use any of thing from this repository for purposes of your own th
 
 | Chapter | Description |
 |---------|------|
-| 1  | [Introduction to python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/01_introduction-to-python)  |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
+|  1  | [Introduction to Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/01_introduction-to-python)  |
+|  2  |   |
+|  3  |   |
+|  4  |   |
+|  5  |   |
+|  6  |   |
+|  7  |   |
+|  8  |   |
+|  9  |   |
+|  10  |   |
+|  11  |   |
+|  12  |   |
+|  13  |   |
+|  14  |   |
