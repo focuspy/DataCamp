@@ -21,7 +21,7 @@ A: Classification, because predicted probabilities will be used to select a labe
 ### [Loading the data](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=5)
 
 ```
-Q: Use df.info() in the IPython Shell to answer the following questions
+Q: Use df.info() in the IPython Shell to answer the following questions.
 A: 1560 rows, 25 columns, 1131 non-null entries in Job_Title_Description.
 ```
 
