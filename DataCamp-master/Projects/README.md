@@ -54,6 +54,7 @@
 |  48  | [Word Frequency in Peter Pan](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/Word%20Frequency%20in%20Peter%20Pan/notebook.ipynb) |
 |  49  | [Writing Functions for Product Analysis](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/Writing%20Functions%20for%20Product%20Analysis/notebook.ipynb) |
 
+<br>
 
 | # | R |
 |:-:|---|
@@ -62,6 +63,7 @@
 | 3 | [Drunken Datetimes in Ames, Iowa](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/R/Drunken%20Datetimes%20in%20Ames%2C%20Iowa/notebook.ipynb) |
 | 4 | [Introduction to DataCamp Projects](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/R/Introduction%20to%20DataCamp%20Projects/notebook.ipynb) |
 
+<br>
 
 | # | SQL |
 |:-:|---|
