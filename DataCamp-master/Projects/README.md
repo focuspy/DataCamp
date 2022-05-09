@@ -4,10 +4,10 @@ My notebooks [Datacamp](https://www.datacamp.com/profile/xinadev?tab=learning-hi
 
 | Python |
 |:-:|
-| [A Network analysis of Game of Thrones](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/A%20Network%20analysis%20of%20Game%20of%20Thrones/notebook.ipynb)  |
-| [A New Era of Data Analysis in Baseball](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/A%20New%20Era%20of%20Data%20Analysis%20in%20Baseball/notebook.ipynb)  |
-| [A Visual History of Nobel Prize Winners](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/A%20Visual%20History%20of%20Nobel%20Prize%20Winners/notebook.ipynb)  |
-| [ASL Recognition with Deep Learning](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/ASL%20Recognition%20with%20Deep%20Learning/notebook.ipynb)  |
+|  1  | [A Network analysis of Game of Thrones](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/A%20Network%20analysis%20of%20Game%20of%20Thrones/notebook.ipynb)  |
+|  2  | [A New Era of Data Analysis in Baseball](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/A%20New%20Era%20of%20Data%20Analysis%20in%20Baseball/notebook.ipynb)  |
+|  3  | [A Visual History of Nobel Prize Winners](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/A%20Visual%20History%20of%20Nobel%20Prize%20Winners/notebook.ipynb)  |
+|  4  | [ASL Recognition with Deep Learning](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/ASL%20Recognition%20with%20Deep%20Learning/notebook.ipynb)  |
 |  5  | [Introduction to data visualization with Matplotlib](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/05_introduction-to-data-visualization-with-matplotlib)  |
 |  6  | [Introduction to data visualization with Seaborn](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/06_introduction-to-data-visualization-with-seaborn)  |
 |  7  | [Python data Science toolbox (Part 1)](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/07_python-data-science-toolbox-part-1)  |
