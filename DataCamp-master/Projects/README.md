@@ -54,5 +54,17 @@ My notebooks [Datacamp](https://www.datacamp.com/profile/xinadev?tab=learning-hi
 |  48  | [Word Frequency in Peter Pan](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/Word%20Frequency%20in%20Peter%20Pan/notebook.ipynb) |
 |  49  | [Writing Functions for Product Analysis](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/Writing%20Functions%20for%20Product%20Analysis/notebook.ipynb) |
 
-| R | SQL |
-|---|---|
+
+| # | R |
+|:-:|---|
+| 1  | [Clustering Bustabit Gambling Behavior](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/R/Clustering%20Bustabit%20Gambling%20Behavior/notebook.ipynb) |
+| 2 | [Dr. Semmelweis and the Discovery of Handwashing](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/R/Dr.%20Semmelweis%20and%20the%20Discovery%20of%20Handwashing/notebook.ipynb) |
+| 3 | [Drunken Datetimes in Ames, Iowa](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/R/Drunken%20Datetimes%20in%20Ames%2C%20Iowa/notebook.ipynb) |
+| 4 | [Introduction to DataCamp Projects](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/R/Introduction%20to%20DataCamp%20Projects/notebook.ipynb) |
+
+
+| # | SQL |
+|:-:|---|
+| 1 | [Analyze International Debt Statistics](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/SQL/Analyze%20International%20Debt%20Statistics/notebook.ipynb) |
+| 2 | [Introduction to DataCamp Projects](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/SQL/Introduction%20to%20DataCamp%20Projects/notebook.ipynb) |
+| 3 | [TV, Halftime Shows, and the Big Game](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/SQL/TV%2C%20Halftime%20Shows%2C%20and%20the%20Big%20Game/notebook.ipynb) |
