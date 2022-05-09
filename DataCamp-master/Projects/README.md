@@ -2,6 +2,8 @@
 
 ## Index of notebooks [Datacamp](https://www.datacamp.com/profile/xinadev?tab=learning-history&id=projects) projects.
 
+<br>
+
 | # | Python |
 |:-:|----|
 |  1  | [A Network analysis of Game of Thrones](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/A%20Network%20analysis%20of%20Game%20of%20Thrones/notebook.ipynb)  |
