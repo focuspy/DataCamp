@@ -15,7 +15,7 @@ My notebooks [Datacamp](https://www.datacamp.com/profile/xinadev?tab=learning-hi
 |  9  | [Comparing Cosmetics by Ingredients](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/Comparing%20Cosmetics%20by%20Ingredients/notebook.ipynb)  |
 |  10  | [Comparing Search Interest with Google Trends](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/Comparing%20Search%20Interest%20with%20Google%20Trends/notebook.ipynb)  |
 |  11  | [Comparing Search Interest with Google Trends II](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/Comparing%20Search%20Interest%20with%20Google%20Trends%20II/notebook.ipynb)  |
-|  12  | [Cleaning Data in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/12_cleaning-data-in-python)  |
+|  12  | [Disney Movies and Box Office Success](https://github.com/focuspy/DataCamp/blob/main/DataCamp-master/Projects/Python/Disney%20Movies%20and%20Box%20Office%20Success/notebook.ipynb)  |
 |  13  | [Working with Dates and Times in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/13_working-with-dates-and-times-in-python)  |
 |  14  | [Writing Functions in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/14_writing-functions-in-python)  |
 |  15  | [Exploratory Data Analysis in Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/15_exploratory-data-analysis-in-python)  |
