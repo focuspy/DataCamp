@@ -1,5 +1,5 @@
 ```
 23 Courses
 
-56 Projects 
+48 Projects 
 ```
