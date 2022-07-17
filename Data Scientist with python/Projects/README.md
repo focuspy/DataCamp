@@ -1,6 +1,6 @@
 # DataCamp Projects
 
-## Index of notebooks [Datacamp projects](https://www.datacamp.com/profile/xinadev?tab=learning-history&id=projects).
+## Index for the jupyter notebooks of [Datacamp projects](https://www.datacamp.com/profile/xinadev?tab=learning-history&id=projects).
 
 <br>
 
