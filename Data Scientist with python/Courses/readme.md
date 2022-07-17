@@ -1,6 +1,6 @@
 ## Courses for [Data Scientist with Python](https://app.datacamp.com/learn/career-tracks/data-scientist-with-python)
 
-| # | Chapter |  Description  |
+| # | **Chapter** |  **Description**  |
 |:-:|---|---|
 |  1  | [Introduction to Python](https://github.com/focuspy/DataCamp/tree/main/Data%20Scientist%20with%20python/Courses/01_introduction-to-python)  | Master the basics of data analysis in Python. Expand your skillset by learning scientific computing with NumPy. |
 |  2  | [Intermediate Python](https://github.com/focuspy/DataCamp/tree/main/Data%20Scientist%20with%20python/Courses/02_intermediate-python)  | Level up your data science skills by creating visualizations using Matplotlib and manipulating DataFrames with pandas. |
