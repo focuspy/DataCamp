@@ -2,7 +2,7 @@
 
 | # | Chapter |  Description  |
 |:-:|---|---|
-|  1  | [Introduction to Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/Data%20Scientist%20with%20Python%20track/01_introduction-to-python)  | Master the basics of data analysis in Python. Expand your skillset by learning scientific computing with NumPy. |
+|  1  | [Introduction to Python](https://github.com/focuspy/DataCamp/tree/main/Data%20Scientist%20with%20python/Courses/01_introduction-to-python)  | Master the basics of data analysis in Python. Expand your skillset by learning scientific computing with NumPy. |
 |  2  | [Intermediate Python](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/Data%20Scientist%20with%20Python%20track/02_intermediate-python)  | Level up your data science skills by creating visualizations using Matplotlib and manipulating DataFrames with pandas. |
 |  3  | [Data Manipulation with Pandas](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/Data%20Scientist%20with%20Python%20track/03_data-manipulation-with-pandas)  | Use the world’s most popular Python data science package to manipulate data and calculate summary statistics. |
 |  4  | [Joining data with Pandas](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses/Data%20Scientist%20with%20Python%20track/04_joining-data-with-pandas)  | Learn to combine data from multiple tables by joining data together using pandas. |
