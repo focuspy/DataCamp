@@ -1,3 +1,3 @@
-[23 Courses](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Courses)
+[23 Courses](https://github.com/focuspy/DataCamp/tree/main/Data%20Scientist%20with%20python/Courses)
 
-[48 Projects](https://github.com/focuspy/DataCamp/tree/main/DataCamp-master/Projects)
+[49 Projects](https://github.com/focuspy/DataCamp/tree/main/Data%20Scientist%20with%20python/Projects)
