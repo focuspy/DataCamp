@@ -6,14 +6,14 @@ Record linkage is a powerful technique used to merge multiple datasets together,
 
 ### [Minimum edit distance](https://campus.datacamp.com/courses/cleaning-data-in-python/record-linkage-4?ex=2)
 
-```
+```Python
 Q: What is the minimum edit distance from 'sign' to 'sing', and which operation(s) gets you there?
 A: 1 by transposing 'g' with 'n'.
 ```
 
 ### [The cutoff point](https://campus.datacamp.com/courses/cleaning-data-in-python/record-linkage-4?ex=3)
 
-```
+```Python
 # Import process from fuzzywuzzy
 from fuzzywuzzy import process
 
@@ -32,7 +32,7 @@ print(process.extract('italian', unique_types, limit = len(unique_types)))
 
 ### [Remapping categories II](https://campus.datacamp.com/courses/cleaning-data-in-python/record-linkage-4?ex=4)
 
-```
+```Python
 # Print unique values to confirm mapping
 print(restaurants['cuisine_type'].unique())
 
@@ -77,7 +77,7 @@ print(restaurants['cuisine_type'].unique())
 
 ### [Pairs of restaurants](https://campus.datacamp.com/courses/cleaning-data-in-python/record-linkage-4?ex=7)
 
-```
+```Python
 # Create an indexer and object and find possible pairs
 indexer = recordlinkage.Index()
 
@@ -95,7 +95,7 @@ A:Compare between columns, score the comparison, then link the DataFrames.
 
 ### [Similar restaurants](https://campus.datacamp.com/courses/cleaning-data-in-python/record-linkage-4?ex=8)
 
-```
+```Python
 # Create a comparison object
 comp_cl = recordlinkage.Compare()
 
@@ -135,14 +135,14 @@ A: 3 because I need to have matches in all my columns.
 
 ### [Getting the right index](https://campus.datacamp.com/courses/cleaning-data-in-python/record-linkage-4?ex=10)
 
-```
+```Python
 Q:How do you extract all values of the uid_1 index column?
 A: Both 1 and 3 are correct.
 ```
 
 ### [Linking them together!](https://campus.datacamp.com/courses/cleaning-data-in-python/record-linkage-4?ex=11)
 
-```
+```Python
 # Isolate potential matches with row sum >=3
 matches = potential_matches[potential_matches.sum(axis=1) >= 3]
 

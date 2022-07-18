@@ -6,14 +6,14 @@ In this chapter, you’ll dive into more advanced data cleaning problems, such a
 
 ### [Ambiguous dates](https://campus.datacamp.com/courses/cleaning-data-in-python/advanced-data-problems-3?ex=2)
 
-```
+```Python
 Q: What is the best way to unify the formats for ambiguous values such as 2019-04-07?
 A: All of the above are possible, as long as we investigate where our data comes from, and understand the dynamics affecting it before cleaning it.
 ```
 
 ### [Uniform currencies](https://campus.datacamp.com/courses/cleaning-data-in-python/advanced-data-problems-3?ex=3)
 
-```
+```Python
 # Find values of acct_cur that are equal to 'euro'
 acct_eu = banking['acct_cur'] == 'euro'
 
@@ -29,7 +29,7 @@ assert banking['acct_cur'].unique() == 'dollar'
 
 ### [Uniform dates](https://campus.datacamp.com/courses/cleaning-data-in-python/advanced-data-problems-3?ex=4)
 
-```
+```Python
 # Print the header of account_opend
 print(banking['account_opened'].head())
 
@@ -71,7 +71,7 @@ print(banking['acct_year'])
 
 ### [How's our data integrity?](https://campus.datacamp.com/courses/cleaning-data-in-python/advanced-data-problems-3?ex=7)
 
-```
+```Python
 # Store fund columns to sum against
 fund_columns = ['fund_A', 'fund_B', 'fund_C', 'fund_D']
 
@@ -104,14 +104,14 @@ print("Number of inconsistent ages: ", inconsistent_ages.shape[0])
 ```
 ### [Is this missing at random?](https://campus.datacamp.com/courses/cleaning-data-in-python/advanced-data-problems-3?ex=9)
 
-```
+```Python
 Q: You have a DataFrame containing customer satisfaction scores for a service. What type of missingness is the following? 
 A: Missing not at random.
 ```
 
 ### [Missing investors](https://campus.datacamp.com/courses/cleaning-data-in-python/advanced-data-problems-3?ex=10)
 
-```
+```Python
 # Print number of missing values in banking
 print(banking.isna().sum())
 
@@ -158,7 +158,7 @@ plt.show()
 
 ### [Follow the money](https://campus.datacamp.com/courses/cleaning-data-in-python/advanced-data-problems-3?ex=11)
 
-```
+```Python
 # Drop missing values of cust_id
 banking_fullid = banking.dropna(subset = ['cust_id'])
 

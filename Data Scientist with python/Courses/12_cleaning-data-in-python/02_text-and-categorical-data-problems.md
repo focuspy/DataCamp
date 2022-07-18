@@ -6,7 +6,7 @@ Categorical and text data can often be some of the messiest parts of a dataset d
 
 ### [Finding consistency](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=3)
 
-```
+```Python
 # Print categories DataFrame
 print(categories)
 
@@ -31,7 +31,7 @@ print(airlines[~cat_clean_rows])
 
 ### [Inconsistent categories](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=6)
 
-```
+```Python
 # Print unique values of both columns
 print(airlines['dest_region'].unique())
 print(airlines['dest_size'].unique())
@@ -49,7 +49,8 @@ print(airlines['dest_size'].unique())
 ```
 
 ### [Remapping categories](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=7)
-```
+
+```Python
 # Create ranges for categories
 label_ranges = [0, 60, 180, np.inf]
 label_names = ['short', 'medium', 'long']
@@ -67,7 +68,7 @@ airlines['day_week'] = airlines['day'].replace(mappings)
 
 ### [Removing titles and taking names](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=9)
 
-```
+```Python
 # Replace "Dr." with empty string ""
 airlines['full_name'] = airlines['full_name'].str.replace("Dr.","")
 
@@ -86,7 +87,7 @@ assert airlines['full_name'].str.contains('Ms.|Mr.|Miss|Dr.').any() == False
 
 ### [Keeping it descriptive](https://campus.datacamp.com/courses/cleaning-data-in-python/text-and-categorical-data-problems?ex=10)
 
-```
+```Python
 # Store length of each row in survey_response column
 resp_length = airlines['survey_response'].str.len()
 

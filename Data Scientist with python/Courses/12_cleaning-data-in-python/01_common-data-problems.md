@@ -6,7 +6,7 @@ In this chapter, you'll learn how to overcome some of the most common dirty data
 
 ### [Numeric data or ... ?](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=3)
 
-```
+```Python
 # Print the information of ride_sharing
 print(ride_sharing.info())
 
@@ -25,7 +25,7 @@ print(ride_sharing['user_type_cat'].describe())
 
 ### [Summing strings and concatenating numbers](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=4)
 
-```
+```Python
 # Strip duration of minutes
 ride_sharing['duration_trim'] = ride_sharing['duration'].str.strip('minutes')
 
@@ -42,7 +42,7 @@ print(ride_sharing['duration_time'].mean())
 
 ### [Tire size constraints](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=6)
 
-```
+```Python
 # Convert tire_sizes to integer
 ride_sharing['tire_sizes'] = ride_sharing['tire_sizes'].astype('int')
 
@@ -58,7 +58,7 @@ print(ride_sharing['tire_sizes'].head())
 
 ### [Back to the future](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=7)
 
-```
+```Python
 # Convert ride_date to date
 ride_sharing['ride_dt'] = pd.to_datetime(ride_sharing['ride_date']).dt.date
 
@@ -74,7 +74,7 @@ print(ride_sharing['ride_dt'].max())
 
 ### [How big is your subset?](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=9)
 
-```
+```Python
 Q: Choose the correct usage of .duplicated() below
 A: loans.duplicated(subset = ['first_name', 'last_name'], keep = False)
   Because subsetting on consumer metadata and not discarding any duplicate returns all duplicated rows.
@@ -83,7 +83,7 @@ A: loans.duplicated(subset = ['first_name', 'last_name'], keep = False)
 
 ### [Finding duplicates](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=10)
 
-```
+```Python
 # Find duplicates
 duplicates = ride_sharing.duplicated(subset='ride_id', keep=False)
 
@@ -96,7 +96,7 @@ print(duplicated_rides[['ride_id','duration','user_birth_year']])
 
 ### [Treating duplicates](https://campus.datacamp.com/courses/cleaning-data-in-python/common-data-problems-1?ex=11)
 
-```
+```Python
 # Drop complete duplicates from ride_sharing
 ride_dup = ride_sharing.drop_duplicates()
 
