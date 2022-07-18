@@ -6,7 +6,7 @@ The bias-variance tradeoff is one of the fundamental concepts in supervised mach
 
 ### [Complexity, bias and variance](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=2)
 
-```
+```Python
 Q: Which of the following correctly describes the relationship between
 f's complexity and f's bias and variance terms?
 A: As the complexity of increases, the bias term decreases while the variance term increases
@@ -14,14 +14,14 @@ A: As the complexity of increases, the bias term decreases while the variance te
 
 ### [Overfitting and underfitting](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=3)
 
-```
+```Python
 Q: Which of the following statements is true?
 A: B suffers from high bias and underfits the training set.
 ```
 
 ### [Instantiate the model](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=5)
 
-```
+```Python
 # Import train_test_split from sklearn.model_selection
 from sklearn.model_selection import train_test_split
 
@@ -37,7 +37,7 @@ dt = DecisionTreeRegressor(max_depth = 4, min_samples_leaf = 0.26, random_state=
 
 ### [Evaluate the 10-fold CV error](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=6)
 
-```
+```Python
 # Compute the array containing the 10-folds CV MSEs
 MSE_CV_scores = - cross_val_score(dt, X_train, y_train, cv=10, 
                        scoring='neg_mean_squared_error',
@@ -52,7 +52,7 @@ print('CV RMSE: {:.2f}'.format(RMSE_CV))
 
 ### [Evaluate the training error](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=7)
 
-```
+```Python
 # Import mean_squared_error from sklearn.metrics as MSE
 from sklearn.metrics import mean_squared_error as MSE
 
@@ -71,14 +71,14 @@ print('Train RMSE: {:.2f}'.format(RMSE_train))
 
 ### [High bias or high variance?](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=8)
 
-```
+```Python
 Q: Does dt suffer from a high bias or a high variance problem?
 A: dt suffers from high bias because RMSE_CV RMSE_train and both scores are greater than baseline_RMSE.
 ```
 
 ### [Define the ensemble](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=10)
 
-```
+```Python
 # Set seed for reproducibility
 SEED=1
 
@@ -97,7 +97,7 @@ classifiers = [('Logistic Regression', lr), ('K Nearest Neighbours', knn), ('Cla
 
 ### [Evaluate individual classifiers](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=11)
 
-```
+```Python
 # Iterate over the pre-defined list of classifiers
 for clf_name, clf in classifiers:    
  
@@ -116,7 +116,7 @@ for clf_name, clf in classifiers:
 
 ### [Better performance with a Voting Classifier](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/the-bias-variance-tradeoff?ex=12)
 
-```
+```Python
 from sklearn.ensemble import VotingClassifier
 
 # Instantiate a VotingClassifier vc

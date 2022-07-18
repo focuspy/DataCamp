@@ -6,7 +6,7 @@ Up until this point, you've only looked at one variable at a time. In this chapt
 
 ### [PMF of age](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=2)
 
-```
+```Python
 # Extract AGE
 age = brfss['AGE']
 
@@ -22,7 +22,7 @@ plt.show()
 
 ### [Scatter plot](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=3)
 
-```
+```Python
 # Select the first 1000 respondents
 brfss = brfss[:1000]
 
@@ -41,7 +41,7 @@ plt.show()
 
 ### [Jittering](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=4)
 
-```
+```Python
 # Select the first 1000 respondents
 brfss = brfss[:1000]
 
@@ -60,7 +60,7 @@ plt.show()
 
 ### [Height and weight](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=6)
 
-```
+```Python
 # Drop rows with missing data
 data = brfss.dropna(subset=['_HTMG10', 'WTKG3'])
 
@@ -79,7 +79,7 @@ plt.show()
 
 ### [Distribution of income](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=7)
 
-```
+```Python
 # Extract income
 income = brfss['INCOME2']
 
@@ -94,7 +94,7 @@ plt.show()
 
 ### [Income and height](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=8)
 
-```
+```Python
 # Drop rows with missing data
 data = brfss.dropna(subset=['INCOME2', 'HTM4'])
 
@@ -110,7 +110,7 @@ plt.show()
 
 ### [Computing correlations](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=10)
 
-```
+```Python
 # Select columns
 columns = ['AGE','INCOME2','_VEGESU1']
 subset = brfss[columns]
@@ -121,14 +121,14 @@ print(subset.corr())
 
 ### [Interpreting correlations](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=11)
 
-```
+```Python
 Q: Which of the following are correct interpretations of these results
 A: A and D only.
 ```
 
 ### [Income and vegetables](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/relationships?ex=13)
 
-```
+```Python
 from scipy.stats import linregress
 
 # Extract the variables

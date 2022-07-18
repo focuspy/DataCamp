@@ -6,7 +6,7 @@ Before beginning your analysis, it is critical that you first examine and clean 
 
 ### [Examining the dataset](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=2)
 
-```
+```Python
 # Import the pandas library as pd
 import pandas as pd
 
@@ -22,7 +22,7 @@ print(ri.isnull().sum())
 
 ### [Dropping columns](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=3)
 
-```
+```Python
 # Examine the shape of the DataFrame
 print(ri.shape)
 
@@ -35,7 +35,7 @@ print(ri.shape)
 
 ### [Dropping rows](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=4)
 
-```
+```Python
 # Count the number of missing values in each column
 print(ri.isnull().sum())
 
@@ -51,14 +51,14 @@ print(ri.shape)
 
 ### [Finding an incorrect data type](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=6)
 
-```
+```Python
 Q: Your task is to explore the ri DataFrame in the IPython Shell to determine which column's data type should be changed.
 A: is_arrested should have a data type of bool
 ```
 
 ### [Fixing a data type](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=7)
 
-```
+```Python
 # Examine the head of the 'is_arrested' column
 print(ri.is_arrested.head())
 
@@ -71,7 +71,7 @@ print(ri['is_arrested'].dtype)
 
 ### [Combining object columns](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=9)
 
-```
+```Python
 # Concatenate 'stop_date' and 'stop_time' (separated by a space)
 combined = ri.stop_date.str.cat(ri.stop_time, sep=' ')
 
@@ -84,7 +84,7 @@ print(ri.dtypes)
 
 ### [Setting the index](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/preparing-the-data-for-analysis?ex=10)
 
-```
+```Python
 # Set 'stop_datetime' as the index
 ri.set_index('stop_datetime', inplace=True)
 

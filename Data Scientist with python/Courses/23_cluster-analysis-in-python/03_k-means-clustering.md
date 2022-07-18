@@ -6,7 +6,7 @@ This chapter introduces a different clustering algorithm - k-means clustering - 
 
 ### [K-means clustering: first exercise](https://campus.datacamp.com/courses/cluster-analysis-in-python/k-means-clustering-3?ex=2)
 
-```
+```Python
 # Import the kmeans and vq functions
 from scipy.cluster.vq import kmeans, vq
 
@@ -24,14 +24,14 @@ plt.show()
 
 ### [Runtime of k-means clustering](https://campus.datacamp.com/courses/cluster-analysis-in-python/k-means-clustering-3?ex=3)
 
-```
+```Python
 Q: How long does it take to run the kmeans() function on the FIFA dataset?
 A: ~ 50 ms (milliseconds)
 ```
 
 ### [Elbow method on distinct clusters](https://campus.datacamp.com/courses/cluster-analysis-in-python/k-means-clustering-3?ex=5)
 
-```
+```Python
 distortions = []
 num_clusters = range(1, 7)
 
@@ -56,7 +56,7 @@ A: 2 clusters
 
 ### [Elbow method on uniform data](https://campus.datacamp.com/courses/cluster-analysis-in-python/k-means-clustering-3?ex=6)
 
-```
+```Python
 distortions = []
 num_clusters = range(2, 7)
 
@@ -81,7 +81,7 @@ A: Can not be determined
 
 ### [Impact of seeds on distinct clusters](https://campus.datacamp.com/courses/cluster-analysis-in-python/k-means-clustering-3?ex=8)
 
-```
+```Python
 # Import random class
 from numpy import random
 
@@ -117,7 +117,7 @@ plt.show()
 
 ### [Uniform clustering patterns](https://campus.datacamp.com/courses/cluster-analysis-in-python/k-means-clustering-3?ex=9)
 
-```
+```Python
 # Import the kmeans and vq functions
 from scipy.cluster.vq import kmeans,vq
 
@@ -135,7 +135,7 @@ plt.show()
 
 ### [FIFA 18: defenders revisited](https://campus.datacamp.com/courses/cluster-analysis-in-python/k-means-clustering-3?ex=10)
 
-```
+```Python
 # Set up a random seed in numpy
 random.seed([1000,2000])
 

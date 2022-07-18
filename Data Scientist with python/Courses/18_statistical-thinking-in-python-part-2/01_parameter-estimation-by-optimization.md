@@ -6,7 +6,7 @@ When doing statistical inference, we speak the language of probability. A probab
 
 ### [How often do we get no-hitters?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/parameter-estimation-by-optimization?ex=2)
 
-```
+```Python
 # Seed random number generator
 np.random.seed(42)
 
@@ -28,7 +28,7 @@ plt.show()
 
 ### [Do the data follow our story?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/parameter-estimation-by-optimization?ex=3)
 
-```
+```Python
 # Create an ECDF from real data: x, y
 x, y = ecdf(nohitter_times)
 
@@ -50,7 +50,7 @@ plt.show()
 
 ### [How is this parameter optimal?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/parameter-estimation-by-optimization?ex=4)
 
-```
+```Python
 # Plot the theoretical CDFs
 plt.plot(x_theor, y_theor)
 plt.plot(x, y, marker='.', linestyle='none')
@@ -78,7 +78,7 @@ plt.show()
 
 ### [EDA of literacy/fertility data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/parameter-estimation-by-optimization?ex=6)
 
-```
+```Python
 # Plot the illiteracy rate versus fertility
 _ = plt.plot(illiteracy, fertility, marker='.', linestyle='none')
 
@@ -96,7 +96,7 @@ print(pearson_r(illiteracy, fertility))
 
 ### [Linear regression](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/parameter-estimation-by-optimization?ex=7)
 
-```
+```Python
 # Plot the illiteracy rate versus fertility
 _ = plt.plot(illiteracy, fertility, marker='.', linestyle='none')
 plt.margins(0.02)
@@ -123,7 +123,7 @@ plt.show()
 
 ### [How is it optimal?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/parameter-estimation-by-optimization?ex=8)
 
-```
+```Python
 # Specify slopes to consider: a_vals
 a_vals = np.linspace(0,0.1, 200)
 
@@ -144,14 +144,14 @@ plt.show()
 
 ### [The importance of EDA](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/parameter-estimation-by-optimization?ex=10)
 
-```
+```Python
 Q: Why should exploratory data analysis be the first step in an analysis of data (after getting your data imported and cleaned, of course)?
 A: All of these reasons!
 ```
 
 ### [Linear regression on appropriate Anscombe data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/parameter-estimation-by-optimization?ex=11)
 
-```
+```Python
 # Perform linear regression: a, b
 a, b = np.polyfit(x,y, deg=1)
 
@@ -176,7 +176,7 @@ plt.show()
 
 ### [Linear regression on all Anscombe data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/parameter-estimation-by-optimization?ex=12)
 
-```
+```Python
 # Iterate through x,y pairs
 for x, y in zip(anscombe_x, anscombe_y):
     # Compute the slope and intercept: a, b

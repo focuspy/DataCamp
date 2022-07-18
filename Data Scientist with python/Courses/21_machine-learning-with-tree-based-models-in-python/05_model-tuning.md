@@ -6,21 +6,21 @@ The hyperparameters of a machine learning model are parameters that are not lear
 
 ### [Tree hyperparameters](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/model-tuning?ex=2)
 
-```
+```Python
 Q: Which of the following is not a hyperparameter of dt?
 A: min_features
 ```
 
 ### [Set the tree's hyperparameter grid](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/model-tuning?ex=3)
 
-```
+```Python
 # Define params_dt
 params_dt = {'max_depth': [2, 3, 4], 'min_samples_leaf': [0.12, 0.14, 0.16, 0.18]}
 ```
 
 ### [Search for the optimal tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/model-tuning?ex=4)
 
-```
+```Python
 # Import GridSearchCV
 from sklearn.model_selection import GridSearchCV
 
@@ -34,7 +34,7 @@ grid_dt = GridSearchCV(estimator=dt,
 
 ### [Evaluate the optimal tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/model-tuning?ex=5)
 
-```
+```Python
 # Import roc_auc_score from sklearn.metrics 
 from sklearn.metrics import roc_auc_score
 
@@ -53,21 +53,21 @@ print('Test set ROC AUC score: {:.3f}'.format(test_roc_auc))
 
 ### [Random forests hyperparameters](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/model-tuning?ex=7)
 
-```
+```Python
 Q: Which of the following is not a hyperparameter of rf?
 A: learning_rate
 ```
 
 ### [Set the hyperparameter grid of RF](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/model-tuning?ex=8)
 
-```
+```Python
 # Define the dictionary 'params_rf'
 params_rf = {'n_estimators': [100, 350, 500], 'max_features': ['log2', 'auto', 'sqrt'], 'min_samples_leaf': [2, 10, 30]}
 ```
 
 ### [Search for the optimal forest](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/model-tuning?ex=9)
 
-```
+```Python
 # Import GridSearchCV
 from sklearn.model_selection import  GridSearchCV
 
@@ -82,7 +82,7 @@ grid_rf = GridSearchCV(estimator=rf,
 
 ### [Evaluate the optimal forest](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/model-tuning?ex=10)
 
-```
+```Python
 # Import mean_squared_error from sklearn.metrics as MSE 
 from sklearn.metrics import mean_squared_error as MSE
 

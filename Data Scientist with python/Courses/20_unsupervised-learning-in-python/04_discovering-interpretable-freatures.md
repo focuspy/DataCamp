@@ -6,14 +6,14 @@ In this chapter, you'll learn about a dimension reduction technique called "Non-
 
 ### [Non-negative data](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=2)
 
-```
+```Python
 Q: Which of the following 2-dimensional arrays are examples of non-negative data?
 A: 1 and 3
 ```
 
 ### [NMF applied to Wikipedia articles](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=3)
 
-```
+```Python
 # Import NMF
 from sklearn.decomposition import NMF
 
@@ -32,7 +32,7 @@ print(nmf_features.round(2))
 
 ### [NMF features of the Wikipedia articles](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=4)
 
-```
+```Python
 # Import pandas
 import pandas as pd
 
@@ -48,14 +48,14 @@ print(df.loc['Denzel Washington'])
 
 ### [NMF reconstructs samples](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=5)
 
-```
+```Python
 Q: If the NMF feature values of a sample are [2, 1], then which of the following is most likely to represent the original sample?
 A: [2.2, 1.1, 2.1].
 ```
 
 ### [NMF learns topics of documents](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=7)
 
-```
+```Python
 # Import pandas
 import pandas as pd
 
@@ -74,7 +74,7 @@ print(component.nlargest())
 
 ### [Explore the LED digits dataset](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=8)
 
-```
+```Python
 # Import pyplot
 from matplotlib import pyplot as plt
 
@@ -98,7 +98,7 @@ plt.show()
 
 ### [NMF learns the parts of images](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=9)
 
-```
+```Python
 # Import NMF
 from sklearn.decomposition import NMF
 
@@ -121,7 +121,7 @@ print(digit_features)
 
 ### [PCA doesn't learn parts](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=10)
 
-```
+```Python
 # Import PCA
 from sklearn.decomposition import PCA
 
@@ -138,7 +138,7 @@ for component in model.components_:
 
 ### [Which articles are similar to 'Cristiano Ronaldo'?](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=12)
 
-```
+```Python
 # Perform the necessary imports
 import pandas as pd
 from sklearn.preprocessing import normalize
@@ -161,7 +161,7 @@ print(similarities.nlargest())
 
 ### [Recommend musical artists part I](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=13)
 
-```
+```Python
 # Perform the necessary imports
 from sklearn.decomposition import NMF
 from sklearn.preprocessing import Normalizer, MaxAbsScaler
@@ -185,7 +185,7 @@ norm_features = pipeline.fit_transform(artists)
 
 ### [Recommend musical artists part II](https://campus.datacamp.com/courses/unsupervised-learning-in-python/discovering-interpretable-features?ex=14)
 
-```
+```Python
 # Import pandas
 import pandas as pd
 

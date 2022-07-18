@@ -6,7 +6,7 @@ In this chapter, you will use a second dataset to explore the impact of weather 
 
 ### [Plotting the temperature](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=2)
 
-```
+```Python
 # Read 'weather.csv' into a DataFrame named 'weather'
 weather = pd.read_csv('weather.csv')
 
@@ -22,7 +22,7 @@ plt.show()
 
 ### [Plotting the temperature difference](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=3)
 
-```
+```Python
 # Create a 'TDIFF' column that represents temperature difference
 weather['TDIFF'] = weather['TMAX'] - weather['TMIN']
 
@@ -38,7 +38,7 @@ plt.show()
 
 ### [Counting bad weather conditions](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=5)
 
-```
+```Python
 # Copy 'WT01' through 'WT22' to a new DataFrame
 WT = weather.loc[:,'WT01':'WT22']
 
@@ -57,7 +57,7 @@ plt.show()
 
 ### [Rating the weather conditions](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=6)
 
-```
+```Python
 # Count the unique values in 'bad_conditions' and sort the index
 print(weather.bad_conditions.value_counts().sort_index())
 
@@ -73,7 +73,7 @@ print(weather['rating'].value_counts())
 
 ### [Changing the data type to category](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=7)
 
-```
+```Python
 # Create a list of weather ratings in logical order
 cats = ['good','bad','worse']
 
@@ -86,7 +86,7 @@ print(weather['rating'].head())
 
 ### [Preparing the DataFrames](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=9)
 
-```
+```Python
 # Reset the index of 'ri'
 ri.reset_index(inplace=True)
 
@@ -102,7 +102,7 @@ print(weather_rating.head())
 
 ### [Merging the DataFrames](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=10)
 
-```
+```Python
 # Examine the shape of 'ri'
 print(ri.shape)
 
@@ -118,7 +118,7 @@ ri_weather.set_index('stop_datetime', inplace=True)
 
 ### [Comparing arrest rates by weather rating](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=12)
 
-```
+```Python
 # Calculate the overall arrest rate
 print(ri_weather.is_arrested.mean())
 
@@ -135,7 +135,7 @@ print(ri_weather.groupby(['violation','rating']).is_arrested.mean())
 
 ### [Selecting from a multi-indexed Series](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=13)
 
-```
+```Python
 # Save the output of the groupby operation from the last exercise
 arrest_rate = ri_weather.groupby(['violation', 'rating']).is_arrested.mean()
 
@@ -151,7 +151,7 @@ print(arrest_rate.loc['Speeding'])
 
 ### [Reshaping the arrest rate data](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/analyzing-the-effect-of-weather-on-policing?ex=14)
 
-```
+```Python
 # Unstack the 'arrest_rate' Series into a DataFrame
 print(arrest_rate.unstack)
 

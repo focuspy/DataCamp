@@ -6,7 +6,7 @@ In the first chapter, having cleaned and validated your data, you began explorin
 
 ### [Make a PMF](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=2)
 
-```
+```Python
 # Compute the PMF for year
 pmf_year = Pmf(gss['year'], normalize=False)
 
@@ -21,7 +21,7 @@ A: 2867
 
 ### [Plot a PMF](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=3)
 
-```
+```Python
 # Select the age column
 age = gss['age']
 
@@ -52,7 +52,7 @@ plt.show()
 
 ### [Make a CDF](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=5)
 
-```
+```Python
 # Select the age column
 age = gss['age']
 
@@ -83,7 +83,7 @@ A: Approximately 75%
 
 ### [Compute IQR](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=6)
 
-```
+```Python
 # Calculate the 75th percentile 
 percentile_75th = cdf_income.inverse(0.75)
 
@@ -117,7 +117,7 @@ A: Approximately 29676
 
 ### [Plot a CDF](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=7)
 
-```
+```Python
 # Select realinc
 income = gss['realinc']
 
@@ -135,14 +135,14 @@ plt.show()
 
 ### [Distribution of education](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=9)
 
-```
+```Python
 Q: What fraction of respondents report that they have 12 years of education or fewer?
 A: Approximately 53%
 ```
 
 ### [Extract education levels](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=10)
 
-```
+```Python
 # Select educ
 educ = gss['educ']
 
@@ -159,7 +159,7 @@ print(high.mean())
 
 ### [Plot income CDFs](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=11)
 
-```
+```Python
 income = gss['realinc']
 
 # Plot the CDFs
@@ -176,7 +176,7 @@ plt.show()
 
 ### [Distribution of income](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=13)
 
-```
+```Python
 # Extract realinc and compute its log
 income = gss['realinc']
 log_income = np.log10(income)
@@ -193,7 +193,7 @@ dist = norm(mean,std)
 
 ### [Comparing CDFs](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=14)
 
-```
+```Python
 # Evaluate the model CDF
 xs = np.linspace(2, 5.5)
 ys = dist.cdf(xs)
@@ -213,7 +213,7 @@ plt.show()
 
 ### [Comparing PDFs](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/distributions?ex=15)
 
-```
+```Python
 # Evaluate the normal PDF
 xs = np.linspace(2, 5.5)
 ys = dist.pdf(xs)

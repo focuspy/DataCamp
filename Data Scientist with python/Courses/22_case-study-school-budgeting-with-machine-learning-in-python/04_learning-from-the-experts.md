@@ -6,14 +6,14 @@ In this chapter, you will learn the tricks used by the competition winner, and i
 
 ### [How many tokens?](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/learning-from-the-experts?ex=2)
 
-```
+```Python
 Q: Assuming we tokenize on punctuation, accepting only alpha-numeric sequences as tokens, how many tokens are in the following string from the main dataset
 A: 4, because , and & are not tokens
 ```
 
 ### [Deciding what's a word](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/learning-from-the-experts?ex=3)
 
-```
+```Python
 # Import the CountVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -35,7 +35,7 @@ print(text_features.get_feature_names()[:10])
 
 ### [N-gram range in scikit-learn](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/learning-from-the-experts?ex=4)
 
-```
+```Python
 # Import pipeline
 from sklearn.pipeline import Pipeline
 
@@ -87,14 +87,14 @@ pl = Pipeline([
 
 ### [Which models of the data include interaction terms?](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/learning-from-the-experts?ex=6)
 
-```
+```Python
 Q: Which expression(s) include interaction terms?
 A: The second expression.
 ```
 
 ### [Implement interaction modeling in scikit-learn](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/learning-from-the-experts?ex=7)
 
-```
+```Python
 # Instantiate pipeline: pl
 pl = Pipeline([
         ('union', FeatureUnion(
@@ -119,14 +119,14 @@ pl = Pipeline([
 
 ### [Why is hashing a useful trick?](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/learning-from-the-experts?ex=9)
 
-```
+```Python
 Q: Why is hashing a useful trick?
 A: Some problems are memory-bound and not easily parallelizable, and hashing enforces a fixed length computation instead of using a mutable datatype (like a dictionary).
 ```
 
 ### [Implementing the hashing trick in scikit-learn](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/learning-from-the-experts?ex=10)
 
-```
+```Python
 # Import HashingVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
 
@@ -149,7 +149,7 @@ print(hashed_df.head())
 
 ### [Build the winning model](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/learning-from-the-experts?ex=11)
 
-```
+```Python
 # Import the hashing vectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
 
@@ -178,7 +178,7 @@ pl = Pipeline([
 
 ### [What tactics got the winner the best score?](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/learning-from-the-experts?ex=12)
 
-```
+```Python
 Q: What tactics got the winner the best score?
 A: The winner used skillful NLP, efficient computation, and simple but powerful stats tricks to master the budget data.
 ```

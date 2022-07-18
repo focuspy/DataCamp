@@ -6,7 +6,7 @@ The goal of this course is to transform you into a Python expert, and so the fir
 
 ### [Docstrings](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=2)
 
-```
+```Python
 # Add a docstring to count_letter()
 def count_letter(content, letter):
   """Count the number of times `letter` appears in `content`"""
@@ -68,7 +68,7 @@ def count_letter(content, letter):
 
 ### [Retrieving docstrings](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=3)
 
-```
+```Python
 # Get the "count_letter" docstring by using an attribute of the function
 docstring = count_letter.__doc__
 
@@ -111,14 +111,14 @@ print(build_tooltip(print))
 
 ### [Docstrings to the rescue!](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=4)
 
-```
+```Python
 Q: Examine each of these functions' docstrings in the IPython shell to determine which of them is actually numpy.histogram().
 A: numpy.fywdkxa()
 ```
 
 ### [Extract a function](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=6)
 
-```
+```Python
 def standardize(column):
   """Standardize the values in a column.
 
@@ -141,7 +141,7 @@ df['y4_z'] = standardize(df.y4_gpa)
 
 ### [Split up a function](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=7)
 
-```
+```Python
 def mean(values):
   """Get the mean of a list of values
 
@@ -178,14 +178,14 @@ def median(values):
 
 ### [Mutable or immutable?](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=9)
 
-```
+```Python
 Q: What do you expect the values of d and s to be after the function is called?
 A: d = {'Hello': 'hello'}, s = 'Hello'
 ```
 
 ### [Best practice for default arguments](https://campus.datacamp.com/courses/writing-functions-in-python/best-practices?ex=10)
 
-```
+```Python
 # Use an immutable variable for the default argument 
 def better_add_column(values, df=None):
   """Add a column of `values` to a DataFrame `df`.

@@ -6,7 +6,7 @@ You've learned a lot about how decorators work. This lesson will walk you throug
 
 #### [Print the return type](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=2)
 
-```
+```Python
 def print_return_type(func):
   # Define wrapper(), the decorated function
   def wrapper(*args, **kwargs):
@@ -30,7 +30,7 @@ print(foo({'a': 42}))
 
 ### [Counter](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=3)
 
-```
+```Python
 def counter(func):
   def wrapper(*args, **kwargs):
     wrapper.count += 1
@@ -53,7 +53,7 @@ print('foo() was called {} times.'.format(foo.count))
 
 ### [Preserving docstrings when decorating functions](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=5)
 
-```
+```Python
 def add_hello(func):
   def wrapper(*args, **kwargs):
     print('Hello')
@@ -136,7 +136,7 @@ print(print_sum.__name__)
 
 ### [Measuring decorator overhead](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=6)
 
-```
+```Python
 @check_everything
 def duplicate(my_list):
   """Return a new list that repeats the input twice"""
@@ -159,8 +159,7 @@ print('Undecorated time: {:.5f}s'.format(undecorated_time))
 
 #### [Run_n_times()](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=8)
 
-```
-
+```Python
 # Make print_sum() run 10 times with the run_n_times() decorator
 @run_n_times(10)
 def print_sum(a, b):
@@ -189,8 +188,7 @@ print('What is happening?!?!')
 
 ### [HTML Generator](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=9)
 
-```
-
+```Python
 def html(open_tag, close_tag):
   def decorator(func):
     @wraps(func)
@@ -232,8 +230,7 @@ print(hello_goodbye('Alice'))
 
 ###  [Tag your functions](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=11)
 
-```
-
+```Python
 def tag(*tags):
   # Define a new decorator, named "decorator", to return
   def decorator(func):
@@ -255,8 +252,7 @@ print(foo.tags)
 ```
 ### [Check the return type](https://campus.datacamp.com/courses/writing-functions-in-python/more-on-decorators?ex=12)
 
-```
-
+```Python
 def returns_dict(func):
   # Complete the returns_dict() decorator
   def wrapper(*args, **kwargs):

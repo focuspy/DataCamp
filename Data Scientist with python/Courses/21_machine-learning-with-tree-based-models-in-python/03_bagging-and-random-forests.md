@@ -6,7 +6,7 @@ Bagging is an ensemble method involving training the same algorithm many times u
 
 ### [Define the bagging classifier](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/bagging-and-random-forests?ex=2)
 
-```
+```Python
 # Import DecisionTreeClassifier
 from sklearn.tree import DecisionTreeClassifier
 
@@ -22,7 +22,7 @@ bc = BaggingClassifier(base_estimator=dt, n_estimators=50, random_state=1)
 
 ### [Evaluate Bagging performance](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/bagging-and-random-forests?ex=3)
 
-```
+```Python
 # Fit bc to the training set
 bc.fit(X_train, y_train)
 
@@ -36,7 +36,7 @@ print('Test set accuracy of bc: {:.2f}'.format(acc_test))
 
 ### [Prepare the ground](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/bagging-and-random-forests?ex=5)
 
-```
+```Python
 # Import DecisionTreeClassifier
 from sklearn.tree import DecisionTreeClassifier
 
@@ -55,7 +55,7 @@ bc = BaggingClassifier(base_estimator=dt,
 
 ### [OOB Score vs Test Set Score](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/bagging-and-random-forests?ex=6)
 
-```
+```Python
 # Fit bc to the training set 
 bc.fit(X_train, y_train)
 
@@ -74,7 +74,7 @@ print('Test set accuracy: {:.3f}, OOB accuracy: {:.3f}'.format(acc_test, acc_oob
 
 ### [Train an RF regressor](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/bagging-and-random-forests?ex=8)
 
-```
+```Python
 # Import RandomForestRegressor
 from sklearn.ensemble import RandomForestRegressor
 
@@ -88,7 +88,7 @@ rf.fit(X_train, y_train)
 
 ### [Evaluate the RF regressor](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/bagging-and-random-forests?ex=9)
 
-```
+```Python
 # Import mean_squared_error as MSE
 from sklearn.metrics import mean_squared_error as MSE
 
@@ -104,7 +104,7 @@ print('Test set RMSE of rf: {:.2f}'.format(rmse_test))
 
 ### [Visualizing features importances](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/bagging-and-random-forests?ex=10)
 
-```
+```Python
 # Create a pd.Series of features importances
 importances = pd.Series(data=rf.feature_importances_,
                         index= X_train.columns)

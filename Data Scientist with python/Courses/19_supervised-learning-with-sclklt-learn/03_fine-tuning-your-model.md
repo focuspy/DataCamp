@@ -6,7 +6,7 @@ Having trained your model, your next task is to evaluate its performance. In thi
 
 ### [Metrics for classification](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=2)
 
-```
+```Python
 # Import necessary modules
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
@@ -30,7 +30,7 @@ print(classification_report(y_test, y_pred))
 
 ### [# Building a logistic regression model](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=4)
 
-```
+```Python
 # Import the necessary modules
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix, classification_report
@@ -54,7 +54,7 @@ print(classification_report(y_test, y_pred))
 
 ### [Plotting an ROC curve](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=5)
 
-```
+```Python
 # Import necessary modules
 from sklearn.metrics import roc_curve
 
@@ -75,14 +75,14 @@ plt.show()
 
 ### [Precision-recall Curve](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=6)
 
-```
+```Python
 Q: Choose the one statement that is not true. Note that here, the class is positive (1) if the individual has diabetes.
 A: Precision and recall take true negatives into consideration.
 ```
 
 ### [AUC computation](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=8)
 
-```
+```Python
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import roc_auc_score
 
@@ -91,8 +91,6 @@ y_pred_prob = logreg.predict_proba(X_test)[:,1]
 
 # Compute and print AUC score
 print("AUC: {}".format(roc_auc_score(y_test, y_pred_prob)))
-
-
 
 # Compute cross-validated AUC scores: cv_auc
 cv_auc = cross_val_score(logreg, X, y, cv=5, scoring='roc_auc')
@@ -103,7 +101,7 @@ print("AUC scores computed using 5-fold cross-validation: {}".format(cv_auc))
 
 ### [Hyperparameter tuning with GridSearchCV](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=10)
 
-```
+```Python
 # Import necessary modules
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
@@ -128,7 +126,7 @@ print("Best score is {}".format(logreg_cv.best_score_))
 
 ### [Hyperparameter tuning with RandomizedSearchCV](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=11)
 
-```
+```Python
 from scipy.stats import randint
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import RandomizedSearchCV
@@ -155,14 +153,14 @@ print("Best score is {}".format(tree_cv.best_score_))
 
 ### [Hold-out set reasoning](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=13)
 
-```
+```Python
 Q: For which of the following reasons would you want to use a hold-out set for the very end?
 A: You want to be absolutely certain about your model's ability to generalize to unseen data.
 ```
 
 ### [Hold-out set in practice I: Classification](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=14)
 
-```
+```Python
 # Import necessary modules
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -191,7 +189,7 @@ print("Tuned Logistic Regression Accuracy: {}".format(logreg_cv.best_score_))
 
 ### [Hold-out set in practice II: Regression](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model?ex=15)
 
-```
+```Python
 # Import necessary modules
 from sklearn.linear_model import ElasticNet
 from sklearn.metrics import mean_squared_error

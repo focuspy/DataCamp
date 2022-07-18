@@ -6,7 +6,7 @@ This chapter focuses on a popular clustering algorithm - hierarchical clustering
 
 ### [Hierarchical clustering: ward method](https://campus.datacamp.com/courses/cluster-analysis-in-python/hierarchical-clustering-877595ec-58cd-4cf5-837c-704a42eb8776?ex=2)
 
-```
+```Python
 # Import the fcluster and linkage functions
 from scipy.cluster.hierarchy import fcluster, linkage
 
@@ -24,7 +24,7 @@ plt.show()
 
 ### [Hierarchical clustering: single method]()
 
-```
+```Python
 # Import the fcluster and linkage functions
 from scipy.cluster.hierarchy import fcluster, linkage
 
@@ -42,7 +42,7 @@ plt.show()
 
 ### [Hierarchical clustering: complete method](https://campus.datacamp.com/courses/cluster-analysis-in-python/hierarchical-clustering-877595ec-58cd-4cf5-837c-704a42eb8776?ex=4)
 
-```
+```Python
 # Import the fcluster and linkage functions
 from scipy.cluster.hierarchy import linkage, fcluster
 
@@ -60,7 +60,7 @@ plt.show()
 
 ### [Visualize clusters with matplotlib](https://campus.datacamp.com/courses/cluster-analysis-in-python/hierarchical-clustering-877595ec-58cd-4cf5-837c-704a42eb8776?ex=6)
 
-```
+```Python
 # Import the pyplot class
 from matplotlib import pyplot as plt
 
@@ -76,7 +76,7 @@ plt.show()
 
 ### [Visualize clusters with seaborn](https://campus.datacamp.com/courses/cluster-analysis-in-python/hierarchical-clustering-877595ec-58cd-4cf5-837c-704a42eb8776?ex=7)
 
-```
+```Python
 # Import the seaborn module
 import seaborn as sns
 
@@ -90,7 +90,7 @@ plt.show()
 
 ### [Create a dendrogram](https://campus.datacamp.com/courses/cluster-analysis-in-python/hierarchical-clustering-877595ec-58cd-4cf5-837c-704a42eb8776?ex=9)
 
-```
+```Python
 # Import the dendrogram function
 from scipy.cluster.hierarchy import dendrogram
 
@@ -103,21 +103,21 @@ plt.show()
 
 ### [How many clusters in comic con data?](https://campus.datacamp.com/courses/cluster-analysis-in-python/hierarchical-clustering-877595ec-58cd-4cf5-837c-704a42eb8776?ex=10)
 
-```
+```Python
 Q: Given the dendrogram from the last exercise, how many clusters can you see in the data?
 A: 2 clusters
 ```
 
 ### [Timing run of hierarchical clustering](https://campus.datacamp.com/courses/cluster-analysis-in-python/hierarchical-clustering-877595ec-58cd-4cf5-837c-704a42eb8776?ex=12)
 
-```
+```Python
 Q: How long does it take to the run the linkage function on the comic con data?
 A: 1-5 milliseconds
 ```
 
 ### [FIFA 18: exploring defenders](https://campus.datacamp.com/courses/cluster-analysis-in-python/hierarchical-clustering-877595ec-58cd-4cf5-837c-704a42eb8776?ex=13)
 
-```
+```Python
 # Fit the data into a hierarchical clustering algorithm
 distance_matrix = linkage(fifa[['scaled_sliding_tackle', 'scaled_aggression']], 'ward')
 

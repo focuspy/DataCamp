@@ -6,7 +6,7 @@ If you've ever seen the "with" keyword in Python and wondered what its deal was,
 
 ### [The number of cats](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=2)
 
-```
+```Python
 # Open "alice.txt" and assign the file to "file"
 with open('alice.txt') as file:
   text = file.read()
@@ -21,7 +21,7 @@ print('Lewis Carroll uses the word "cat" {} times'.format(n))
 
 ### [The speed of cats](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=3)
 
-```
+```Python
 image = get_image_from_instagram()
 
 # Time how long process_with_numpy(image) takes to run
@@ -37,7 +37,7 @@ with timer():
 
 ### [The timer() context manager](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=5)
 
-```
+```Python
 # Add a decorator that will make timer() a context manager
 @contextlib.contextmanager
 def timer():
@@ -59,7 +59,7 @@ with timer():
 
 ### [A read-only open() context manager](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=6)
 
-```
+```Python
 @contextlib.contextmanager
 def open_read_only(filename):
   """Open a file in read-only mode.
@@ -82,14 +82,14 @@ with open_read_only('my_file.txt') as my_file:
 
 ### [Context manager use cases](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=8)
 
-```
+```Python
 Q: Which of the following would NOT be a good opportunity to use a context manager?
 A: A function that prints all of the prime numbers between 2 and some value n.
 ```
 
 ### [Scraping the NASDAQ](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=9)
 
-```
+```Python
 # Use the "stock('NVDA')" context manager
 # and assign the result to the variable "nvda"
 with stock("NVDA") as nvda:
@@ -103,7 +103,7 @@ with stock("NVDA") as nvda:
 
 ### [Changing the working directory](https://campus.datacamp.com/courses/writing-functions-in-python/context-managers?ex=10)
 
-```
+```Python
 def in_dir(directory):
   """Change current working directory to `directory`,
   allow the user to run some code, and change back.

@@ -6,7 +6,7 @@ Dimension reduction summarizes a dataset using its common occuring patterns. In 
 
 ### [Correlated data in nature](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=2)
 
-```
+```Python
 # Perform the necessary imports
 import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
@@ -31,7 +31,7 @@ print(correlation)
 
 ### [Decorrelating the grain measurements with PCA](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=3)
 
-```
+```Python
 # Import PCA
 from sklearn.decomposition import PCA
 
@@ -61,14 +61,14 @@ print(correlation)
 
 ### [Principal components](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=4)
 
-```
+```Python
 Q: In which of the plots could the axes represent the principal components of the point cloud?
 A: Both plot 1 and plot 3.
 ```
 
 ### [The first principal component](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=6)
 
-```
+```Python
 # Make a scatter plot of the untransformed points
 plt.scatter(grains[:,0], grains[:,1])
 
@@ -94,7 +94,7 @@ plt.show()
 
 ### [Variance of the PCA features](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=7)
 
-```
+```Python
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
@@ -123,14 +123,14 @@ plt.show()
 
 ### [Intrinsic dimension of the fish data](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=8)
 
-```
+```Python
 Q: Looking again at your plot, what do you think would be a reasonable choice for the "intrinsic dimension" of the fish measurements?
 A: 2
 ```
 
 ### [Dimension reduction of the fish measurements](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=10)
 
-```
+```Python
 # Import PCA
 from sklearn.decomposition import PCA
 
@@ -149,7 +149,7 @@ print(pca_features.shape)
 
 ### [A tf-idf word-frequency array](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=11)
 
-```
+```Python
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Create a TfidfVectorizer: tfidf
@@ -170,7 +170,7 @@ print(words)
 
 ### [Clustering Wikipedia part I](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=12)
 
-```
+```Python
 # Perform the necessary imports
 from sklearn.decomposition import TruncatedSVD
 from sklearn.cluster import KMeans
@@ -188,7 +188,7 @@ pipeline = make_pipeline(svd,kmeans)
 
 ### [Clustering Wikipedia part II](https://campus.datacamp.com/courses/unsupervised-learning-in-python/decorrelating-your-data-and-dimension-reduction?ex=13)
 
-```
+```Python
 # Import pandas
 import pandas as pd
 

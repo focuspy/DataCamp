@@ -6,28 +6,28 @@ In this chapter, you will be introduced to classification problems and learn how
 
 ### [Which of these is a classification problem?](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=2)
 
-```
+```Python
 Q: Which of these is a classification problem?
 A: Using labeled financial data to predict whether the value of a stock will go up or go down next week.
 ```
 
 ### [Numerical EDA](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=4)
 
-```
+```Python
 Q: Get started with your EDA now by exploring this voting records dataset numerically. It has been pre-loaded for you into a DataFrame called df. Use pandas' .head(), .info(), and .describe() methods in the IPython Shell to explore the DataFrame, and select the statement below that is not true.
 A: There are 17 predictor variables, or features, in this DataFrame.
 ```
 
 ### [Visual EDA](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=5)
 
-```
+```Python
 Q: Of these two bills, for which ones do Democrats vote resoundingly in favor of, compared to Republicans? 
 A: Both 'satellite' and 'missile'.
 ```
 
 ### [k-Nearest Neighbors: Fit](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=7)
 
-```
+```Python
 # Import KNeighborsClassifier from sklearn.neighbors
 from sklearn.neighbors import KNeighborsClassifier 
 
@@ -44,7 +44,7 @@ knn.fit(X, y)
 
 ### [k-Nearest Neighbors: Fit](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=8)
 
-```
+```Python
 # Import KNeighborsClassifier from sklearn.neighbors
 from sklearn.neighbors import KNeighborsClassifier 
 
@@ -68,7 +68,7 @@ print("Prediction: {}".format(new_prediction))
 
 ### [The digits recognition dataset](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=10)
 
-```
+```Python
 # Import necessary modules
 from sklearn import datasets
 import matplotlib.pyplot as plt
@@ -91,7 +91,7 @@ plt.show()
 
 ### [Train/Test Split + Fit/Predict/Accuracy](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=11)
 
-```
+```Python
 # Import necessary modules
 from sklearn.neighbors import KNeighborsClassifier 
 from sklearn.model_selection import train_test_split
@@ -115,7 +115,7 @@ print(knn.score(X_test, y_test))
 
 ### [Overfitting and underfitting](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification?ex=12)
 
-```
+```Python
 # Setup arrays to store train and test accuracies
 neighbors = np.arange(1, 9)
 train_accuracy = np.empty(len(neighbors))

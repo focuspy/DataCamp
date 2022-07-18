@@ -6,28 +6,28 @@ In this chapter, you'll be introduced to the problem you'll be solving in this c
 
 ### [What category of problem is this?](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=2)
 
-```
+```Python
 Q: What type of machine learning problem is this?
 A: Supervised Learning, because the model will be trained using labeled examples.
 ```
 
 ### [What is the goal of the algorithm?](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=3)
 
-```
+```Python
 Q:  In this exercise you will tell us what type of supervised machine learning problem this is, and why you think so.
 A: Classification, because predicted probabilities will be used to select a label class.
 ```
 
 ### [Loading the data](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=5)
 
-```
+```Python
 Q: Use df.info() in the IPython Shell to answer the following questions.
 A: 1560 rows, 25 columns, 1131 non-null entries in Job_Title_Description.
 ```
 
 ### [Summarizing the data](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=6)
 
-```
+```Python
 # Print the summary statistics
 print(df.describe())
 
@@ -49,14 +49,14 @@ plt.show()
 
 ### [Exploring datatypes in pandas](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=8)
 
-```
+```Python
 Q: How many columns with dtype object are in the data?
 A: 23.
 ```
 
 ### [Encode the labels as categorical variables](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=9)
 
-```
+```Python
 # Define the lambda function: categorize_label
 categorize_label = lambda x: x.astype('category')
 
@@ -69,7 +69,7 @@ print(df[LABELS].dtypes)
 
 ### [Counting unique labels](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=10)
 
-```
+```Python
 # Import matplotlib.pyplot
 import matplotlib.pyplot as plt
 
@@ -89,14 +89,14 @@ plt.show()
 
 ### [Penalizing highly confident wrong answers](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=12)
 
-```
+```Python
 Q: Select the ordering of the examples which corresponds to the lowest to highest log loss scores. y is an indicator of whether the example was classified correctly. You shouldn't need to crunch any numbers!
 A: Lowest: A, Middle: C, Highest: B.
 ```
 
 ### [Computing log loss with NumPy](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/exploring-the-raw-data?ex=13)
 
-```
+```Python
 # Compute and print log loss for 1st case
 correct_confident_loss = compute_log_loss(correct_confident, actual_labels)
 print("Log loss, correct and confident: {}".format(correct_confident_loss)) 

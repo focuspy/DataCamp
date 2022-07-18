@@ -6,7 +6,7 @@ In this chapter, you are going to learn about decorators, a powerful way of modi
 
 ### [Building a command line data app](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=2)
 
-```
+```Python
 # Add the missing function references to the function map
 function_map = {
   'mean': mean,
@@ -26,7 +26,7 @@ function_map[func_name](data)
 
 ### [Reviewing your co-worker's code](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=3)
 
-```
+```Python
 # Call has_docstring() on the load_and_plot_data() function
 ok = has_docstring(load_and_plot_data)
 
@@ -58,7 +58,7 @@ else:
 
 ### [Returning functions for a math game](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=4)
 
-```
+```Python
 def create_math_function(func_name):
   if func_name == 'add':
     def add(a, b):
@@ -81,14 +81,14 @@ print('5 - 2 = {}'.format(subtract(5, 2)))
 
 ### [Understanding scope](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=6)
 
-```
+```Python
 Q: What four values does this script print?
 A: 50, 30, 100, 30
 ```
 
 ### [Modifying variables outside local scope](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=7)
 
-```
+```Python
 call_count = 0
 
 def my_function():
@@ -144,8 +144,7 @@ print('Work done? {}'.format(done))
 
 ### [Checking for closure](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=9)
 
-```
-
+```Python
 def return_a_func(arg1, arg2):
   def new_func():
     print('arg1 was {}'.format(arg1))
@@ -194,8 +193,7 @@ print(closure_values == [2, 17])
 
 ### [Closures keep your values safe](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=10)
 
-```
-
+```Python
 def my_special_function():
   print('You are running my_special_function()')
   
@@ -247,7 +245,7 @@ my_special_function()
 
 ### [Using decorator syntax](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=12)
 
-```
+```Python
 def my_function(a, b, c):
   print(a + b + c)
 
@@ -268,7 +266,7 @@ my_function(1, 2, 3)
 
 ### [Defining a decorator](https://campus.datacamp.com/courses/writing-functions-in-python/decorators?ex=13)
 
-```
+```Python
 def print_before_and_after(func):
   def wrapper(*args):
     print('Before {}'.format(func.__name__))

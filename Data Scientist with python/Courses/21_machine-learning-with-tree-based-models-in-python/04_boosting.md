@@ -6,7 +6,7 @@ Boosting refers to an ensemble method in which several models are trained sequen
 
 ### [Define the AdaBoost classifier](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/boosting?ex=2)
 
-```
+```Python
 # Import DecisionTreeClassifier
 from sklearn.tree import DecisionTreeClassifier
 
@@ -22,7 +22,7 @@ ada = AdaBoostClassifier(base_estimator=dt, n_estimators=180, random_state=1)
 
 ### [Train the AdaBoost classifier](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/boosting?ex=3)
 
-```
+```Python
 # Fit ada to the training set
 ada.fit(X_train, y_train)
 
@@ -32,7 +32,7 @@ y_pred_proba = ada.predict_proba(X_test)[:, 1]
 
 ### [Evaluate the AdaBoost classifier](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/boosting?ex=4)
 
-```
+```Python
 # Import roc_auc_score
 from sklearn.metrics import roc_auc_score
 
@@ -45,7 +45,7 @@ print('ROC AUC score: {:.2f}'.format(ada_roc_auc))
 
 ### [Define the GB regressor](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/boosting?ex=6)
 
-```
+```Python
 # Import GradientBoostingRegressor
 from sklearn.ensemble import GradientBoostingRegressor 
 
@@ -57,7 +57,7 @@ gb = GradientBoostingRegressor(max_depth = 4,
 
 ### [Train the GB regressor](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/boosting?ex=7)
 
-```
+```Python
 # Fit gb to the training set
 gb.fit(X_train, y_train)
 
@@ -67,7 +67,7 @@ y_pred = gb.predict(X_test)
 
 ### [Evaluate the GB regressor](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/boosting?ex=8)
 
-```
+```Python
 # Import mean_squared_error as MSE
 from sklearn.metrics import mean_squared_error as MSE
 
@@ -83,7 +83,7 @@ print('Test set RMSE of gb: {:.3f}'.format(rmse_test))
 
 ### [Regression with SGB](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/boosting?ex=10)
 
-```
+```Python
 # Import GradientBoostingRegressor
 from sklearn.ensemble import GradientBoostingRegressor
 
@@ -97,7 +97,7 @@ sgbr = GradientBoostingRegressor(max_depth=4,
 
 ### [Train the SGB regressor](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/boosting?ex=11)
 
-```
+```Python
 # Fit sgbr to the training set
 sgbr.fit(X_train, y_train)
 
@@ -107,7 +107,7 @@ y_pred = sgbr.predict(X_test)
 
 ### [Evaluate the SGB regressor](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/boosting?ex=12)
 
-```
+```Python
 # Import mean_squared_error as MSE
 from sklearn.metrics import mean_squared_error as MSE
 

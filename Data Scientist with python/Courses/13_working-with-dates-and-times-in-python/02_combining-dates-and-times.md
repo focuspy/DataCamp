@@ -5,7 +5,7 @@ In this chapter, you are going to move from only working with dates to working w
 
 ### [Creating datetimes by hand](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=2)
 
-```
+```Python
 # Import datetime
 from datetime import datetime
 
@@ -43,7 +43,7 @@ print(dt_old)
 
 #### [Counting events before and after noon](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=3)
 
-```
+```Python
 # Create dictionary to hold results
 trip_counts = {'AM': 0, 'PM': 0}
   
@@ -63,7 +63,7 @@ print(trip_counts)
 
 ### [Turning strings into datetimes](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=5)
 
-```
+```Python
 # Import the datetime class
 from datetime import datetime
 
@@ -116,7 +116,7 @@ print(d)
 
 ### [Parsing pairs of strings as datetimes](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=6)
 
-```
+```Python
 # Write down the format string
 fmt = "%Y-%m-%d %H:%M:%S"
 
@@ -134,7 +134,7 @@ for (start, end) in onebike_datetime_strings:
 
 ### [Recreating ISO format with strftime()](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=7)
 
-```
+```Python
 # Import datetime
 from datetime import datetime
 
@@ -151,7 +151,7 @@ print(first_start.strftime(fmt))
 
 ### [Unix timestamps](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=8)
 
-```
+```Python
 # Import datetime
 from datetime import datetime
 
@@ -171,7 +171,7 @@ print(dts)
 
 ### [Turning pairs of datetimes into durations](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=10)
 
-```
+```Python
 # Initialize a list for all the trip durations
 onebike_durations = []
 
@@ -188,7 +188,7 @@ for trip in onebike_datetimes:
 
 ### [Average trip time](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=11)
 
-```
+```Python
 # What was the total duration of all trips?
 total_elapsed_time = sum(onebike_durations)
 
@@ -201,7 +201,7 @@ print(total_elapsed_time / number_of_trips)
 
 ### [The long and the short of why time is hard](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/combining-dates-and-times?ex=12)
 
-```
+```Python
 # Calculate shortest and longest trips
 shortest_trip = min(onebike_durations)
 longest_trip = max(onebike_durations)

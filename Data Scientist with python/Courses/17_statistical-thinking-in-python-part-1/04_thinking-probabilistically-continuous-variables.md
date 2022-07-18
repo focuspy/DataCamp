@@ -6,21 +6,21 @@ It’s time to move onto continuous variables, such as those that can take on an
 
 ### [Interpreting PDFs](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=2)
 
-```
+```Python
 Q: Which of the following is true?
 A: x is more likely to be less than 10 than to be greater than 10.
 ```
 
 ### [Interpreting CDFs](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=3)
 
-```
+```Python
 Q: Using the CDF, what is the probability that x is greater than 10?
 A: 0.25
 ```
 
 ### [The Normal PDF](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=5)
 
-```
+```Python
 # Draw 100000 samples from Normal distribution with stds of interest: samples_std1, samples_std3, samples_std10
 samples_std1 = np.random.normal(20, 1, size=100000)
 samples_std3 = np.random.normal(20, 3, size=100000)
@@ -39,7 +39,7 @@ plt.show()
 
 ### [The Normal CDF](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=6)
 
-```
+```Python
 # Generate CDFs
 x_std1, y_std1 = ecdf(samples_std1)
 x_std3, y_std3 = ecdf(samples_std3)
@@ -58,14 +58,14 @@ plt.show()
 
 ### [Gauss and the 10 Deutschmark banknote](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=8)
 
-```
+```Python
 Q: What are the mean and standard deviation, respectively, of the Normal distribution that was on the 10 Deutschmark banknote, shown to the right?
 A: mean = 3, std = 1
 ```
 
 ### [Are the Belmont Stakes results Normally distributed?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=9)
 
-```
+```Python
 # Compute mean and standard deviation: mu, sigma
 mu = belmont_no_outliers.mean()
 sigma = belmont_no_outliers.std()
@@ -88,7 +88,7 @@ plt.show()
 
 ### [What are the chances of a horse matching or beating Secretariat's record?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=10)
 
-```
+```Python
 # Take a million samples out of the Normal distribution: samples
 samples = np.random.normal(mu, sigma, size=1000000)
 
@@ -101,21 +101,21 @@ print('Probability of besting Secretariat:', prob)
 
 ### [Matching a story and a distribution](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=12)
 
-```
+```Python
 Q: How might we expect the time between Major League no-hitters to be distributed?
 A: Exponential
 ```
 
 ### [Waiting for the next Secretariat](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=13)
 
-```
+```Python
 Q: How is the waiting time until the next performance as good or better than Secretariat's distributed
 A: Exponential: A horse as fast as Secretariat is a rare event, which can be modeled as a Poisson process, and the waiting time between arrivals of a Poisson process is Exponentially distributed.
 ```
 
 ### [If you have a story, you can simulate it!](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=14)
 
-```
+```Python
 def successive_poisson(tau1, tau2, size=1):
     """Compute time for arrival of 2 successive Poisson processes."""
     # Draw samples out of first exponential distribution: t1
@@ -129,7 +129,7 @@ def successive_poisson(tau1, tau2, size=1):
 
 ### [Distribution of no-hitters and cycles](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-continuous-variables?ex=15)
 
-```
+```Python
 # Draw samples of waiting times: waiting_times
 waiting_times = successive_poisson(764, 715, 100000)
 

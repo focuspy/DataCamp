@@ -6,21 +6,21 @@ To "pull yourself up by your bootstraps" is a classic idiom meaning that you ach
 
 ### [Getting the terminology down](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=2)
 
-```
+```Python
 Q: What is a bootstrap replicate?
 A: A single value of a statistic computed from a bootstrap sample.
 ```
 
 ### [Bootstrapping by hand](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=3)
 
-```
+```Python
 Q: How many unique bootstrap samples can be drawn (e.g., [-1, 0, 1] and [1, 0, -1] are unique), and what is the maximum mean you can get from a bootstrap sample?
 A: There are 27 unique samples, and the maximum mean is 1.
 ```
 
 ### [Visualizing bootstrap samples](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=4)
 
-```
+```Python
 for _ in range(50):
     # Generate bootstrap sample: bs_sample
     bs_sample = np.random.choice(rainfall, size=len(rainfall))
@@ -45,7 +45,7 @@ plt.show()
 
 ## [Generating many bootstrap replicates](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=6)
 
-```
+```Python
 def draw_bs_reps(data, func, size=1):
     """Draw bootstrap replicates."""
 
@@ -61,7 +61,7 @@ def draw_bs_reps(data, func, size=1):
 
 ## [Bootstrap replicates of the mean and the SEM](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=7)
 
-```
+```Python
 # Take 10,000 bootstrap replicates of the mean: bs_replicates
 bs_replicates = draw_bs_reps(rainfall, np.mean, 10000)
 
@@ -84,14 +84,14 @@ plt.show()
 
 ## [Confidence intervals of rainfall data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=8)
 
-```
+```Python
 Q: What is the 95% confidence interval?
 A: (780, 821) mm/year
 ```
 
 ## [Bootstrap replicates of other statistics](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=9)
 
-```
+```Python
 # Generate 10,000 bootstrap replicates of the variance: bs_replicates
 bs_replicates = draw_bs_reps(rainfall, np.var, 10000)
 
@@ -109,7 +109,7 @@ plt.show()
 
 ## [Confidence interval on the rate of no-hitters](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=10)
 
-```
+```Python
 # Draw bootstrap replicates of the mean no-hitter time (equal to tau): bs_replicates
 bs_replicates = draw_bs_reps(nohitter_times, np.mean, 10000)
 
@@ -130,7 +130,7 @@ plt.show()
 
 ## [A function to do pairs bootstrap](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=12)
 
-```
+```Python
 def draw_bs_pairs_linreg(x, y, size=1):
     """Perform pairs bootstrap for linear regression."""
 
@@ -152,7 +152,7 @@ def draw_bs_pairs_linreg(x, y, size=1):
 
 ## [Pairs bootstrap of literacy/fertility data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=13)
 
-```
+```Python
 # Generate replicates of slope and intercept using pairs bootstrap
 bs_slope_reps, bs_intercept_reps = draw_bs_pairs_linreg(illiteracy, fertility, 1000)
 
@@ -169,7 +169,7 @@ plt.show()
 
 ## [Plotting bootstrap regressions](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/bootstrap-confidence-intervals?ex=14)
 
-```
+```Python
 # Generate array of x-values for bootstrap lines: x
 x = np.array([0, 100])
 

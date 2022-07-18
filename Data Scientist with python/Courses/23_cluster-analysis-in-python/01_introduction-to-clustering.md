@@ -6,14 +6,14 @@ Before you are ready to classify news articles, you need to be introduced to the
 
 ### [Unsupervised learning in real world](https://campus.datacamp.com/courses/cluster-analysis-in-python/introduction-to-clustering?ex=2)
 
-```
+```Python
 Q: Which of the following examples can be solved with unsupervised learning?
 A: Segmentation of learners at DataCamp based on courses they complete. The training data has no labels.
 ```
 
 ### [Pokémon sightings](https://campus.datacamp.com/courses/cluster-analysis-in-python/introduction-to-clustering?ex=3)
 
-```
+```Python
 # Import plotting class from matplotlib library
 from matplotlib import pyplot as plt
 
@@ -26,7 +26,7 @@ plt.show()
 
 ### [Pokémon sightings: hierarchical clustering](https://campus.datacamp.com/courses/cluster-analysis-in-python/introduction-to-clustering?ex=5)
 
-```
+```Python
 # Import kmeans and vq functions
 from scipy.cluster.vq import kmeans, vq
 
@@ -43,7 +43,7 @@ plt.show()
 
 ### [Normalize basic list data](https://campus.datacamp.com/courses/cluster-analysis-in-python/introduction-to-clustering?ex=8)
 
-```
+```Python
 # Import the whiten function
 from scipy.cluster.vq import whiten
 
@@ -56,7 +56,7 @@ print(scaled_data)
 
 ### [](https://campus.datacamp.com/courses/cluster-analysis-in-python/introduction-to-clustering?ex=8)
 
-```
+```Python
 # Import the whiten function
 from scipy.cluster.vq import whiten
 
@@ -69,7 +69,7 @@ print(scaled_data)
 
 ### [Visualize normalized data](https://campus.datacamp.com/courses/cluster-analysis-in-python/introduction-to-clustering?ex=9)
 
-```
+```Python
 # Plot original data
 plt.plot(goals_for, label='original')
 
@@ -85,7 +85,7 @@ plt.show()
 
 ### [Normalization of small numbers](https://campus.datacamp.com/courses/cluster-analysis-in-python/introduction-to-clustering?ex=10)
 
-```
+```Python
 # Prepare data
 rate_cuts = [0.0025, 0.001, -0.0005, -0.001, -0.0005, 0.0025, -0.001, -0.0015, -0.001, 0.0005]
 
@@ -104,7 +104,7 @@ plt.show()
 
 ### [FIFA 18: Normalize data](https://campus.datacamp.com/courses/cluster-analysis-in-python/introduction-to-clustering?ex=11)
 
-```
+```Python
 # Scale wage and value
 fifa['scaled_wage'] = whiten(fifa['eur_wage'])
 fifa['scaled_value'] = whiten(fifa['eur_value'])

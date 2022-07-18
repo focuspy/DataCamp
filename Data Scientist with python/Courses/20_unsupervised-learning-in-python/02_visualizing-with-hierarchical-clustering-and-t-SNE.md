@@ -6,14 +6,14 @@ In this chapter, you'll learn about two unsupervised learning techniques for dat
 
 ### [How many merges?](https://campus.datacamp.com/courses/unsupervised-learning-in-python/visualization-with-hierarchical-clustering-and-t-sne?ex=2)]
 
-```
+```Python
 Q: If there are 5 data samples, how many merge operations will occur in a hierarchical clustering?
 A: 4 merges.
 ```
 
 ### [Hierarchical clustering of the grain data](https://campus.datacamp.com/courses/unsupervised-learning-in-python/visualization-with-hierarchical-clustering-and-t-sne?ex=3)
 
-```
+```Python
 # Perform the necessary imports
 from scipy.cluster.hierarchy import linkage, dendrogram
 import matplotlib.pyplot as plt
@@ -32,14 +32,14 @@ plt.show()
 
 ### [Which clusters are closest?](https://campus.datacamp.com/courses/unsupervised-learning-in-python/visualization-with-hierarchical-clustering-and-t-sne?ex=6)
 
-```
+```Python
 Q: Consider the three clusters in the diagram. Which of the following statements are true?
 A: Both A and B.
 ```
 
 ### [Different linkage, different hierarchical clustering!](https://campus.datacamp.com/courses/unsupervised-learning-in-python/visualization-with-hierarchical-clustering-and-t-sne?ex=7)
 
-```
+```Python
 # Perform the necessary imports
 import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import dendrogram, linkage
@@ -58,14 +58,14 @@ plt.show()
 
 ### [Intermediate clusterings](https://campus.datacamp.com/courses/unsupervised-learning-in-python/visualization-with-hierarchical-clustering-and-t-sne?ex=8)
 
-```
+```Python
 Q: If the hierarchical clustering were stopped at height 6 on the dendrogram, how many clusters would there be?
 A: 3.
 ```
 
 ### [Extracting the cluster labels](https://campus.datacamp.com/courses/unsupervised-learning-in-python/visualization-with-hierarchical-clustering-and-t-sne?ex=9)
 
-```
+```Python
 # Perform the necessary imports
 import pandas as pd
 from scipy.cluster.hierarchy import fcluster
@@ -85,7 +85,7 @@ print(ct)
 
 ### [t-SNE visualization of grain dataset](https://campus.datacamp.com/courses/unsupervised-learning-in-python/visualization-with-hierarchical-clustering-and-t-sne?ex=11)
 
-```
+```Python
 # Import TSNE
 from sklearn.manifold import TSNE
 
@@ -108,7 +108,7 @@ plt.show()
 
 ### [A t-SNE map of the stock market](https://campus.datacamp.com/courses/unsupervised-learning-in-python/visualization-with-hierarchical-clustering-and-t-sne?ex=12)
 
-```
+```Python
 # Import TSNE
 from sklearn.manifold import TSNE
 

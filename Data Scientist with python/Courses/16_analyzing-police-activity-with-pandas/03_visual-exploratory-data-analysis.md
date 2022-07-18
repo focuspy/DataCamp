@@ -6,7 +6,7 @@ Are you more likely to get arrested at a certain time of day? Are drug-related s
 
 ### [Calculating the hourly arrest rate](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=2)
 
-```
+```Python
 # Calculate the overall arrest rate
 print(ri.is_arrested.mean())
 
@@ -19,7 +19,7 @@ hourly_arrest_rate = ri.groupby(ri.index.hour).is_arrested.mean()
 
 ### [Plotting the hourly arrest rate](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=3)
 
-```
+```Python
 # Import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 
@@ -38,7 +38,7 @@ plt.show()
 
 ### [Plotting drug-related stops](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=5)
 
-```
+```Python
 # Calculate the annual rate of drug-related stops
 print(ri.drugs_related_stop.resample('A').mean())
 
@@ -54,7 +54,7 @@ plt.show()
 
 ### [Comparing drug and search rates](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=6)
 
-```
+```Python
 # Calculate and save the annual search rate
 annual_search_rate = ri.search_conducted.resample('A').mean()
 
@@ -70,7 +70,7 @@ plt.show()
 
 ### [Tallying violations by district](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=8)
 
-```
+```Python
 # Create a frequency table of districts and violations
 print(pd.crosstab(ri.district, ri.violation))
 
@@ -86,7 +86,7 @@ k_zones = all_zones.loc['Zone K1':'Zone K3']
 
 ### [Plotting violations by district](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=9)
 
-```
+```Python
 # Create a bar plot of 'k_zones'
 k_zones.plot(kind='bar')
 
@@ -104,7 +104,7 @@ plt.show()
 
 ### [Converting stop durations to numbers](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=11)
 
-```
+```Python
 # Print the unique values in 'stop_duration'
 print(ri.stop_duration.unique())
 
@@ -120,7 +120,7 @@ print(ri['stop_minutes'].unique())
 
 ### [Plotting stop length](https://campus.datacamp.com/courses/analyzing-police-activity-with-pandas/visual-exploratory-data-analysis?ex=12)
 
-```
+```Python
 # Calculate the mean 'stop_minutes' for each value in 'violation_raw'
 print(ri.groupby('violation_raw').stop_minutes.mean())
 

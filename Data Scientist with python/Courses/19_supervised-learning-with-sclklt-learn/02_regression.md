@@ -6,14 +6,14 @@ In the previous chapter, you used image and political datasets to predict binary
 
 ### [Which of the following is a regression problem?](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=2)
 
-```
+```Python
 Q: Given below are four example applications of machine learning. Your job is to pick the one that is best framed as a regression problem.
 A: A bike share company using time and weather data to predict the number of bikes being rented at any given hour.
 ```
 
 ### [Importing data for supervised learning](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=3)
 
-```
+```Python
 # Import numpy and pandas
 import numpy as np
 import pandas as pd
@@ -40,14 +40,14 @@ print("Dimensions of X after reshaping: ", X_reshaped.shape)
 
 ### [Exploring the Gapminder data](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=4)
 
-```
+```Python
 Q: Which features are positively correlated with life, and which ones are negatively correlated? Does this match your intuition? 
 A: fertility is of type int64.
 ```
 
 ### [Fit & predict for regression](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=6)
 
-```
+```Python
 # Import LinearRegression
 from sklearn.linear_model import LinearRegression
 
@@ -73,7 +73,7 @@ plt.show()
 
 ### [Train/test split for regression](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=7)
 
-```
+```Python
 # Import necessary modules
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
@@ -99,7 +99,7 @@ print("Root Mean Squared Error: {}".format(rmse))
 
 ### [5-fold cross-validation](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=9)
 
-```
+```Python
 # Import the necessary modules
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import cross_val_score
@@ -118,7 +118,7 @@ print("Average 5-Fold CV Score: {}".format(np.mean(cv_scores)))
 
 ### [K-Fold CV comparison](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=10)
 
-```
+```Python
 # Import necessary modules
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import cross_val_score
@@ -137,7 +137,7 @@ print(np.mean(cvscores_10))
 
 ### [Regularization I: Lasso](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=12)
 
-```
+```Python
 # Import Lasso
 from sklearn.linear_model import Lasso
 
@@ -162,7 +162,7 @@ plt.show()
 
 ### [Regularization II: Ridge](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-2?ex=13)
 
-```
+```Python
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import cross_val_score
 

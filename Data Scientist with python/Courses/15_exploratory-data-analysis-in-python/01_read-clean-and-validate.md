@@ -6,14 +6,14 @@ The first step of almost any data project is to read the data, check for errors 
 
 ### [Read the codebook](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/read-clean-and-validate?ex=2)
 
-```
+```Python
 Q: How many respondents refused to answer this question?
 A: 1.
 ```
 
 ### [Exploring the NSFG data](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/read-clean-and-validate?ex=3)
 
-```
+```Python
 # Display the number of rows and columns
 nsfg.shape
 
@@ -52,14 +52,14 @@ print(ounces.head())
 ```
 ### [Validate a variable](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/read-clean-and-validate?ex=5)
 
-```
+```Python
 Q: How many pregnancies in this dataset ended with a live birth?
 A: 6489
 ```
 
 ### [Clean a variable](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/read-clean-and-validate?ex=6)
 
-```
+```Python
 # Replace the value 8 with NaN
 nsfg['nbrnaliv'].replace(8, np.nan, inplace=True)
 
@@ -69,7 +69,7 @@ print(nsfg['nbrnaliv'].value_counts())
 
 ### [Compute a variable](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/read-clean-and-validate?ex=7)
 
-```
+```Python
 # Select the columns and divide by 100
 agecon = nsfg['agecon'] / 100
 agepreg = nsfg['agepreg'] / 100
@@ -98,7 +98,7 @@ print(preg_length.describe())
 
 ### [Make a histogram](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/read-clean-and-validate?ex=9)
 
-```
+```Python
 # Plot the histogram
 plt.hist(agecon, bins=20)
 
@@ -124,7 +124,7 @@ plt.show()
 
 ### [Compute birth weight](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/read-clean-and-validate?ex=10)
 
-```
+```Python
 # Create a Boolean Series for full-term babies
 full_term = nsfg['prglngth'] >= 37
 
@@ -137,7 +137,7 @@ print(full_term_weight.mean())
 
 ### [Filter](https://campus.datacamp.com/courses/exploratory-data-analysis-in-python/read-clean-and-validate?ex=11)
 
-```
+```Python
 # Filter full-term babies
 full_term = nsfg['prglngth'] >= 37
 

@@ -6,7 +6,7 @@ Dates are everywhere in data science. Stock prices go up and down, experiments b
 
 ### [Which day of the week?](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=2)
 
-```
+```Python
 # Import date from datetime
 from datetime import date
 
@@ -32,7 +32,7 @@ print(hurricane_andrew.weekday())
 
 ### [How many hurricanes come early?](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=3)
 
-```
+```Python
 # Counter for how many before June 1
 early_hurricanes = 0
 
@@ -47,7 +47,7 @@ print(early_hurricanes)
 
 ### [Subtracting dates](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=5)
 
-```
+```Python
 # Import date
 from datetime import date
 
@@ -63,7 +63,7 @@ print((end - start).days)
 
 ### [Counting events per calendar month](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=6)
 
-```
+```Python
 # A dictionary to count hurricanes per calendar month
 hurricanes_each_month = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6:0,
 		  				 7: 0, 8:0, 9:0, 10:0, 11:0, 12:0}
@@ -80,7 +80,7 @@ print(hurricanes_each_month)
 
 ### [Putting a list of dates in order](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=7)
 
-```
+```Python
 # Print the first and last scrambled dates
 print(dates_scrambled[0])
 print(dates_scrambled[-1])
@@ -102,7 +102,7 @@ print(dates_ordered[-1])
 
 ### [Printing dates in a friendly format](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=9)
 
-```
+```Python
 # Assign the earliest date to first_date
 first_date = sorted(florida_hurricane_dates)[0]
 
@@ -116,7 +116,7 @@ print("US: " + us)
 
 ### [Representing dates in different ways](https://campus.datacamp.com/courses/working-with-dates-and-times-in-python/dates-and-calendars?ex=10)
 
-```
+```Python
 # Import date
 from datetime import date
 

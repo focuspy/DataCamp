@@ -6,7 +6,7 @@ Classification and Regression Trees (CART) are a set of supervised learning mode
 
 ### [Train your first classification tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=2)
 
-```
+```Python
 # Import DecisionTreeClassifier from sklearn.tree
 from sklearn.tree import DecisionTreeClassifier
 
@@ -23,7 +23,7 @@ print(y_pred[0:5])
 
 ### [Evaluate the classification tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=3)
 
-```
+```Python
 # Import accuracy_score
 from sklearn.metrics import accuracy_score
 
@@ -37,7 +37,7 @@ print("Test set accuracy: {:.2f}".format(acc))
 
 ### [Logistic regression vs classification tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=4)
 
-```
+```Python
 # Import LogisticRegression from sklearn.linear_model
 from sklearn.linear_model import LogisticRegression
 
@@ -56,14 +56,14 @@ plot_labeled_decision_regions(X_test, y_test, clfs)
 
 ### [Growing a classification tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=6)
 
-```
+```Python
 Q: Which of the following is not one of these rules?
 A: When an internal node is split, the split is performed in such a way so that information gain is minimized
 ```
 
 ### [Using entropy as a criterion](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=7)
 
-```
+```Python
 # Import DecisionTreeClassifier from sklearn.tree
 from sklearn.tree import DecisionTreeClassifier
 
@@ -76,7 +76,7 @@ dt_entropy.fit(X_train, y_train)
 
 ### [Entropy vs Gini index](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=8)
 
-```
+```Python
 # Import accuracy_score from sklearn.metrics
 from sklearn.metrics import accuracy_score
 
@@ -95,7 +95,7 @@ print(f'Accuracy achieved by using the gini index: {accuracy_gini:.3f}')
 
 ### [Train your first regression tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=10)
 
-```
+```Python
 # Import DecisionTreeRegressor from sklearn.tree
 from sklearn.tree import DecisionTreeRegressor
 
@@ -110,7 +110,7 @@ dt.fit(X_train, y_train)
 
 ### [Evaluate the regression tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=11)
 
-```
+```Python
 from sklearn.metrics import mean_squared_error as MSE
 
 # Compute y_pred
@@ -128,7 +128,7 @@ print("Test set RMSE of dt: {:.2f}".format(rmse_dt))
 
 ### [Linear regression vs regression tree](https://campus.datacamp.com/courses/machine-learning-with-tree-based-models-in-python/classification-and-regression-trees?ex=12)
 
-```
+```Python
 # Predict test set labels 
 y_pred_lr = lr.predict(X_test)
 

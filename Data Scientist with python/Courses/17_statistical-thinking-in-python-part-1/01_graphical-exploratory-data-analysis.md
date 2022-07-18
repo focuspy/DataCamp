@@ -6,21 +6,21 @@ Before diving into sophisticated statistical inference techniques, you should fi
 
 ### [Tukey's comments on EDA](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=2)
 
-```
+```Python
 Q: Which of the following quotes is not directly from Tukey?
 A: Often times EDA is too time consuming, so it is better to jump right in and do your hypothesis tests.
 ```
 
 ### [Advantages of graphical EDA](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=3)
 
-```
+```Python
 Q: Which of the following is not true of graphical EDA?
 A: A nice looking plot is always the end goal of a statistical analysis.
 ```
 
 ### [Plotting a histogram of iris data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=5)
 
-```
+```Python
 # Import plotting modules
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -37,7 +37,7 @@ plt.show()
 
 ### [Axis labels](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=6)
 
-```
+```Python
 # Plot histogram of versicolor petal lengths
 _ = plt.hist(versicolor_petal_length)
 
@@ -52,7 +52,7 @@ plt.show()
 
 ### [Adjusting the number of bins in a histogram](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=7)
 
-```
+```Python
 # Import numpy
 import numpy as np
 
@@ -78,7 +78,7 @@ plt.show()
 
 ### [Bee swarm plot](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=9)
 
-```
+```Python
 # Create bee swarm plot with Seaborn's default settings
 _ = sns.swarmplot(x='species', y='petal length (cm)', data=df)
 
@@ -93,14 +93,14 @@ plt.show()
 
 ### [Interpreting a bee swarm plot](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=10)
 
-```
+```Python
 Q: Which of the following conclusions could you draw from the bee swarm plot of iris petal lengths you generated in the previous exercise? 
 A: I. virginica petals tend to be the longest, and I. setosa petals tend to be the shortest of the three species.
 ```
 
 ### [Computing the ECDF](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=12)
 
-```
+```Python
 def ecdf(data):
     """Compute ECDF for a one-dimensional array of measurements."""
     # Number of data points: n
@@ -117,7 +117,7 @@ def ecdf(data):
 
 ### [Plotting the ECDF](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=13)
 
-```
+```Python
 # Compute ECDF for versicolor data: x_vers, y_vers
 x_vers, y_vers = ecdf(versicolor_petal_length)
 
@@ -134,7 +134,7 @@ plt.show()
 
 ### [Comparison of ECDFs](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/graphical-exploratory-data-analysis?ex=14)
 
-```
+```Python
 # Compute ECDFs
 x_set, y_set = ecdf(setosa_petal_length)
 x_vers, y_vers = ecdf(versicolor_petal_length)

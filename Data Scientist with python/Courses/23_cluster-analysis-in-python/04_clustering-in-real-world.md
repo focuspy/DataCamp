@@ -6,7 +6,7 @@ Now that you are familiar with two of the most popular clustering techniques, th
 
 ### [Extract RGB values from image](https://campus.datacamp.com/courses/cluster-analysis-in-python/clustering-in-real-world?ex=2)
 
-```
+```Python
 # Import image class of matplotlib
 import matplotlib.image as img
 
@@ -25,7 +25,7 @@ for row in batman_image:
 
 ### [How many dominant colors?](https://campus.datacamp.com/courses/cluster-analysis-in-python/clustering-in-real-world?ex=3)
 
-```
+```Python
 distortions = []
 num_clusters = range(1, 7)
 
@@ -45,7 +45,7 @@ plt.show()
 
 ### [Display dominant colors](https://campus.datacamp.com/courses/cluster-analysis-in-python/clustering-in-real-world?ex=4)
 
-```
+```Python
 # Get standard deviations of each color
 r_std, g_std, b_std = batman_df[['red', 'green', 'blue']].std()
 
@@ -66,7 +66,7 @@ plt.show()
 
 ### [TF-IDF of movie plots](https://campus.datacamp.com/courses/cluster-analysis-in-python/clustering-in-real-world?ex=6)
 
-```
+```Python
 # Import TfidfVectorizer class from sklearn
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -79,7 +79,7 @@ tfidf_matrix = tfidf_vectorizer.fit_transform(plots)
 
 ### [Top terms in movie clusters](https://campus.datacamp.com/courses/cluster-analysis-in-python/clustering-in-real-world?ex=7)
 
-```
+```Python
 num_clusters = 2
 
 # Generate cluster centers through the kmeans function
@@ -97,14 +97,14 @@ for i in range(num_clusters):
 
 ### [Clustering with many features](https://campus.datacamp.com/courses/cluster-analysis-in-python/clustering-in-real-world?ex=9)
 
-```
+```Python
 Q: What should you do if you have too many features for clustering?
 A: Reduce features using a technique like Factor Analysis
 ```
 
 ### [Basic checks on clusters](https://campus.datacamp.com/courses/cluster-analysis-in-python/clustering-in-real-world?ex=10)
 
-```
+```Python
 # Print the size of the clusters
 print(fifa.groupby('cluster_labels')['ID'].count())
 
@@ -114,7 +114,7 @@ print(fifa.groupby('cluster_labels')['eur_wage'].mean())
 
 ### [FIFA 18: what makes a complete player?](https://campus.datacamp.com/courses/cluster-analysis-in-python/clustering-in-real-world?ex=11)
 
-```
+```Python
 # Create centroids with kmeans for 2 clusters
 cluster_centers,_ = kmeans(fifa[scaled_features], 2)
 

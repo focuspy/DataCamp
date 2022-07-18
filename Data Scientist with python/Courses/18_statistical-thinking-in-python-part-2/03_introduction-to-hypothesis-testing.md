@@ -6,7 +6,7 @@ You now know how to define and estimate parameters given a model. But the questi
 
 ### [Generating a permutation sample](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=2)
 
-```
+```Python
 def permutation_sample(data1, data2):
     """Generate a permutation sample from two data sets."""
 
@@ -25,7 +25,7 @@ def permutation_sample(data1, data2):
 
 ### [Visualizing permutation sampling](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=3)
 
-```
+```Python
 for _ in range(50):
     # Generate permutation samples
     perm_sample_1, perm_sample_2 = permutation_sample(rain_june, rain_november)
@@ -56,21 +56,21 @@ plt.show()
 
 ### [Test statistics](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=5)
 
-```
+```Python
 Q: When performing hypothesis tests, your choice of test statistic should be:
 A: be pertinent to the question you are seeking to answer in your hypothesis test.
 ```
 
 ### [What is a p-value?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=6)
 
-```
+```Python
 Q: The p-value is generally a measure of:
 A: the probability of observing a test statistic equally or more extreme than the one you observed, given that the null hypothesis is true.
 ```
 
 ### [Generating permutation replicates](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=7)
 
-```
+```Python
 def draw_perm_reps(data_1, data_2, func, size=1):
     """Generate multiple permutation replicates."""
 
@@ -89,7 +89,7 @@ def draw_perm_reps(data_1, data_2, func, size=1):
 
 ### [Look before you leap: EDA before hypothesis testing](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=8)
 
-```
+```Python
 # Make bee swarm plot
 _ = sns.swarmplot(x=df.ID, y= df.impact_force, data = df)
 
@@ -103,7 +103,7 @@ plt.show()
 
 ### [Permutation test on frog data](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=9)
 
-```
+```Python
 def diff_of_means(data_1, data_2):
     """Difference in means of two arrays."""
 
@@ -128,7 +128,7 @@ print('p-value =', p)
 
 ### [A one-sample bootstrap hypothesis test](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=11)
 
-```
+```Python
 # Make an array of translated impact forces: translated_force_b
 translated_force_b = force_b - np.mean(force_b) + 0.55
 
@@ -144,7 +144,7 @@ print('p = ', p)
 
 ### [A two-sample bootstrap hypothesis test for difference of means](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-2/introduction-to-hypothesis-testing?ex=12)
 
-```
+```Python
 # Compute mean of all forces: mean_force
 mean_force = np.mean(forces_concat)
 

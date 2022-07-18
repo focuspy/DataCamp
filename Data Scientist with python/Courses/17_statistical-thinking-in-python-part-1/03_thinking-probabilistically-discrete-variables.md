@@ -6,21 +6,21 @@ Statistical inference rests upon probability. Because we can very rarely say any
 
 ### [What is the goal of statistical inference?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=2)
 
-```
+```Python
 Q: Why do we do statistical inference?
 A: All of these.
 ```
 
 ### [Why do we use the language of probability?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=3)
 
-```
+```Python
 Q: Which of the following is not a reason why we use probabilistic language in statistical inference?
 A: Probabilistic language is not very precise.
 ```
 
 ### [Generating random numbers using the np.random module](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=5)
 
-```
+```Python
 # Seed the random number generator
 np.random.seed(42)
 
@@ -39,7 +39,7 @@ plt.show()
 
 ### [The np.random module and Bernoulli trials](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=6)
 
-```
+```Python
 def perform_bernoulli_trials(n, p):
     """Perform n Bernoulli trials with success probability p
     and return number of successes."""
@@ -60,7 +60,7 @@ def perform_bernoulli_trials(n, p):
 
 ### [How many defaults might we expect?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=7)
 
-```
+```Python
 # Seed random number generator
 np.random.seed(42)
 
@@ -83,7 +83,7 @@ plt.show()
 
 ### [Will the bank fail?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=8)
 
-```
+```Python
 # Compute ECDF: x, y
 x, y = ecdf(n_defaults)
 
@@ -104,7 +104,7 @@ print('Probability of losing money =', n_lose_money / len(n_defaults))
 
 ### [Sampling out of the Binomial distribution](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=10)
 
-```
+```Python
 # Take 10,000 samples out of the binomial distribution: n_defaults
 n_defaults = np.random.binomial(n=100, p=0.05, size=10000)
 
@@ -122,7 +122,7 @@ plt.show()
 
 ### [Plotting the Binomial PMF](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=11)
 
-```
+```Python
 # Compute bin edges: bins
 bins = np.arange(0, max(n_defaults) + 1.5) - 0.5
 
@@ -139,7 +139,7 @@ plt.show()
 
 ### [Relationship between Binomial and Poisson distributions](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=13)
 
-```
+```Python
 # Draw 10,000 samples out of Poisson distribution: samples_poisson
 samples_poisson = np.random.poisson(10, size=10000)
 
@@ -163,14 +163,14 @@ for i in range(3):
 
 ### [How many no-hitters in a season?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=14)
 
-```
+```Python
 Q: Which probability distribution would be appropriate to describe the number of no-hitters we would expect in a given season?
 A: Both Binomial and Poisson, though Poisson is easier to model and compute.
 ```
 
 ### [Was 2015 anomalous?](https://campus.datacamp.com/courses/statistical-thinking-in-python-part-1/thinking-probabilistically-discrete-variables?ex=15)
 
-```
+```Python
 # Draw 10,000 samples out of Poisson distribution: n_nohitters
 n_nohitters = np.random.poisson(251/115, size=10000)
 

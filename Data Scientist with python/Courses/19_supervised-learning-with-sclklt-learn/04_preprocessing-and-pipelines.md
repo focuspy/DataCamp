@@ -6,7 +6,7 @@ This chapter introduces pipelines, and how scikit-learn allows for transformers 
 
 ### [Exploring categorical features](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=2)
 
-```
+```Python
 # Import pandas
 import pandas as pd
 
@@ -22,7 +22,7 @@ plt.show()
 
 ### [Creating dummy variables](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=3)
 
-```
+```Python
 # Create dummy variables: df_region
 df_region = pd.get_dummies(df)
 
@@ -38,7 +38,7 @@ print(df_region.columns)
 
 ### [Regression with categorical features](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=4)
 
-```
+```Python
 # Import necessary modules
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import Ridge
@@ -55,7 +55,7 @@ print(ridge_cv)
 
 ### [Dropping missing data](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=6)
 
-```
+```Python
 # Convert '?' to NaN
 df[df == '?'] = np.nan
 
@@ -74,7 +74,7 @@ print("Shape of DataFrame After Dropping All Rows with Missing Values: {}".forma
 
 ### [Imputing missing data in a ML Pipeline I](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=7)
 
-```
+```Python
 # Import the Imputer module
 from sklearn.preprocessing import Imputer
 from sklearn.svm import SVC
@@ -92,7 +92,7 @@ steps = [('imputation', imp),
 
 ### [Imputing missing data in a ML Pipeline II](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=8)
 
-```
+```Python
 # Import necessary modules
 from sklearn.preprocessing import Imputer
 from sklearn.pipeline import Pipeline
@@ -120,7 +120,7 @@ print(classification_report(y_test, y_pred))
 
 ### [Centering and scaling your data](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=10)
 
-```
+```Python
 # Import scale
 from sklearn.preprocessing import scale
 
@@ -138,7 +138,7 @@ print("Standard Deviation of Scaled Features: {}".format(np.std(X_scaled)))
 
 ### [Centering and scaling in a pipeline](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=11)
 
-```
+```Python
 # Import the necessary modules
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
@@ -166,7 +166,7 @@ print('Accuracy without Scaling: {}'.format(knn_unscaled.score(X_test, y_test)))
 
 ### [Bringing it all together I: Pipeline for classification](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=12)
 
-```
+```Python
 # Setup the pipeline
 steps = [('scaler', StandardScaler()),
          ('SVM', SVC())]
@@ -197,7 +197,7 @@ print("Tuned Model Parameters: {}".format(cv.best_params_))
 
 ### [Bringing it all together II: Pipeline for regression](https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/preprocessing-and-pipelines?ex=13)
 
-```
+```Python
 # Setup the pipeline steps: steps
 steps = [('imputation', Imputer(missing_values='NaN', strategy='mean', axis=0)),
          ('scaler', StandardScaler()),

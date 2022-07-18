@@ -6,7 +6,7 @@ Here, you'll improve on your benchmark model using pipelines. Because the budget
 
 ### [Instantiate pipeline](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/improving-your-model?ex=2)
 
-```
+```Python
 # Import Pipeline
 from sklearn.pipeline import Pipeline
 
@@ -35,7 +35,7 @@ print("\nAccuracy on sample data - numeric, no nans: ", accuracy)
 
 ### [Preprocessing numeric features](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/improving-your-model?ex=3)
 
-```
+```Python
 # Import the Imputer object
 from sklearn.preprocessing import Imputer
 
@@ -60,7 +60,7 @@ print("\nAccuracy on sample data - all numeric, incl nans: ", accuracy)
 
 ### [Preprocessing text features](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/improving-your-model?ex=5)
 
-```
+```Python
 # Import the CountVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -85,7 +85,7 @@ print("\nAccuracy on sample data - just text data: ", accuracy)
 
 ### [Multiple types of processing: FunctionTransformer](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/improving-your-model?ex=6)
 
-```
+```Python
 # Import FunctionTransformer
 from sklearn.preprocessing import FunctionTransformer
 
@@ -110,7 +110,7 @@ print(just_numeric_data.head())
 
 ### [Multiple types of processing: FeatureUnion](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/improving-your-model?ex=7)
 
-```
+```Python
 # Import FeatureUnion
 from sklearn.pipeline import FeatureUnion
 
@@ -150,7 +150,7 @@ print("\nAccuracy on sample data - all data: ", accuracy)
 
 ### [Using FunctionTransformer on the main dataset](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/improving-your-model?ex=9)
 
-```
+```Python
 # Import FunctionTransformer
 from sklearn.preprocessing import FunctionTransformer
 
@@ -175,7 +175,7 @@ get_numeric_data = FunctionTransformer(lambda x: x[NUMERIC_COLUMNS], validate=Fa
 
 ### [Add a model to the pipeline](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/improving-your-model?ex=10)
 
-```
+```Python
 # Complete the pipeline: pl
 pl = Pipeline([
         ('union', FeatureUnion(
@@ -203,7 +203,7 @@ print("\nAccuracy on budget dataset: ", accuracy)
 
 ### [Try a different class of model](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/improving-your-model?ex=11)
 
-```
+```Python
 # Import random forest classifer
 from sklearn.ensemble import RandomForestClassifier
 
@@ -234,7 +234,7 @@ print("\nAccuracy on budget dataset: ", accuracy)
 
 ### [Can you adjust the model or parameters to improve accuracy?](https://campus.datacamp.com/courses/case-study-school-budgeting-with-machine-learning-in-python/improving-your-model?ex=12)
 
-```
+```Python
 # Import RandomForestClassifier
 from sklearn.ensemble import RandomForestClassifier
 

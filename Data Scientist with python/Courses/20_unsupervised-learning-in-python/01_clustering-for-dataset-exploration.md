@@ -6,14 +6,14 @@ Learn how to discover the underlying groups (or "clusters") in a dataset. By the
 
 ### [How many clusters?](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=2)
 
-```
+```Python
 Q: How many clusters do you see?
 A: 3.
 ```
 
 ### [Clustering 2D points](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=3)
 
-```
+```Python
 # Import KMeans
 from sklearn.cluster import KMeans
 
@@ -32,7 +32,7 @@ print(labels)
 
 ### [Inspect your clustering](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=4)
 
-```
+```Python
 # Import pyplot
 import matplotlib.pyplot as plt
 
@@ -57,7 +57,7 @@ plt.show()
 
 ### [How many clusters of grain?](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=6)
 
-```
+```Python
 ks = range(1, 6)
 inertias = []
 
@@ -81,7 +81,7 @@ plt.show()
 
 ### [Evaluating the grain clustering](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=7)
 
-```
+```Python
 # Create a KMeans model with 3 clusters: model
 model = KMeans(n_clusters=3)
 
@@ -100,7 +100,7 @@ print(ct)
 
 ### [Scaling fish data for clustering](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=9)
 
-```
+```Python
 # Perform the necessary imports
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
@@ -118,7 +118,7 @@ pipeline = make_pipeline(scaler,kmeans)
 
 ### [Clustering the fish data](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=10)
 
-```
+```Python
 # Import pandas
 import pandas as pd
 
@@ -140,7 +140,7 @@ print(ct)
 
 ### [Clustering stocks using KMeans](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=11)
 
-```
+```Python
 # Import Normalizer
 from sklearn.preprocessing import Normalizer
 
@@ -159,7 +159,7 @@ pipeline.fit(movements)
 
 ### [Which stocks move together?](https://campus.datacamp.com/courses/unsupervised-learning-in-python/clustering-for-dataset-exploration?ex=12)
 
-```
+```Python
 # Import pandas
 import pandas as pd
 
