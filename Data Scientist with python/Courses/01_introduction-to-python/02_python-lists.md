@@ -6,7 +6,7 @@ Learn to store, access, and manipulate data in lists: the first step toward effi
 
 ### [Create a list](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=2)
 
-```
+```Python
 # area variables (in square meters)
 hall = 11.25
 kit = 18.0
@@ -23,7 +23,7 @@ print(areas)
 
 ### [Create list with different types](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=3)
 
-```
+```Python
 # area variables (in square meters)
 hall = 11.25
 kit = 18.0
@@ -40,14 +40,14 @@ print(areas)
 
 ### [Select the valid list](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=4)
 
-```
+```Python
 Q: Can you tell which ones of the following lines of Python code are valid ways to build a list?
 A: A, B and C
 ```
 
 ### [List of lists](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=5)
 
-```
+```Python
 # area variables (in square meters)
 hall = 11.25
 kit = 18.0
@@ -70,7 +70,7 @@ print(type(house))
 
 ### [Subset and conquer](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=7)
 
-```
+```Python
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
@@ -86,7 +86,7 @@ print(areas[5])
 
 ### [Subset and calculate](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=8)
 
-```
+```Python
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
@@ -99,7 +99,7 @@ print(eat_sleep_area)
 
 ### [Slicing and dicing](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=9)
 
-```
+```Python
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
@@ -116,7 +116,7 @@ print(upstairs)
 
 ### [Slicing and dicing (2)](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=10)
 
-```
+```Python
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
@@ -130,14 +130,14 @@ print(upstairs)
 
 ### [Subsetting lists of lists](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=11)
 
-```
+```Python
 Q: What will house[-1][1] return?
 A: A float: the bathroom area
 ```
 
 ### [Replace list elements](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=13)
 
-```
+```Python
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
@@ -151,7 +151,7 @@ print (areas)
 
 ### [Extend a list](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=14)
 
-```
+```Python
 # Create the areas list and make some changes
 areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
          "bedroom", 10.75, "bathroom", 10.50]
@@ -166,14 +166,14 @@ print(areas_2)
 
 ### [Delete list elements](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=15)
 
-```
+```Python
 Q: Which of the code chunks will do the job for us?
 A: del(areas[-4:-2])
 ```
 
 ### [Inner workings of lists](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=16)
 
-```
+```Python
 # Create list areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 

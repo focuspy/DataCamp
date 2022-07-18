@@ -6,8 +6,8 @@ You'll learn how to use functions, methods, and packages to efficiently leverage
 
  ### [Familiar functions](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=2)
 
- ```
- # Create variables var1 and var2
+```Python
+# Create variables var1 and var2
 var1 = [1, 2, 3, 4]
 var2 = True
 
@@ -23,14 +23,14 @@ out2 = int(var2)
 
 ### [Help!](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=3)
 
-```
+```Python
 Q: Which of the following statements is true?
 A: pow() takes three arguments: base, exp, and mod. base and exp are required arguments, mod is an optional argument.
 ```
 
 ### [Multiple arguments](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=4)
 
-```
+```Python
 # Create lists first and second
 first = [11.25, 18.0, 20.0]
 second = [10.75, 9.50]
@@ -47,7 +47,7 @@ print (full_sorted)
 
 ### [String Methods](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=6)
 
-```
+```Python
 # string to experiment with: place
 place = "poolhouse"
 
@@ -63,7 +63,7 @@ print(place.count("o"))
 
 ### [List Methods](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=7)
 
-```
+```Python
 # Create list areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
@@ -76,7 +76,7 @@ print(areas.count(9.50))
 
 ### [List Methods (2)](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=8)
 
-```
+```Python
 # Create list areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
@@ -97,7 +97,7 @@ print (areas)
 
 ### [Import package](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=10)
 
-```
+```Python
 # Definition of radius
 r = 0.43
 
@@ -117,7 +117,7 @@ print("Area: " + str(A))
 
 ### [Selective import](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=11)
 
-```
+```Python
 # Definition of radius
 r = 192500
 
@@ -134,7 +134,7 @@ print(dist)
 
 ### [Different ways of importing](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=12)
 
-```
+```Python
 Q: Which import statement will you need in order to run the above code without an error?
 A: from scipy.linalg import inv as my_inv
 ```

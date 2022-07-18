@@ -6,7 +6,7 @@ NumPy is a fundamental Python package to efficiently practice data science. Lear
 
 ### [Your First NumPy Array](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=2)
 
-```
+```Python
 # Create list baseball
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
@@ -22,7 +22,7 @@ print (type(np_baseball))
 
 ### [Baseball players' height](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=3)
 
-```
+```Python
 # height is available as a regular list
 
 # Import numpy
@@ -43,7 +43,7 @@ print(np_height_m)
 
 ### [Baseball player's BMI](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=4)
 
-```
+```Python
 # height and weight are available as regular lists
 
 # Import numpy
@@ -64,7 +64,7 @@ print(bmi)
 
 ### [Lightweight baseball players](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=5)
 
-```
+```Python
 # height and weight are available as a regular lists
 
 # Import numpy
@@ -87,14 +87,14 @@ print(bmi[light])
 
 ### [NumPy Side Effects](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=6)
 
-```
+```Python
 Q: Can you tell which code chunk builds the exact same Python object?
 A: np.array([4, 3, 0]) + np.array([0, 2, 2])
 ```
 
 ### [Subsetting NumPy Arrays](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=7)
 
-```
+```Python
 # height and weight are available as a regular lists
 
 # Import numpy
@@ -113,7 +113,7 @@ print(np.array(np_height_in[100:111]))
 
 ### [Your First 2D NumPy Array](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=9)
 
-```
+```Python
 # Create baseball, a list of lists
 baseball = [[180, 78.4],
             [215, 102.7],
@@ -135,7 +135,7 @@ print(np_baseball.shape)
 
 ### [Baseball data in 2D form](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=10)
 
-```
+```Python
 # baseball is available as a regular list of lists
 
 # Import numpy package
@@ -150,7 +150,7 @@ print(np_baseball.shape)
 
 ### [Subsetting 2D NumPy Arrays](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=11)
 
-```
+```Python
 # baseball is available as a regular list of lists
 
 # Import numpy package
@@ -172,7 +172,7 @@ print(np_baseball[123, 0])
 
 ### [2D Arithmetic](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=12)
 
-```
+```Python
 # baseball is available as a regular list of lists
 # updated is available as 2D numpy array
 
@@ -194,7 +194,7 @@ print(np_baseball*conversion)
 
 ### [Average versus median](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=14)
 
-```
+```Python
 # np_baseball is available
 
 # Import numpy
@@ -212,7 +212,7 @@ print(np.median(np_height_in))
 
 ### [Explore the baseball data](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=15)
 
-```
+```Python
 # np_baseball is available
 
 # Import numpy
@@ -237,7 +237,7 @@ print("Correlation: " + str(corr))
 
 ### [Blend it all together](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=16)
 
-```
+```Python
 # heights and positions are available as lists
 
 # Import numpy
