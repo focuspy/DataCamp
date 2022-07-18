@@ -9,3 +9,5 @@ If you wish to use anything from this repository for purposes of your own and th
 - [**Data Scientist with Python track @2022**](https://www.datacamp.com/)
 
 > **Note**: Be aware, some exercises are now outdated. The solutions may not be the same.
+
+![alt text](https://github.com/focuspy/DataCamp/blob/main/SVG/inverted.svg) "datacamp logo"
