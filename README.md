@@ -1,4 +1,4 @@
-![alt text](https://github.com/focuspy/DataCamp/blob/main/SVG/inverted.svg)
+<a href="https://www.datacamp.com/">![alt text](https://github.com/focuspy/DataCamp/blob/main/SVG/inverted.svg)<a>
 
 # Personal repository for all exercises and projects.
 
