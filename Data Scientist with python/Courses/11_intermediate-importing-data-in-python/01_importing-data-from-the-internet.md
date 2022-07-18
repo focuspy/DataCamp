@@ -6,7 +6,7 @@ The web is a rich source of data from which you can extract various types of ins
 
 ### [Importing flat files from the web: your turn!](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=2)
 
-```
+```Python
 # Import package
 from urllib.request import urlretrieve
 
@@ -26,7 +26,7 @@ print(df.head())
 
 ### [Opening and reading flat files from the web](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=3)
 
-```
+```Python
 # Import packages
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -49,7 +49,7 @@ plt.show()
 
 ### [Importing non-flat files from the web](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=4)
 
-```
+```Python
 # Import package
 import pandas as pd
 
@@ -68,7 +68,7 @@ print(xls['1700'].head())
 
 ### [Performing HTTP requests in Python using urllib](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=6)
 
-```
+```Python
 # Import packages
 from urllib.request import urlopen, Request
 
@@ -90,7 +90,7 @@ response.close()
 
 ### [Printing HTTP request results in Python using urllib](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=7)
 
-```
+```Python
 # Import packages
 from urllib.request import urlopen, Request
 
@@ -115,7 +115,7 @@ response.close()
 
 ### [Performing HTTP requests in Python using requests](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=8)
 
-```
+```Python
 # Import package
 import requests
 
@@ -134,7 +134,7 @@ print(text)
 
 ### [Parsing HTML with BeautifulSoup](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=10)
 
-```
+```Python
 # Import packages
 import requests
 from bs4 import BeautifulSoup
@@ -160,7 +160,7 @@ print(pretty_soup)
 
 ### [Turning a webpage into data using BeautifulSoup: getting the text](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=11)
 
-```
+```Python
 # Import packages
 import requests
 from bs4 import BeautifulSoup
@@ -192,7 +192,7 @@ print(guido_text)
 
 ### [Turning a webpage into data using BeautifulSoup: getting the hyperlinks](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/importing-data-from-the-internet-1?ex=12)
 
-```
+```Python
 # Import packages
 import requests
 from bs4 import BeautifulSoup

@@ -6,14 +6,14 @@ In this chapter, you'll learn how to extract meaningful data from relational dat
 
 ### [Pop quiz: The relational model](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=2)
 
-```
+```Python
 Q: Which of the following is not part of the relational model?
 A: Each row or record in a table represents an instance of an entity type.
 ```
 
 ### [Creating a database engine](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=4)
 
-```
+```Python
 # Import necessary module
 from sqlalchemy import create_engine
 
@@ -23,7 +23,7 @@ engine = create_engine('sqlite:///Chinook.sqlite')
 
 ### [What are the tables in the database?](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=5)
 
-```
+```Python
 # Import necessary module
 from sqlalchemy import create_engine
 
@@ -39,7 +39,7 @@ print(table_names)
 
 ### [The Hello World of SQL Queries!](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=7)
 
-```
+```Python
 # Import packages
 from sqlalchemy import create_engine
 import pandas as pd
@@ -65,7 +65,7 @@ print(df.head())
 
 ### [Customizing the Hello World of SQL Queries](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=8)
 
-```
+```Python
 # Open engine in context manager
 # Perform query and save results to DataFrame: df
 with engine.connect() as con:
@@ -82,7 +82,7 @@ print(df.head())
 
 ### [Filtering your database records using SQL's WHERE](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=9)
 
-```
+```Python
 # Create engine: engine
 engine = create_engine('sqlite:///Chinook.sqlite')
 
@@ -99,7 +99,7 @@ print(df.head())
 
 ### [Ordering your SQL records with ORDER BY](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=10)
 
-```
+```Python
 # Create engine: engine
 engine = create_engine('sqlite:///Chinook.sqlite')
 
@@ -118,7 +118,7 @@ print(df.head())
 
 ### [Pandas and The Hello World of SQL Queries!](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=12)
 
-```
+```Python
 # Import packages
 from sqlalchemy import create_engine
 import pandas as pd
@@ -144,7 +144,7 @@ print(df.equals(df1))
 
 ### [Pandas for more complex querying](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=13)
 
-```
+```Python
 # Import packages
 from sqlalchemy import create_engine
 import pandas as pd
@@ -161,7 +161,7 @@ print(df.head())
 
 ### [The power of SQL lies in relationships between tables: INNER JOIN](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=15)
 
-```
+```Python
 # Open engine in context manager
 # Perform query and save results to DataFrame: df
 with engine.connect() as con:
@@ -175,7 +175,7 @@ print(df.head())
 
 ### [Filtering your INNER JOIN](https://campus.datacamp.com/courses/introduction-to-importing-data-in-python/working-with-relational-databases-in-python-3?ex=16)
 
-```
+```Python
 # Execute query and store records in DataFrame: df
 df = pd.read_sql_query('SELECT * FROM PlaylistTrack INNER JOIN Track on PlaylistTrack.TrackId = Track.TrackId WHERE Milliseconds < 250000', engine)
 

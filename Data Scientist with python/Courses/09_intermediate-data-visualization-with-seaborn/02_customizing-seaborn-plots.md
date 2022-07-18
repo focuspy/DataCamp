@@ -6,7 +6,7 @@ Overview of functions for customizing the display of Seaborn plots.
 
 ### [Setting the default style](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=2)
 
-```
+```Python
 # Plot the pandas histogram
 df['fmr_2'].plot.hist()
 plt.show()
@@ -23,7 +23,7 @@ plt.clf()
 
 ### [Comparing styles](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=3)
 
-```
+```Python
 sns.set_style('dark')
 sns.distplot(df['fmr_2'])
 
@@ -41,7 +41,7 @@ plt.clf()
 
 ### [Removing spines](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=4)
 
-```
+```Python
 # Set the style to white
 sns.set_style('white')
 
@@ -60,7 +60,7 @@ plt.clf()
 
 ### [Matplotlib color codes](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=6)
 
-```
+```Python
 # Set style, enable color code, and create a magenta distplot
 sns.set(color_codes=True)
 sns.distplot(df['fmr_3'], color='m')
@@ -71,7 +71,7 @@ plt.show()
 
 ### [Using default palettes](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=7)
 
-```
+```Python
 # Loop through differences between bright and colorblind palettes
 for p in ['bright', 'colorblind']:
     sns.set_palette(p)
@@ -84,7 +84,7 @@ for p in ['bright', 'colorblind']:
 
 ### [Creating Custom Palettes](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=9)
 
-```
+```Python
 sns.palplot(sns.color_palette( "Purples", 8))
 plt.show()
 
@@ -101,7 +101,7 @@ plt.show()
 
 ### [Using matplotlib axes](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=11)
 
-```
+```Python
 # Create a figure and axes
 fig, ax = plt.subplots()
 
@@ -117,7 +117,7 @@ plt.show()
 
 ### [Additional plot customizations](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=12)
 
-```
+```Python
 # Create a figure and axes
 fig, ax = plt.subplots()
 
@@ -135,7 +135,7 @@ plt.show()
 
 ### [Adding annotations](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=13)
 
-```
+```Python
 # Create a figure and axes. Then plot the data
 fig, ax = plt.subplots()
 sns.distplot(df['fmr_1'], ax=ax)
@@ -154,7 +154,7 @@ plt.show()
 
 ### [Multiple plots](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/customizing-seaborn-plots?ex=14)
 
-```
+```Python
 # Create a plot with 1 row and 2 columns that share the y axis label
 fig, (ax0, ax1) = plt.subplots(nrows=1, ncols=2, sharey=True)
 

@@ -6,10 +6,10 @@ Learn about lambda functions, which allow you to write functions quickly and on 
 
 ### [Pop quiz on lambda functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=2)
 
-```
+```Python
 Q: How would you write a lambda function add_bangs that adds three exclamation points '!!!' to the end of a string a?
 How would you call add_bangs with the argument 'hello'?
-A: The lambda function definition is: `add_bangs = (lambda a: a + '!!!')`, and the function call is: `add_bangs('hello')`.
+A: The lambda function definition is: add_bangs = (lambda a: a + '!!!'), and the function call is: add_bangs('hello').
 ```
 
 ### [Writing a lambda function you already know](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=3)

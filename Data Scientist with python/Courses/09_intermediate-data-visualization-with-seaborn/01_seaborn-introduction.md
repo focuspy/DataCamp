@@ -6,14 +6,14 @@ Introduction to the Seaborn library and where it fits in the Python visualizatio
 
 ### [Seaborn foundation](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/seaborn-introduction?ex=2)
 
-```
+```Python
 Q: What library provides the foundation for pandas and Seaborn plotting?
 A: matplotlib
 ```
 
 ### [Reading a csv file](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/seaborn-introduction?ex=3)
 
-```
+```Python
 # import all modules
 import pandas as pd
 import seaborn as sns
@@ -25,7 +25,7 @@ df = pd.read_csv(grant_file)
 
 ### [Comparing a histogram and distplot](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/seaborn-introduction?ex=4)
 
-```
+```Python
 # Display pandas histogram
 df['Award_Amount'].plot.hist()
 plt.show()
@@ -45,7 +45,7 @@ plt.clf()
 
 ### [Plot a histogram](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/seaborn-introduction?ex=6)
 
-```
+```Python
 # Create a distplot
 sns.distplot(df['Award_Amount'],
              kde=False,
@@ -57,7 +57,7 @@ plt.show()
 
 ### [Rug plot and kde shading](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/seaborn-introduction?ex=7)
 
-```
+```Python
 # Create a distplot of the Award Amount
 sns.distplot(df['Award_Amount'],
              hist=False,
@@ -70,14 +70,14 @@ plt.show()
 
 ### [Interpreting the results](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/seaborn-introduction?ex=8)
 
-```
+```Python
 Q: Looking at this distplot, which of these choices can you infer based on the visualization?
 A: There are a large group of award amounts < $400K.
 ```
 
 ### [Create a regression plot](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/seaborn-introduction?ex=10)
 
-```
+```Python
 # Create a regression plot of premiums vs. insurance_losses
 sns.regplot(x="insurance_losses", y="premiums", data=df)
 
@@ -97,7 +97,7 @@ plt.show()
 
 ### [Plotting multiple variables](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/seaborn-introduction?ex=11)
 
-```
+```Python
 # Create a regression plot using hue
 sns.lmplot(data=df,
            x="insurance_losses",
@@ -110,7 +110,7 @@ plt.show()
 
 ### [Facetting multiple regressions](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/seaborn-introduction?ex=12)
 
-```
+```Python
 # Create a regression plot with multiple rows
 sns.lmplot(data=df,
            x="insurance_losses",

@@ -6,7 +6,7 @@ Overview of more complex plot types included in Seaborn.
 
 ### [stripplot() and swarmplot()](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/additional-plot-types?ex=2)
 
- ```
+```Python
 # Create the stripplot
 sns.stripplot(data=df,
          x='Award_Amount',
@@ -28,7 +28,7 @@ plt.show()
 
 ### [boxplots, violinplots and lvplots](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/additional-plot-types?ex=3)
 
-```
+```Python
 # Create a boxplot
 sns.boxplot(data=df,
          x='Award_Amount',
@@ -63,7 +63,7 @@ plt.clf()
 
 ### [barplots, pointplots and countplots](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/additional-plot-types?ex=4)
 
-```
+```Python
 # Show a countplot with the number of models used with each region a different color
 sns.countplot(data=df,
          y="Model Selected",
@@ -97,7 +97,7 @@ plt.clf()
 
 ### [Regression and residual plots](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/additional-plot-types?ex=6)
 
-```
+```Python
 # Display a regression plot for Tuition
 sns.regplot(data=df,
          y='Tuition',
@@ -122,7 +122,7 @@ plt.clf()
 
 ### [Regression plot parameters](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/additional-plot-types?ex=7)
 
-```
+```Python
 # Plot a regression plot of Tuition and the Percentage of Pell Grants
 sns.regplot(data=df,
             y='Tuition',
@@ -157,7 +157,7 @@ plt.clf()
 
 ### [Binning data](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/additional-plot-types?ex=8)
 
-```
+```Python
 # Create a scatter plot by disabling the regression line
 sns.regplot(data=df,
             y='Tuition',
@@ -192,7 +192,7 @@ plt.clf()
 
 ### [Creating heatmaps](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/additional-plot-types?ex=10)
 
-```
+```Python
 # Create a crosstab table of the data
 pd_crosstab = pd.crosstab(df["Group"], df["YEAR"])
 print(pd_crosstab)
@@ -209,7 +209,7 @@ plt.show()
 
 ### [Customizing heatmaps](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/additional-plot-types?ex=11)
 
-```
+```Python
 # Create the crosstab DataFrame
 pd_crosstab = pd.crosstab(df["Group"], df["YEAR"])
 

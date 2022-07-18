@@ -6,7 +6,7 @@ This chapter will allow you to apply your newly acquired skills toward wrangling
 
 ### [Dictionaries for data science](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=2)
 
-```
+```Python
 # Zip lists: zipped_lists
 zipped_lists = zip(feature_names, row_vals)
 
@@ -19,7 +19,7 @@ print(rs_dict)
 
 ### [Writing a function to help you](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=3)
 
-```
+```Python
 # Define lists2dict()
 def lists2dict(list1, list2):
     """Return a dictionary where list1 provides
@@ -43,7 +43,7 @@ print(rs_fxn)
 
 ### [Using a list comprehension](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=4)
 
-```
+```Python
 # Print the first two lists in row_lists
 print(row_lists[0])
 print(row_lists[1])
@@ -58,7 +58,7 @@ print(list_of_dicts[1])
 
 ### [Turning this all into a DataFrame](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=5)
 
-```
+```Python
 # Import the pandas package
 import pandas as pd
 
@@ -74,7 +74,7 @@ print(df.head())
 
 ### [Processing data in chunks (1)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=7)
 
-```
+```Python
 # Open a connection to the file
 with open('world_dev_ind.csv') as file:
 
@@ -107,7 +107,7 @@ print(counts_dict)
 
 ### [Writing a generator to load data in chunks (2)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=8)
 
-```
+```Python
 # Define read_large_file()
 def read_large_file(file_object):
     """A generator function to read a large file lazily."""
@@ -139,7 +139,7 @@ with open('world_dev_ind.csv') as file:
 
 ### [Writing a generator to load data in chunks (3)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=9)
 
-```
+```Python
 # Initialize an empty dictionary: counts_dict
 counts_dict = {}
 
@@ -163,7 +163,7 @@ print(counts_dict)
 
 ### [Writing an iterator to load data in chunks (1)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=11)
 
-```
+```Python
 # Import the pandas package
 import pandas as pd
 
@@ -177,7 +177,7 @@ print(next(df_reader))
 
 ### [Writing an iterator to load data in chunks (2)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=12)
 
-```
+```Python
 # Initialize reader object: urb_pop_reader
 urb_pop_reader = pd.read_csv('ind_pop_data.csv', chunksize=1000)
 
@@ -203,7 +203,7 @@ print(pops_list)
 
 ### [Writing an iterator to load data in chunks (3)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=13)
 
-```
+```Python
 # Code from previous exercise
 urb_pop_reader = pd.read_csv('ind_pop_data.csv', chunksize=1000)
 df_urb_pop = next(urb_pop_reader)
@@ -223,7 +223,7 @@ plt.show()
 
 ### [Writing an iterator to load data in chunks (4)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=14)
 
-```
+```Python
 # Initialize reader object: urb_pop_reader
 urb_pop_reader = pd.read_csv('ind_pop_data.csv', chunksize=1000)
 
@@ -256,7 +256,7 @@ plt.show()
 
 ### [Writing an iterator to load data in chunks (5)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=15)
 
-```
+```Python
 # Define plot_pop()
 def plot_pop(filename, country_code):
 

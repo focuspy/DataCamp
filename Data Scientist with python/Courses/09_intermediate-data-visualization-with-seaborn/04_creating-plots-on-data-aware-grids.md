@@ -6,7 +6,7 @@ Using Seaborn to draw multiple plots in a single figure.
 
 ### [Building a FacetGrid](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/creating-plots-on-data-aware-grids?ex=2)
 
-```
+```Python
 # Create FacetGrid with Degree_Type and specify the order of the rows using row_order
 g2 = sns.FacetGrid(df, 
              row="Degree_Type",
@@ -22,7 +22,7 @@ plt.clf()
 
 ### [Using a factorplot](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/creating-plots-on-data-aware-grids?ex=3)
 
-```
+```Python
 # Create a factor plot that contains boxplots of Tuition values
 sns.factorplot(data=df,
          x='Tuition',
@@ -47,7 +47,7 @@ plt.clf()
 
 ### [Using a lmplot](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/creating-plots-on-data-aware-grids?ex=4)
 
-```
+```Python
 # Create a FacetGrid varying by column and columns ordered with the degree_order variable
 g = sns.FacetGrid(df, col="Degree_Type", col_order=degree_ord)
 
@@ -87,7 +87,7 @@ plt.clf()
 
 ### [Building a PairGrid](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/creating-plots-on-data-aware-grids?ex=6)
 
-```
+```Python
 # Create a PairGrid with a scatter plot for fatal_collisions and premiums
 g = sns.PairGrid(df, vars=["fatal_collisions", "premiums"])
 g2 = g.map(plt.scatter)
@@ -108,7 +108,7 @@ plt.clf()
 
 ### [Using a pairplot](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/creating-plots-on-data-aware-grids?ex=7)
 
-```
+```Python
 # Create a pairwise plot of the variables using a scatter plot
 sns.pairplot(data=df,
         vars=["fatal_collisions", "premiums"],
@@ -133,7 +133,7 @@ plt.clf()
 
 ### [Additional pairplots](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/creating-plots-on-data-aware-grids?ex=8)
 
-```
+```Python
 # Build a pairplot with different x and y variables
 sns.pairplot(data=df,
         x_vars=["fatal_collisions_speeding", "fatal_collisions_alc"],
@@ -161,7 +161,7 @@ plt.clf()
 
 ### [Building a JointGrid and jointplot](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/creating-plots-on-data-aware-grids?ex=10)
 
-```
+```Python
 # Build a JointGrid comparing humidity and total_rentals
 sns.set_style("whitegrid")
 g = sns.JointGrid(x="hum",
@@ -188,7 +188,7 @@ plt.clf()
 
 ### [Jointplots and regression](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/creating-plots-on-data-aware-grids?ex=11)
 
-```
+```Python
 # Plot temp vs. total_rentals as a regression plot
 sns.jointplot(x="temp",
          y="total_rentals",
@@ -215,7 +215,7 @@ plt.clf()
 
 ### [Complex jointplots](https://campus.datacamp.com/courses/intermediate-data-visualization-with-seaborn/creating-plots-on-data-aware-grids?ex=12)
 
-```
+```Python
 # Create a jointplot of temp vs. casual riders
 # Include a kdeplot over the scatter plot
 g = (sns.jointplot(x="temp",

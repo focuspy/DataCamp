@@ -6,14 +6,14 @@ You'll learn all about iterators and iterables, which you have already worked wi
 
 ### [Iterators vs. Iterables](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/using-iterators-in-pythonland?ex=2)
 
-```
+```Python
 Q: Try printing out their values with print() and next() to figure out which is an iterable and which is an iterator.
 A: flash1 is an iterable and flash2 is an iterator.
 ```
 
 ### [Iterating over iterables (1)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/using-iterators-in-pythonland?ex=3)
 
-```
+```Python
 # Create a list of strings: flash
 flash = ['jay garrick', 'barry allen', 'wally west', 'bart allen']
 
@@ -33,7 +33,7 @@ print(next(superhero))
 
 ### [Iterating over iterables (2)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/using-iterators-in-pythonland?ex=4)
 
-```
+```Python
 # Create an iterator for range(3): small_value
 small_value = iter(range(3))
 
@@ -59,7 +59,7 @@ print(next(googol))
 
 ### [Iterators as function arguments](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/using-iterators-in-pythonland?ex=5)
 
-```
+```Python
 # Create a range object: values
 values = range(10,21)
 
@@ -81,7 +81,7 @@ print(values_sum)
 
 ### [Using enumerate](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/using-iterators-in-pythonland?ex=7)
 
-```
+```Python
 # Create a list of strings: mutants
 mutants = ['charles xavier', 
             'bobby drake', 
@@ -106,7 +106,7 @@ for index2,value2 in enumerate(mutants,start=1):
 
 ### [Using zip](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/using-iterators-in-pythonland?ex=8)
 
-```
+```Python
 # Create a list of tuples: mutant_data
 mutant_data = list(zip(mutants,aliases,powers))
 
@@ -126,7 +126,7 @@ for value1,value2,value3 in mutant_zip:
 
 ### [Using * and zip to 'unzip'](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/using-iterators-in-pythonland?ex=9)
 
-```
+```Python
 # Create a zip object from mutants and powers: z1
 z1 = zip(mutants, powers)
 
@@ -146,7 +146,7 @@ print(result2 == powers)
 
 ### [Processing large amounts of Twitter data](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/using-iterators-in-pythonland?ex=11)
 
-```
+```Python
 # Initialize an empty dictionary: counts_dict
 counts_dict={}
 
@@ -166,7 +166,7 @@ print(counts_dict)
 
 ### [Extracting information for large amounts of Twitter data](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/using-iterators-in-pythonland?ex=12)
 
-```
+```Python
 # Define count_entries()
 def count_entries(csv_file, c_size, colname):
     """Return a dictionary with counts of

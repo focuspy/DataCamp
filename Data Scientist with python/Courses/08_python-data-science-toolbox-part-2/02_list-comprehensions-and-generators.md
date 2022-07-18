@@ -7,28 +7,28 @@ In this chapter, you'll build on your knowledge of iterators and be introduced t
 
 ### [Write a basic list comprehension](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=2)
 
-```
+```Python
 Q: How would a list comprehension that produces a list of the first character of each string in doctor look like? Note that the list comprehension uses doc as the iterator variable. What will the output be?
 A: The list comprehension is [doc[0] for doc in doctor] and produces the list ['h', 'c', 'c', 't', 'w']
 ```
 
 ### [List comprehension over iterables](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=3)
 
-```
+```Python
 Q: Given the following objects below, which of these can we build list comprehensions over?
 A: You can build list comprehensions over all the objects except the integer object valjean.
 ```
 
 ### [Writing list comprehensions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=4)
 
-```
+```Python
 # Create list comprehension: squares
 squares = [i*i for i in range(10)]
 ```
 
 ### [Nested list comprehensions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=5)
 
-```
+```Python
 # Create a 5 x 5 matrix using a list of lists: matrix
 matrix = [[col for col in range(5)] for row in range(5)]
 
@@ -39,7 +39,7 @@ for row in matrix:
 
 ### [Using conditionals in comprehensions (1)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=7)
 
-```
+```Python
 # Create a list of strings: fellowship
 fellowship = ['frodo', 'samwise', 'merry', 'aragorn', 'legolas', 'boromir', 'gimli']
 
@@ -52,7 +52,7 @@ print(new_fellowship)
 
 ### [Using conditionals in comprehensions (2)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=8)
 
-```
+```Python
 # Create a list of strings: fellowship
 fellowship = ['frodo', 'samwise', 'merry', 'aragorn', 'legolas', 'boromir', 'gimli']
 
@@ -65,7 +65,7 @@ print(new_fellowship)
 
 ### [Dict comprehensions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=9)
 
-```
+```Python
 # Create a list of strings: fellowship
 fellowship = ['frodo', 'samwise', 'merry', 'aragorn', 'legolas', 'boromir', 'gimli']
 
@@ -78,14 +78,14 @@ print(new_fellowship)
 
 ### [List comprehensions vs. generators](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=11)
 
-```
+```Python
 Q: Based on your observations and what you can recall from the video, select from the options below the best description for the difference between list comprehensions and generators.
 A: A list comprehension produces a list as output, a generator produces a generator object.
 ```
 
 ### [Write your own generator expressions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=12)
 
-```
+```Python
 # Create generator object: result
 result = (num for num in range(31))
 
@@ -103,7 +103,7 @@ for value in result:
 
 ### [Changing the output in generator expressions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=13)
 
-```
+```Python
 # Create a list of strings: lannister
 lannister = ['cersei', 'jaime', 'tywin', 'tyrion', 'joffrey']
 
@@ -117,7 +117,7 @@ for value in lengths:
 
 ### [Build a generator](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=14)
 
-```
+```Python
 # Create a list of strings
 lannister = ['cersei', 'jaime', 'tywin', 'tyrion', 'joffrey']
 
@@ -137,7 +137,7 @@ for value in get_lengths(lannister):
 
 ### [List comprehensions for time-stamped data](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=16)
 
-```
+```Python
 # Extract the created_at column from df: tweet_time
 tweet_time = df.created_at
 
@@ -150,7 +150,7 @@ print(tweet_clock_time)
 
 ### [Conditional list comprehensions for time-stamped data](https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/list-comprehensions-and-generators?ex=17)
 
-```
+```Python
 # Extract the created_at column from df: tweet_time
 tweet_time = df['created_at']
 
