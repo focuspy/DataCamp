@@ -1,4 +1,4 @@
-## [Interacting with APIs to import data from the web](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2
+## [Interacting with APIs to import data from the web](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2)
 
 In this chapter, you will gain a deeper understanding of how to import data from the web. You will learn the basics of extracting data from APIs, gain insight on the importance of APIs, and practice extracting data by diving into the OMDB and Library of Congress APIs.
 
