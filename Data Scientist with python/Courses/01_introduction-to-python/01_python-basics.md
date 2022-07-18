@@ -16,14 +16,14 @@ print(7 + 10)
 
 ### [When to use Python?](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=3)
 
-```
+```Python
 Q: Python is a pretty versatile language. For which applications can you use Python?
 A: All of the above.
 ```
 
 ### [Any comments?](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=4)
 
-```
+```Python
 # Division
 print(5 / 8)
 
@@ -33,7 +33,7 @@ print(7 + 10)
 
 ### [Python as a calculator](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=5)
 
-```
+```Python
 # Addition, subtraction
 print(5 + 5)
 print(5 - 5)
@@ -50,7 +50,7 @@ print(100 * (1.1**7))
 
 ### [Variable Assignment](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=7)
 
-```
+```Python
 # Create a variable savings
 savings = 100
 
@@ -60,7 +60,7 @@ print(savings)
 
 ### [Calculations with variables](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=8)
 
-```
+```Python
 # Create a variable savings
 savings = 100
 
@@ -76,7 +76,7 @@ print(result)
 
 ### [Other variable types](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=9)
 
-```
+```Python
 # Create a variable desc
 desc = "compound interest"
 
@@ -86,14 +86,14 @@ profitable = True
 
 ### [Guess the type](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=10)
 
-```
+```Python
 Q: Which of the following options is correct?
 A: a is of type float, b is of type str, c is of type bool
 ```
 
 ### [Operations with other types](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=11)
 
-```
+```Python
 savings = 100
 growth_multiplier = 1.1
 desc = "compound interest"
@@ -113,7 +113,7 @@ print (doubledesc)
 
 ### [Type conversion](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=12)
 
-```
+```Python
 # Definition of savings and result
 savings = 100
 result = 100 * 1.10 ** 7
@@ -131,7 +131,7 @@ print (pi_float)
 
 ### [Can Python handle everything?](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=13)
 
-```
+```Python
 Q: Now that you know something more about combining different sources of information, have a look at the four Python expressions below. Which one of these will throw an error?
 A: "The correct answer to this multiple choice exercise is answer number " + 2 .
 ```
