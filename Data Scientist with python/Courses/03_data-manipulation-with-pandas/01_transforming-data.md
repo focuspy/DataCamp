@@ -6,7 +6,7 @@ Let’s master the pandas basics. Learn how to inspect DataFrames and perform fu
 
 ### [Inspecting a DataFrame](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=2)
 
-```
+```Python
 # Print the head of the homelessness data
 print(homelessness.head())
 
@@ -22,7 +22,7 @@ print(homelessness.describe())
 
 ### [Parts of a DataFrame](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=3)
 
-```
+```Python
 # Import pandas using the alias pd
 import pandas as pd
 
@@ -38,7 +38,7 @@ print(homelessness.index)
 
 ### [Sorting rows](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=5)
 
-```
+```Python
 # Sort homelessness by individual
 homelessness_ind = homelessness.sort_values("individuals")
 
@@ -64,7 +64,7 @@ print(homelessness_reg_fam.head())
 
 ### [Subsetting columns](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=6)
 
-```
+```Python
 # Select the individuals column
 individuals = homelessness["individuals"]
 
@@ -90,7 +90,7 @@ print (ind_state.head())
 
 ### [Subsetting rows](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=7)
 
-```
+```Python
 # Filter for rows where individuals is greater than 10000
 ind_gt_10k = homelessness[homelessness["individuals"] > 10000]
 
@@ -117,7 +117,7 @@ print(fam_lt_1k_pac)
 
 ### [Subsetting rows by categorical variables](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=8)
 
-```
+```Python
 # Subset for rows in South Atlantic or Mid-Atlantic regions
 south_mid_atlantic = homelessness[homelessness["region"].isin(["South Atlantic", "Mid-Atlantic"])]
 
@@ -138,9 +138,10 @@ print(mojave_homelessness)
 
 ### [Adding new columns](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=10)
 
-```
+```Python
 # Add total col as sum of individuals and family_members
 homelessness["total"] = homelessness["individuals"] + homelessness["family_members"]
+
 # Add p_individuals col as proportion of individuals
 homelessness["p_individuals"] = homelessness["individuals"] / homelessness["total"]
 
@@ -150,7 +151,7 @@ print(homelessness)
 
 ### [Combo-attack!](https://campus.datacamp.com/courses/data-manipulation-with-pandas/transforming-dataframes?ex=11)
 
-```
+```Python
 # Create indiv_per_10k col as homeless individuals per 10k state pop
 homelessness["indiv_per_10k"] = 10000 * homelessness["individuals"] / homelessness["state_pop"] 
 

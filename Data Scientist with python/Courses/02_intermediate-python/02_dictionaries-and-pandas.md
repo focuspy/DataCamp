@@ -6,7 +6,7 @@ Learn about the dictionary, an alternative to the Python list, and the pandas Da
 
 ### [Motivation for dictionaries](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=2)
 
-```
+```Python
 # Definition of countries and capital
 countries = ['spain', 'france', 'germany', 'norway']
 capitals = ['madrid', 'paris', 'berlin', 'oslo']
@@ -20,7 +20,7 @@ print(capitals[ind_ger])
 
 ### [Create dictionary](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=3)
 
-```
+```Python
 # Definition of countries and capital
 countries = ['spain', 'france', 'germany', 'norway']
 capitals = ['madrid', 'paris', 'berlin', 'oslo']
@@ -34,7 +34,7 @@ print(europe)
 
 ### [Access dictionary](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=4)
 
-```
+```Python
 # Definition of dictionary
 europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin', 'norway':'oslo' }
 
@@ -47,7 +47,7 @@ print(europe['norway'])
 
 ### [Dictionary Manipulation (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=6)
 
-```
+```Python
 # Definition of dictionary
 europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin', 'norway':'oslo' }
 
@@ -66,7 +66,7 @@ print(europe)
 
 ### [Dictionary Manipulation (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=7)
 
-```
+```Python
 # Definition of dictionary
 europe = {'spain':'madrid', 'france':'paris', 'germany':'bonn',
           'norway':'oslo', 'italy':'rome', 'poland':'warsaw',
@@ -84,7 +84,7 @@ print(europe)
 
 ### [Dictionariception](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=8)
 
-```
+```Python
 # Dictionary of dictionaries
 europe = { 'spain': { 'capital':'madrid', 'population':46.77 },
            'france': { 'capital':'paris', 'population':66.03 },
@@ -106,7 +106,7 @@ print(europe)
 
 ### [Dictionary to DataFrame (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=10)
 
-```
+```Python
 # Pre-defined lists
 names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']
 dr =  [True, False, False, False, True, True, True]
@@ -127,7 +127,7 @@ print(cars)
 
 ### [Dictionary to DataFrame (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=11)
 
-```
+```Python
 import pandas as pd
 
 # Build cars DataFrame
@@ -150,7 +150,7 @@ print(cars)
 
 ### [CSV to DataFrame (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=12)
 
-```
+```Python
 # Import pandas as pd
 import pandas as pd
 
@@ -163,7 +163,7 @@ print(cars)
 
 ### [CSV to DataFrame (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=13)
 
-```
+```Python
 # Import pandas as pd
 import pandas as pd
 
@@ -176,7 +176,7 @@ print(cars)
 
 ### [Square Brackets (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=15)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -193,7 +193,7 @@ print(cars[['country','drives_right']])
 
 ### [Square Brackets (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=16)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -207,7 +207,7 @@ print(cars[3:6])
 
 ### [loc and iloc (1)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=17)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -221,7 +221,7 @@ print(cars.loc[['AUS','EG']])
 
 ### [loc and iloc (2)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=18)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -235,7 +235,7 @@ print(cars.loc[['RU','MOR'], ['country','drives_right']])
 
 ### [loc and iloc (3)](https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=19)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)

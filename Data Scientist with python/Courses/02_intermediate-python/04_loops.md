@@ -6,14 +6,14 @@ There are several techniques you can use to repeatedly execute Python code. Whil
 
 ### [while: warming up](https://campus.datacamp.com/courses/intermediate-python/loops?ex=2)
 
-```
+```Python
 Q: Can you tell how many printouts the following while loop will do?
 A: 3
 ```
 
 ### [Basic while loop](https://campus.datacamp.com/courses/intermediate-python/loops?ex=3)
 
-```
+```Python
 # Initialize offset
 offset = 8
 
@@ -26,7 +26,7 @@ while offset != 0:
 
 ### [Add conditionals](https://campus.datacamp.com/courses/intermediate-python/loops?ex=4)
 
-```
+```Python
 # Initialize offset
 offset = -6
 
@@ -41,7 +41,8 @@ while offset != 0 :
 ```
 
 ### [Loop over a list](https://campus.datacamp.com/courses/intermediate-python/loops?ex=6)
-```
+
+```Python
 # areas list
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
@@ -52,7 +53,7 @@ for element in areas:
 
 ### [Indexes and values (1)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=7)
 
-```
+```Python
 # areas list
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
@@ -63,7 +64,7 @@ for idx, a in enumerate(areas) :
 
 ### [Indexes and values (2)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=8)
 
-```
+```Python
 # areas list
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
@@ -74,7 +75,7 @@ for index, area in enumerate(areas) :
 
 ### [Loop over list of lists](https://campus.datacamp.com/courses/intermediate-python/loops?ex=9)
 
-```
+```Python
 # house list of lists
 house = [["hallway", 11.25],
          ["kitchen", 18.0],
@@ -89,7 +90,7 @@ for x,y in enumerate(house):
 
 ### [Loop over dictionary](https://campus.datacamp.com/courses/intermediate-python/loops?ex=11)
 
-```
+```Python
 # Definition of dictionary
 europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin',
           'norway':'oslo', 'italy':'rome', 'poland':'warsaw', 'austria':'vienna'}
@@ -101,7 +102,7 @@ for key, value in europe.items():
 
 ### [Loop over Numpy array](https://campus.datacamp.com/courses/intermediate-python/loops?ex=12)
 
-```
+```Python
 # Import numpy as np
 import numpy as np
 
@@ -116,7 +117,7 @@ for n in np.nditer(np_baseball):
 
 ### [Loop over DataFrame (1)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=14)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -129,7 +130,7 @@ for lab, row in cars.iterrows():
 
 ### [Loop over DataFrame (2)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=15)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -141,7 +142,7 @@ for lab, row in cars.iterrows() :
 
 ### [Add column (1)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=16)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -156,7 +157,7 @@ print(cars)
 
 ### [Add column (2)](https://campus.datacamp.com/courses/intermediate-python/loops?ex=17)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)

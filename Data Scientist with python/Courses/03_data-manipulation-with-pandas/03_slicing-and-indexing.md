@@ -6,7 +6,7 @@ Indexes are supercharged row and column names. Learn how they can be combined wi
 
 ### [Setting and removing indexes](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=2)
 
-```
+```Python
 # Look at temperatures
 print(temperatures.head())
 
@@ -25,7 +25,7 @@ print(temperatures_ind.reset_index(drop=True))
 
 ### [Subsetting with .loc[]](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=3)
 
-```
+```Python
 # Make a list of cities to subset on
 cities = ["Moscow", "Saint Petersburg"]
 
@@ -38,7 +38,7 @@ print(temperatures_ind.loc[cities])
 
 ### [Setting multi-level indexes](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=4)
 
-```
+```Python
 # Index temperatures by country & city
 temperatures_ind = temperatures.set_index(["country", "city"])
 
@@ -51,7 +51,7 @@ print(temperatures_ind.loc[rows_to_keep])
 
 ### [Sorting by index values](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=5)
 
-```
+```Python
 # Sort temperatures_ind by index values
 print(temperatures_ind.sort_index())
 
@@ -64,7 +64,7 @@ print(temperatures_ind.sort_index(level=["country", "city"], ascending=[True, Fa
 
 ### [Slicing index values](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=7)
 
-```
+```Python
 # Sort the index of temperatures_ind
 temperatures_srt = temperatures_ind.sort_index()
 
@@ -80,7 +80,7 @@ print(temperatures_srt.loc[("Pakistan","Lahore"):("Russia","Moscow")])
 
 ### [Slicing in both directions](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=8)
 
-```
+```Python
 # Subset rows from India, Hyderabad to Iraq, Baghdad
 print(temperatures_srt.loc[("India","Hyderabad"):("Iraq","Baghdad")])
 
@@ -93,7 +93,7 @@ print(temperatures_srt.loc[("India","Hyderabad"):("Iraq","Baghdad"),"date":"avg_
 
 ### [Slicing time series](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=9)
 
-```
+```Python
 # Use Boolean conditions to subset temperatures for rows in 2010 and 2011
 temperatures_bool = temperatures[(temperatures["date"] >= "2010-01-01") & (temperatures["date"] <= "2011-12-31")]
 print(temperatures_bool)
@@ -110,7 +110,7 @@ print(temperatures_ind.loc["2010-08":"2011-02"])
 
 ### [Subsetting by row/column number](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=10)
 
-```
+```Python
 # Get 23rd row, 2nd column (index 22, 1)
 print(temperatures.iloc[22,1])
 
@@ -126,7 +126,7 @@ print(temperatures.iloc[:5,2:4])
 
 ### [Pivot temperature by city and year](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=12)
 
-```
+```Python
 # Add a year column to temperatures
 temperatures["year"] = temperatures["date"].dt.year
 
@@ -139,7 +139,7 @@ print(temp_by_country_city_vs_year)
 
 ### [Subsetting pivot tables](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=13)
 
-```
+```Python
 # Subset for Egypt to India
 temp_by_country_city_vs_year.loc["Egypt":"India"]
 
@@ -152,7 +152,7 @@ temp_by_country_city_vs_year.loc[("Egypt","Cairo"):("India","Delhi"),"2005":"201
 
 ### [Calculating on a pivot table](https://campus.datacamp.com/courses/data-manipulation-with-pandas/slicing-and-indexing-dataframes?ex=14)
 
-```
+```Python
 # Get the worldwide mean temp by year
 mean_temp_by_year = temp_by_country_city_vs_year.mean(axis="index")
 

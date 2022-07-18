@@ -6,7 +6,7 @@ Data visualization is a key skill for aspiring data scientists. Matplotlib makes
 
 ### [Line plot (1)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=2)
 
-```
+```Python
 # Print the last item from year and pop
 print(year[-1])
 print(pop[-1])
@@ -23,7 +23,7 @@ plt.show()
 
 ### [Line plot (3)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=4)
 
-```
+```Python
 # Print the last item of gdp_cap and life_exp
 print(gdp_cap[-1])
 print(life_exp[-1])
@@ -37,7 +37,7 @@ plt.show()
 
 ### [Scatter Plot (1)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=5)
 
-```
+```Python
 # Change the line plot below to a scatter plot
 plt.scatter(gdp_cap, life_exp)
 
@@ -50,7 +50,7 @@ plt.show()
 
 ### [Scatter plot (2)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=6)
 
-```
+```Python
 # Import package
 import matplotlib.pyplot as plt
 
@@ -63,7 +63,7 @@ plt.show()
 
 ### [Build a histogram (1)](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=8)
 
-```
+```Python
 # Create histogram of life_exp data
 plt.hist(life_exp)
 
@@ -73,7 +73,7 @@ plt.show()
 
 ### [Build a histogram (2): bins](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=9)
 
-```
+```Python
 # Build histogram with 5 bins
 plt.hist(life_exp, bins=5)
 
@@ -91,7 +91,7 @@ plt.clf()
 
 ### [Build a histogram (3): compare](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=10)
 
-```
+```Python
 # Histogram of life_exp, 15 bins
 plt.hist(life_exp, bins=15)
 
@@ -117,7 +117,7 @@ A: Histogram
 
 ### [Labels](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=14)
 
-```
+```Python
 # Basic scatter plot, log scale
 plt.scatter(gdp_cap, life_exp)
 plt.xscale('log')
@@ -140,7 +140,7 @@ plt.show()
 
 ### [Ticks](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=15)
 
-```
+```Python
 # Scatter plot
 plt.scatter(gdp_cap, life_exp)
 
@@ -163,7 +163,7 @@ plt.show()
 
 ### [Sizes](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=16)
 
-```
+```Python
 # Import numpy as np
 import numpy as np
 
@@ -188,7 +188,7 @@ plt.show()
 ```
 ### [Colors](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=17)
 
-```
+```Python
 # Specify c and alpha inside plt.scatter()
 plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2 , c = col, alpha = 0.8)
 
@@ -205,7 +205,7 @@ plt.show()
 
 ### [Additional Customizations](https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=18)
 
-```
+```Python
 # Scatter plot
 plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c = col, alpha = 0.8)
 

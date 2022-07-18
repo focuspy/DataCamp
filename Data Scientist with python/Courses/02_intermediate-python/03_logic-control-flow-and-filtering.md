@@ -6,7 +6,7 @@ Boolean logic is the foundation of decision-making in Python programs. Learn abo
 
 ### [Equality](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=2)
 
-```
+```Python
 # Comparison of booleans
 True == False
 
@@ -22,7 +22,7 @@ True == 1
 
 ### [Greater and less than](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=3)
 
-```
+```Python
 # Comparison of integers
 x = -3 * 6
 
@@ -37,7 +37,7 @@ print(True > False)
 
 ### [Compare arrays](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=4)
 
-```
+```Python
 # Create arrays
 import numpy as np
 my_house = np.array([18.0, 20.0, 10.75, 9.50])
@@ -52,7 +52,7 @@ print(my_house <= your_house)
 
 ### [and, or, not (1)](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=6)
 
-```
+```Python
 # Define variables
 my_kitchen = 18.0
 your_kitchen = 14.0
@@ -69,7 +69,7 @@ print(my_kitchen*2 < your_kitchen*3)
 
 ### [Boolean operators with Numpy](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=8)
 
-```
+```Python
 # Create arrays
 import numpy as np
 my_house = np.array([18.0, 20.0, 10.75, 9.50])
@@ -84,14 +84,14 @@ print(np.logical_and(my_house < 11, your_house < 11))
 
 ### [Warmup](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=10)
 
-```
+```Python
 Q: What will the output be if you run this piece of code in the IPython Shell?
 A: medium
 ```
 
 ### [if](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=11)
 
-```
+```Python
 # Define variables
 room = "kit"
 area = 14.0
@@ -107,7 +107,7 @@ if area > 15 :
 
 ### [Add else](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=12)
 
-```
+```Python
 # Define variables
 room = "kit"
 area = 14.0
@@ -127,7 +127,7 @@ else:
 
 ### [Customize further: elif](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=13)
 
-```
+```Python
 # Define variables
 room = "bed"
 area = 14.0
@@ -151,7 +151,7 @@ else :
 
 ### [Driving right (1)](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=15)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -168,7 +168,7 @@ print(sel)
 
 ### [Driving right (2)](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=16)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -182,7 +182,7 @@ print(sel)
 
 ### [Cars per capita (1)](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=17)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
@@ -197,7 +197,7 @@ print(car_maniac)
 
 ### [Cars per capita (2)](https://campus.datacamp.com/courses/intermediate-python/logic-control-flow-and-filtering?ex=18)
 
-```
+```Python
 # Import cars data
 import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)

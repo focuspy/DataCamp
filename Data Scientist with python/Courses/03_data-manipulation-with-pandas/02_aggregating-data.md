@@ -6,7 +6,7 @@ In this chapter, you’ll calculate summary statistics on DataFrame columns, and
 
 ### [Mean and median](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=2)
 
-```
+```Python
 # Print the head of the sales DataFrame
 print(sales.head())
 
@@ -22,7 +22,7 @@ print(sales["weekly_sales"].median())
 
 ### [Summarizing dates](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=3)
 
-```
+```Python
 # Print the maximum of the date column
 print(sales["date"].max())
 
@@ -33,7 +33,7 @@ print(sales["date"].min())
 
 ### [Efficient summaries](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=4)
 
-```
+```Python
 # A custom IQR function
 def iqr(column):
     return column.quantile(0.75) - column.quantile(0.25)
@@ -63,7 +63,7 @@ print(sales[["temperature_c", "fuel_price_usd_per_l", "unemployment"]].agg([iqr,
 
 ### [Cumulative statistics](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=5)
 
-```
+```Python
 # Sort sales_1_1 by date
 sales_1_1 = sales_1_1.sort_values("date")
 
@@ -79,7 +79,7 @@ print(sales_1_1[["date", "weekly_sales", "cum_weekly_sales", "cum_max_sales"]])
 
 ### [Dropping duplicates](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=7)
 
-```
+```Python
 # Drop duplicate store/type combinations
 store_types = sales.drop_duplicates(subset=["store", "type"])
 print(store_types.head())
@@ -97,7 +97,7 @@ print(holiday_dates.head())
 
 ### [Counting categorical variables](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=8)
 
-```
+```Python
 # Count the number of stores of each type
 store_counts = store_types["type"].value_counts()
 print(store_counts)
@@ -117,7 +117,7 @@ print(dept_props_sorted)
 
 ### [What percent of sales occurred at each store type?](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=10)
 
-```
+```Python
 # Calc total weekly sales
 sales_all = sales["weekly_sales"].sum()
 
@@ -137,7 +137,7 @@ print(sales_propn_by_type)
 
 ### [Calculations with .groupby()](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=11)
 
-```
+```Python
 # Group by type; calc total weekly sales
 sales_by_type = sales.groupby("type")["weekly_sales"].sum()
 
@@ -157,7 +157,7 @@ print(sales_by_type_is_holiday)
 
 ### [Multiple grouped summaries](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=12)
 
-```
+```Python
 # Import numpy with the alias np
 import numpy as np
 
@@ -176,7 +176,7 @@ print(unemp_fuel_stats)
 
 ### [Pivoting on one variable](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=14)
 
-```
+```Python
 # Pivot for mean weekly_sales for each store type
 mean_sales_by_type = sales.pivot_table(values="weekly_sales", index="type")
 
@@ -206,7 +206,7 @@ print(mean_sales_by_type_holiday)
 
 ### [Fill in missing values and sum values with pivot tables](https://campus.datacamp.com/courses/data-manipulation-with-pandas/aggregating-dataframes?ex=15)
 
-```
+```Python
 # Print mean weekly_sales by department and type; fill missing values with 0
 import numpy as np
 print(sales.pivot_table(values="weekly_sales", index="department", columns="type", aggfunc=np.mean, fill_value=0))
@@ -214,4 +214,3 @@ print(sales.pivot_table(values="weekly_sales", index="department", columns="type
 # Print the mean weekly_sales by department and type; fill missing values with 0s; sum all rows and cols
 print(sales.pivot_table(values="weekly_sales", index="department", columns="type", fill_value=0, margins=True))
 ```
-

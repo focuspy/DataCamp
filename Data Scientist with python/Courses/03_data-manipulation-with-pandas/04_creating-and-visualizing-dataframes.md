@@ -6,7 +6,7 @@ Learn to visualize the contents of your DataFrames, handle missing data values, 
 
 ### [Which avocado size is most popular?](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=2)
 
-```
+```Python
 # Import matplotlib.pyplot with alias plt
 import matplotlib.pyplot as plt
 
@@ -25,7 +25,7 @@ plt.show()
 
 ### [Changes in sales over time](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=3)
 
-```
+```Python
 # Import matplotlib.pyplot with alias plt
 import matplotlib.pyplot as plt
 
@@ -51,7 +51,7 @@ plt.show()
 
 ### [Price of conventional vs. organic avocados](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=5)
 
-```
+```Python
 # # Histogram of conventional avg_price 
 avocados[avocados["type"] == "conventional"]["avg_price"].hist()
 
@@ -95,7 +95,7 @@ plt.show()
 
 ### [Finding missing values](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=7)
 
-```
+```Python
 # Import matplotlib.pyplot with alias plt
 import matplotlib.pyplot as plt
 
@@ -114,7 +114,7 @@ plt.show()
 
 ### [Removing missing values](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=8)
 
-```
+```Python
 # Remove rows with missing values
 avocados_complete = avocados_2016.dropna()
 
@@ -124,7 +124,7 @@ print(avocados_complete.isna().any())
 
 ### [Replacing missing values](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=9)
 
-```
+```Python
 # List the columns with missing values
 cols_with_missing = ["small_sold", "large_sold", "xl_sold"]
 
@@ -153,7 +153,7 @@ plt.show()
 
 ### [List of dictionaries](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=11)
 
-```
+```Python
 # Create a list of dictionaries with new data
 avocados_list = [
     {"date": "2019-11-03", "small_sold": 10376832, "large_sold": 7835071},
@@ -169,7 +169,7 @@ print(avocados_2019)
 
 ### [Dictionary of lists](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=12)
 
-```
+```Python
 # Create a dictionary of lists with new data
 avocados_dict = {
   "date": ["2019-11-17","2019-12-01"],
@@ -186,7 +186,7 @@ print(avocados_2019)
 
 ### [CSV to DataFrame](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=14)
 
-```
+```Python
 # Read CSV as DataFrame called airline_bumping
 airline_bumping = pd.read_csv("airline_bumping.csv")
 
@@ -226,7 +226,7 @@ print(airline_totals)
 
 ### [DataFrame to CSV](https://campus.datacamp.com/courses/data-manipulation-with-pandas/creating-and-visualizing-dataframes?ex=15)
 
-```
+```Python
 # Create airline_totals_sorted
 airline_totals_sorted = airline_totals.sort_values("bumps_per_10k", ascending=False)
 
