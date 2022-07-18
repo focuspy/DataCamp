@@ -6,14 +6,14 @@ In this chapter, you will gain a deeper understanding of how to import data from
 
 ### [Pop quiz: What exactly is a JSON?](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=2)
 
-```
+```Python
 Q:Which of the following is NOT true of the JSON file format?
 A:The function json.load() will load the JSON into Python as a list.
 ```
 
 ### [Loading and exploring a JSON](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=3)
 
-```
+```Python
 # Load JSON: json_data
 with open("a_movie.json") as json_file:
     json_data = json.load(json_file)
@@ -25,21 +25,21 @@ for k in json_data.keys():
 
 ### [Pop quiz: Exploring your JSON](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=4)
 
-```
+```Python
 Q: Which of the following statements is true of the movie in question?
 A: The title is 'The Social Network' and the year is 2010.
 ```
 
 ### [Pop quiz: What's an API?](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=6)
 
-```
+```Python
 Q: Which of the following statements about APIs is NOT true?
 A: All APIs transmit data only in the JSON file format.
 ```
 
 ### [API requests](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=7)
 
-```
+```Python
 # Import requests package
 import requests
 
@@ -55,7 +55,7 @@ print(r.text)
 
 ### [JSON–from the web to Python](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=8)
 
-```
+```Python
 # Import package
 import requests
 
@@ -76,7 +76,7 @@ for k in json_data.keys():
 
 ### [Checking out the Wikipedia API](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/interacting-with-apis-to-import-data-from-the-web-2?ex=9)
 
-```
+```Python
 # Import package
 import requests
 

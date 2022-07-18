@@ -1,4 +1,4 @@
-## [Diving deep into the Twitter API](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api)
+## [Diving deep into the Twitter API](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api "Datacamp link")
 
 In this chapter, you will consolidate your knowledge of interacting with APIs in a deep dive into the Twitter streaming API. You'll learn how to stream real-time Twitter data, and how to analyze and visualize it.
 
@@ -6,7 +6,7 @@ In this chapter, you will consolidate your knowledge of interacting with APIs in
 
 ### [Streaming tweets](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=2)
 
-```
+```Python
 # Initialize Stream listener
 l = MyStreamListener()
 
@@ -19,7 +19,7 @@ stream.filter(['clinton','trump','sanders','cruz'])
 
 ### [Load and explore your Twitter data](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=3)
 
-```
+```Python
 # Import package
 import json
 
@@ -47,7 +47,7 @@ print(tweets_data[0].keys())
 
 ### [Twitter data to DataFrame](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=4)
 
-```
+```Python
 # Import package
 import pandas as pd
 
@@ -60,7 +60,7 @@ print(df.head())
 
 ### [A little bit of Twitter text analysis](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=5)
 
-```
+```Python
 # Initialize list to store tweet counts
 [clinton, trump, sanders, cruz] = [0, 0, 0, 0]
 
@@ -76,7 +76,7 @@ for index, row in df.iterrows():
 
 ### [Plotting your Twitter data](https://campus.datacamp.com/courses/intermediate-importing-data-in-python/diving-deep-into-the-twitter-api?ex=6)
 
-```
+```Python
 # Import packages
 import matplotlib.pyplot as plt
 import seaborn as sns
