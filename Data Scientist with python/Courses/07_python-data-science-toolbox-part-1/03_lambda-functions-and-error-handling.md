@@ -9,12 +9,12 @@ Learn about lambda functions, which allow you to write functions quickly and on 
 ```
 Q: How would you write a lambda function add_bangs that adds three exclamation points '!!!' to the end of a string a?
 How would you call add_bangs with the argument 'hello'?
-A: The lambda function definition is: add_bangs = (lambda a: a + '!!!'), and the function call is: add_bangs('hello').
+A: The lambda function definition is: `add_bangs = (lambda a: a + '!!!')`, and the function call is: `add_bangs('hello')`.
 ```
 
 ### [Writing a lambda function you already know](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=3)
 
-```
+```Python
 # Define echo_word as a lambda function: echo_word
 echo_word = (lambda word1,echo:word1*echo)
 
@@ -27,7 +27,7 @@ print(result)
 
 ### [Map() and lambda functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=4)
 
-```
+```Python
 # Create a list of strings: spells
 spells = ["protego", "accio", "expecto patronum", "legilimens"]
 
@@ -43,7 +43,7 @@ print(shout_spells_list)
 
 ### [Filter() and lambda functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=5)
 
-```
+```Python
 # Create a list of strings: fellowship
 fellowship = ['frodo', 'samwise', 'merry', 'pippin', 'aragorn', 'boromir', 'legolas', 'gimli', 'gandalf']
 
@@ -59,7 +59,7 @@ print(result_list)
 
 ### [Reduce() and lambda functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=6)
 
-```
+```Python
 # Import reduce from functools
 from functools import reduce
 
@@ -75,14 +75,14 @@ print(result)
 
 ### [Pop quiz about errors](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=8)
 
-```
+```Python
 Q: Which of the function calls raises an error and what type of error is raised?
 A: The call len(525600) raises a TypeError.
 ```
 
 ### [Error handling with try-except](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=9)
 
-```
+```Python
 # Define shout_echo
 def shout_echo(word1, echo=1):
     """Concatenate echo copies of word1 and three
@@ -111,7 +111,7 @@ shout_echo("particle", echo="accelerator")
 
 ### [Error handling by raising an error](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=10)
 
-```
+```Python
 # Define shout_echo
 def shout_echo(word1, echo=1):
     """Concatenate echo copies of word1 and three
@@ -136,7 +136,7 @@ shout_echo("particle", echo=5)
 
 ### [Bringing it all together (1)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=12)
 
-```
+```Python
 # Select retweets from the Twitter DataFrame: result
 result = filter(lambda x:x[0:2]=="RT", tweets_df["text"])
 
@@ -150,7 +150,7 @@ for tweet in res_list:
 
 ### [Bringing it all together (2)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=13)
 
-```
+```Python
 # Define count_entries()
 def count_entries(df, col_name='lang'):
     """Return a dictionary with counts of
@@ -190,7 +190,7 @@ print(result1)
 
 ### [Bringing it all together (3)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/lambda-functions-and-error-handling?ex=14)
 
-```
+```Python
 # Define count_entries()
 def count_entries(df, col_name='lang'):
     """Return a dictionary with counts of

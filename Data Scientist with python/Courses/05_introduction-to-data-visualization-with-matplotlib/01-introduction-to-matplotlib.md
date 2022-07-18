@@ -6,7 +6,7 @@ This chapter introduces the Matplotlib visualization library and demonstrates ho
 
 ### [Using the matplotlib.pyplot interface](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=2)
 
-```
+```Python
 # Import the matplotlib.pyplot submodule and name it plt
 import matplotlib.pyplot as plt
 
@@ -19,7 +19,7 @@ plt.show()
 
 ### [Adding data to an Axes object](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=3)
 
-```
+```Python
 # Import the matplotlib.pyplot submodule and name it plt
 import matplotlib.pyplot as plt
 
@@ -38,7 +38,7 @@ plt.show()
 
 ### [Customizing data appearance](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=5)
 
-```
+```Python
 # Plot Seattle data, setting data appearance
 ax.plot(seattle_weather["MONTH"], seattle_weather["MLY-PRCP-NORMAL"], color='b', marker='o', linestyle='--')
 
@@ -51,7 +51,7 @@ plt.show()
 
 ### [Customizing axis labels and adding titles](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=6)
 
-```
+```Python
 ax.plot(seattle_weather["MONTH"], seattle_weather["MLY-PRCP-NORMAL"])
 ax.plot(austin_weather["MONTH"], austin_weather["MLY-PRCP-NORMAL"])
 
@@ -70,14 +70,14 @@ plt.show()
 
 ### [Creating a grid of subplots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=8)
 
-```
+```Python
 Q: How would you create a Figure with 6 Axes objects organized in 3 rows and 2 columns?
 A: fig, ax = plt.subplots(3, 2)
 ```
 
 ### [Creating small multiples with plt.subplots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=9)
 
-```
+```Python
 # Create a Figure and an array of subplots with 2 rows and 2 columns
 fig, ax = plt.subplots(2, 2)
 
@@ -98,7 +98,7 @@ plt.show()
 
 ### [Small multiples with shared y axis](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/introduction-to-matplotlib?ex=10)
 
-```
+```Python
 # Create a figure and an array of axes: 2 rows, 1 column with shared y axis
 fig, ax = plt.subplots(2, 1, sharey=True)
 

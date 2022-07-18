@@ -6,14 +6,14 @@ Learn how you can merge disparate data using inner joins. By combining informati
 
 ### [What column to merge on?](https://campus.datacamp.com/courses/joining-data-with-pandas/data-merging-basics?ex=2)
 
-```
+```Python
 Q: What column to merge on?
 A: on='vid'
 ```
 
 ### [Your first inner join](https://campus.datacamp.com/courses/joining-data-with-pandas/data-merging-basics?ex=3)
 
-```
+```Python
 # Merge the taxi_owners and taxi_veh tables
 taxi_own_veh = taxi_owners.merge(taxi_veh, on="vid")
 
@@ -39,7 +39,7 @@ print(taxi_own_veh['fuel_type'].value_counts())
 
 ### [Inner joins and number of rows returned](https://campus.datacamp.com/courses/joining-data-with-pandas/data-merging-basics?ex=4)
 
-```
+```Python
 # Merge the wards and census tables on the ward column
 wards_census = wards.merge(census, on='ward')
 
@@ -70,7 +70,7 @@ print('wards_census_altered table shape:', wards_census_altered.shape)
 
 ### [One-to-many merge](https://campus.datacamp.com/courses/joining-data-with-pandas/data-merging-basics?ex=7)
 
-```
+```Python
 # Merge the licenses and biz_owners table on account
 licenses_owners = licenses.merge(biz_owners,on="account")
 
@@ -86,7 +86,7 @@ print(sorted_df.head())
 
 ### [Total riders in a month](https://campus.datacamp.com/courses/joining-data-with-pandas/data-merging-basics?ex=9)
 
-```
+```Python
 # Merge the ridership and cal tables
 ridership_cal = ridership.merge(cal)
 
@@ -113,7 +113,7 @@ print(ridership_cal_stations.loc[filter_criteria, 'rides'].sum())
 
 ### [Three table merge](https://campus.datacamp.com/courses/joining-data-with-pandas/data-merging-basics?ex=10)
 
-```
+```Python
 # Merge licenses and zip_demo, on zip; and merge the wards on ward
 licenses_zip_ward = licenses.merge(zip_demo, on='zip') \
             			.merge(wards, on='ward')
@@ -125,7 +125,7 @@ print(licenses_zip_ward.groupby('alderman').agg({'income':'median'}))
 
 ### [One-to-many merge with multiple tables](https://campus.datacamp.com/courses/joining-data-with-pandas/data-merging-basics?ex=11)
 
-```
+```Python
 # Merge land_use and census and merge result with licenses including suffixes
 land_cen_lic = land_use.merge(census, on='ward') \
                     .merge(licenses, on='ward', suffixes=('_cen','_lic'))

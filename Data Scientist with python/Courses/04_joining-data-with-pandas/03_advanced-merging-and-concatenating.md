@@ -6,7 +6,7 @@ In this chapter, you’ll leverage powerful filtering techniques, including semi
 
 ### [Steps of a semi join](https://campus.datacamp.com/courses/joining-data-with-pandas/advanced-merging-and-concatenating?ex=2)
 
-```
+```Python
 Q: Sort the steps in the correct order of the technique shown to perform a semi join in pandas
 
 A: 1. Merge the left and right tables on key column using a inner join.
@@ -18,7 +18,7 @@ A: 1. Merge the left and right tables on key column using a inner join.
 
 ### [Performing an anti join](https://campus.datacamp.com/courses/joining-data-with-pandas/advanced-merging-and-concatenating?ex=3)
 
-```
+```Python
 # Merge employees and top_cust
 empl_cust = employees.merge(top_cust, on='srid', 
                             how='left', indicator=True)
@@ -47,7 +47,7 @@ print(employees[employees['srid'].isin(srid_list)])
 
 ### [Performing a semi join](https://campus.datacamp.com/courses/joining-data-with-pandas/advanced-merging-and-concatenating?ex=4)
 
-```
+```Python
 # Merge the non_mus_tck and top_invoices tables on tid
 tracks_invoices = non_mus_tcks.merge(top_invoices, on='tid', how='inner')
 
@@ -63,7 +63,7 @@ print(cnt_by_gid.merge(genres, on='gid'))
 
 ### [Concatenation basics](https://campus.datacamp.com/courses/joining-data-with-pandas/advanced-merging-and-concatenating?ex=6)
 
-```
+```Python
 # Concatenate the tracks
 tracks_from_albums = pd.concat([tracks_master,tracks_ride,tracks_st],
                                sort=True)
@@ -88,7 +88,7 @@ print(tracks_from_albums)
 
 ### [Concatenating with keys](https://campus.datacamp.com/courses/joining-data-with-pandas/advanced-merging-and-concatenating?ex=7)
 
-```
+```Python
 # Concatenate the tables and add keys
 inv_jul_thr_sep = pd.concat([inv_jul,inv_aug,inv_sep], 
                             keys=['7Jul','8Aug','9Sep'])
@@ -103,7 +103,7 @@ plt.show()
 
 ### [Using the append method](https://campus.datacamp.com/courses/joining-data-with-pandas/advanced-merging-and-concatenating?ex=8)
 
-```
+```Python
 # Use the .append() method to combine the tracks tables
 metallica_tracks = tracks_ride.append([tracks_master, tracks_st], sort=False)
 
@@ -120,14 +120,14 @@ print(tracks_sold.sort_values(['quantity'], ascending=False))
 
 ### [Validating a merge](https://campus.datacamp.com/courses/joining-data-with-pandas/advanced-merging-and-concatenating?ex=10)
 
-```
+```Python
 Q: Adjust the validate argument to answer which statement is False.
 A: You can use 'many_to_one' without an error, since there is a duplicate key in the left table.
 ```
 
 ### [Concatenate and merge to find common songs](https://campus.datacamp.com/courses/joining-data-with-pandas/advanced-merging-and-concatenating?ex=11)
 
-```
+```Python
 # Concatenate the classic tables vertically
 classic_18_19 = pd.concat([classic_18, classic_19], ignore_index=True)
 

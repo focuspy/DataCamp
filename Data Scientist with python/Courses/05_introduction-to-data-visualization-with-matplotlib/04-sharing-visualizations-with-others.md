@@ -6,14 +6,14 @@ This chapter shows you how to share your visualizations with others: how to save
 
 ### [Selecting a style for printing](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/sharing-visualizations-with-others?ex=2)
 
-```
+```Python
 Q: What style should you choose for your figures?
 A: 'grayscale'
 ```
 
 ### [Switching between styles](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/sharing-visualizations-with-others?ex=3)
 
-```
+```Python
 # Use the "ggplot" style and create new Figure/Axes
 plt.style.use('ggplot')
 fig, ax = plt.subplots()
@@ -31,7 +31,7 @@ plt.show()
 
 ### [Saving a file several times](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/sharing-visualizations-with-others?ex=5)
 
-```
+```Python
 # Show the figure
 plt.show()
 
@@ -48,7 +48,7 @@ fig.savefig('my_figure_300dpi.png', dpi=300)
 
 ### [Save a figure with different sizes](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/sharing-visualizations-with-others?ex=6)
 
-```
+```Python
 # Set figure dimensions and save as a PNG
 fig.set_size_inches([3,5])
 fig.savefig('figure_3_5.png')
@@ -62,7 +62,7 @@ fig.savefig('figure_5_3.png')
 
 ### [Unique values of a column](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/sharing-visualizations-with-others?ex=8)
 
-```
+```Python
 # Extract the "Sport" column
 sports_column = summer_2016_medals['Sport']
 
@@ -75,7 +75,7 @@ print(sports)
 
 ### [Automate your visualization](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/sharing-visualizations-with-others?ex=9)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Loop over the different sports branches

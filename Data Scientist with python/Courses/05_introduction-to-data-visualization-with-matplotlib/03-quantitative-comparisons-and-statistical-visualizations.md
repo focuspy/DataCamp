@@ -6,7 +6,7 @@ Visualizations can be used to compare data in a quantitative manner. This chapte
 
 ### [Bar chart](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=2)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Plot a bar-chart of gold medals as a function of country
@@ -23,7 +23,7 @@ plt.show()
 
 ### [Stacked bar chart](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=3)
 
-```
+```Python
 # Add bars for "Gold" with the label "Gold"
 ax.bar(medals.index, medals.Gold, label='Gold')
 
@@ -41,7 +41,7 @@ plt.show()
 
 ### [Creating histograms](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=5)
 
-```
+```Python
 fig, ax = plt.subplots()
 # Plot a histogram of "Weight" for mens_rowing
 ax.hist(mens_rowing.Weight)
@@ -60,7 +60,7 @@ plt.show()
 
 ### ["Step" histogram](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=6)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Plot a histogram of "Weight" for mens_rowing
@@ -79,7 +79,7 @@ plt.show()
 
 ### [Adding error-bars to a bar chart](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=8)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Add a bar for the rowing "Height" column mean/std
@@ -96,7 +96,7 @@ plt.show()
 
 ### [Adding error-bars to a plot](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=9)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Add Seattle temperature data in each month with error bars
@@ -113,7 +113,7 @@ plt.show()
 
 ### [Creating boxplots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=10)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Add a boxplot for the "Height" column in the DataFrames
@@ -130,7 +130,7 @@ plt.show()
 
 ### [Simple scatter plot](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=12)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Add data: "co2" on x-axis, "relative_temp" on y-axis
@@ -147,7 +147,7 @@ plt.show()
 
 ### [Encoding time by color](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/quantitative-comparisons-and-statistical-visualizations?ex=13)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Add data: "co2", "relative_temp" as x-y, index as color

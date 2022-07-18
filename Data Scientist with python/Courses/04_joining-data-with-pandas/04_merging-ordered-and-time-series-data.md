@@ -6,7 +6,7 @@ In this final chapter, you’ll step up a gear and learn to apply pandas' specia
 
 ### [Correlation between GDP and S&P500](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=2)
 
-```
+```Python
 # Use merge_ordered() to merge gdp and sp500 on year and date
 gdp_sp500 = pd.merge_ordered(gdp, sp500, left_on='year', right_on='date', 
                              how='left')
@@ -38,7 +38,7 @@ print (gdp_returns.corr())
 
 ### [Phillips curve using merge_ordered()](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=3)
 
-```
+```Python
 # Use merge_ordered() to merge inflation, unemployment with inner join
 inflation_unemploy = pd.merge_ordered(inflation, unemployment, on='date', how='inner')
 
@@ -52,7 +52,7 @@ plt.show()
 
 ### [merge_ordered() caution, multiple columns](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=4)
 
-```
+```Python
 # Merge gdp and pop on date and country with fill and notice rows 2 and 3
 ctry_date = pd.merge_ordered(gdp, pop, on=['date', 'country', ], 
                              fill_method='ffill')
@@ -71,7 +71,7 @@ print(date_ctry)
 
 ### [Using merge_asof() to study stocks](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=6)
 
-```
+```Python
 # Use merge_asof() to merge jpm and wells
 jpm_wells = pd.merge_asof(jpm, wells, on='date_time', suffixes=('', '_wells'), direction='nearest')
 
@@ -90,7 +90,7 @@ plt.show()
 
 ### [Using merge_asof() to create dataset](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=7)
 
-```
+```Python
 # Merge gdp and recession on date using merge_asof()
 gdp_recession = pd.merge_asof(gdp, recession, on='date')
 
@@ -104,14 +104,14 @@ plt.show()
 
 ### [Explore financials with .query()](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=10)
 
-```
+```Python
 Q: Use the .query() method and the IPython shell to explore social_fin and select the True statement.
 A: There are 6 rows where the net income has a negative value.
 ```
 
 ### [Subsetting rows with .query()](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=11)
 
-```
+```Python
 # Merge gdp and pop on date and country with fill
 gdp_pop = pd.merge_ordered(gdp, pop, on=['country','date'], fill_method='ffill')
 
@@ -155,14 +155,14 @@ plt.show()
 
 ### [Select the right .melt() arguments](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=13)
 
-```
+```Python
 Q: You are given a table named inflation. Chose the option to get the same output as the table below.
 A: inflation.melt(id_vars=['country','indicator'], var_name='year', value_name='annual')
 ```
 
 ### [Using .melt() to reshape government data](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=14)
 
-```
+```Python
 # unpivot everything besides the year column
 ur_tall = ur_wide.melt(id_vars=['year'], var_name='month', value_name='unempl_rate')
 
@@ -179,7 +179,7 @@ plt.show()
 
 ### [Using .melt() for stocks vs bond performance](https://campus.datacamp.com/courses/joining-data-with-pandas/merging-ordered-and-time-series-data?ex=15)
 
-```
+```Python
 # Use melt on ten_yr, unpivot everything besides the metric column
 bond_perc = ten_yr.melt(id_vars=['metric'], var_name='date', value_name='close')
 

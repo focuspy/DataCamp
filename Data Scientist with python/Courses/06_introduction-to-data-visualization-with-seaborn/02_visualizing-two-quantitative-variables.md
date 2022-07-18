@@ -6,7 +6,7 @@ In this chapter, you will create and customize plots that visualize the relation
 
 ### [Creating subplots with col and row](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-two-quantitative-variables?ex=2)
 
-```
+```Python
 # Change to use relplot() instead of scatterplot()
 sns.relplot(x="absences",
             y="G3",
@@ -42,7 +42,7 @@ plt.show()
 
 ### [Creating two-factor subplots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-two-quantitative-variables?ex=3)
 
-```
+```Python
 # Create a scatter plot of G1 vs. G3
 sns.relplot(x="G1", y="G3", 
             data=student_data,
@@ -79,7 +79,7 @@ plt.show()
 
 ### [Changing the size of scatter plot points](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-two-quantitative-variables?ex=5)
 
-```
+```Python
 # Import Matplotlib and Seaborn
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -111,7 +111,7 @@ plt.show()
 
 ### [Changing the style of scatter plot points](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-two-quantitative-variables?ex=6)
 
-```
+```Python
 # Import Matplotlib and Seaborn
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -125,7 +125,7 @@ plt.show()
 
 ### [Interpreting line plots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-two-quantitative-variables?ex=8)
 
-```
+```Python
 # Import Matplotlib and Seaborn
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -147,7 +147,7 @@ A: The distribution of miles per gallon is smaller in 1973 compared to 1977.
 
 ### [Visualizing standard deviation with line plots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-two-quantitative-variables?ex=9)
 
-```
+```Python
 # Make the shaded area show the standard deviation
 sns.relplot(x="model_year", y="mpg",
             data=mpg, kind="line", ci='sd')
@@ -158,7 +158,7 @@ plt.show()
 
 ### [Plotting subgroups in line plots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-two-quantitative-variables?ex=10)
 
-```
+```Python
 #####################################################
 
 # Import Matplotlib and Seaborn

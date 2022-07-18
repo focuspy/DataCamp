@@ -6,7 +6,7 @@ What is Seaborn, and when should you use it? In this chapter, you will find out!
 
 ### [Making a scatter plot with lists](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/introduction-to-seaborn?ex=2)
 
-```
+```Python
 # Import Matplotlib and Seaborn
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -47,7 +47,7 @@ plt.show()
 
 ### [Making a count plot with a list](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/introduction-to-seaborn?ex=3)
 
-```
+```Python
 # Import Matplotlib and Seaborn
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -61,7 +61,7 @@ plt.show()
 
 ### ["Tidy" vs. "untidy" data](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/introduction-to-seaborn?ex=5)
 
-```
+```Python
 # Import Pandas
 import pandas as pd
 
@@ -79,7 +79,7 @@ A: No, because a single column contains different types of information.
 
 ### [Making a count plot with a DataFrame](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/introduction-to-seaborn?ex=6)
 
-```
+```Python
 # Import Matplotlib, Pandas, and Seaborn
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -97,7 +97,7 @@ plt.show()
 
 ### [Hue and scatter plots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/introduction-to-seaborn?ex=8)
 
-```
+```Python
 # Import Matplotlib and Seaborn
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -127,7 +127,7 @@ plt.show()
 
 ### [Hue and count plots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/introduction-to-seaborn?ex=9)
 
-```
+```Python
 # Import Matplotlib and Seaborn
 import matplotlib.pyplot as plt
 import seaborn as sns

@@ -6,7 +6,7 @@ Categorical variables are present in nearly every dataset, but they are especial
 
 ### [Count plots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-a-categorical-and-a-quantitative-variable?ex=2)
 
-```
+```Python
 # Create count plot of internet usage
 sns.catplot(x="Internet usage",
             data=survey_data,
@@ -36,7 +36,7 @@ plt.show()
 
 ### [Bar plots with percentages](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-a-categorical-and-a-quantitative-variable?ex=3)
 
-```
+```Python
 # Create a bar plot of interest in math, separated by gender
 
 sns.catplot(x="Gender", y="Interested in Math",
@@ -48,7 +48,7 @@ plt.show()
 
 ### [Customizing bar plots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-a-categorical-and-a-quantitative-variable?ex=4)
 
-```
+```Python
 # Create bar plot of average final grade in each study category
 sns.catplot(x="study_time", y="G3",
             data=student_data,
@@ -96,7 +96,7 @@ plt.show()
 
 ### [Create and interpret a box plot](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-a-categorical-and-a-quantitative-variable?ex=6)
 
-```
+```Python
 # Specify the category ordering
 study_time_order = ["<2 hours", "2 to 5 hours", 
                     "5 to 10 hours", ">10 hours"]
@@ -120,7 +120,7 @@ A: The median grade among students studying less than 2 hours is 10.0.
 
 ### [Omitting outliers](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-a-categorical-and-a-quantitative-variable?ex=7)
 
-```
+```Python
 # Create a box plot with subgroups and omit the outliers
 sns.catplot(x="internet",y="G3",
             data=student_data,
@@ -134,7 +134,7 @@ plt.show()
 
 ### [Adjusting the whiskers](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-a-categorical-and-a-quantitative-variable?ex=8)
 
-```
+```Python
 # Set the whiskers to 0.5 * IQR
 sns.catplot(x="romantic", y="G3",
             data=student_data,
@@ -169,7 +169,7 @@ plt.show()
 
 ### [Customizing point plots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-a-categorical-and-a-quantitative-variable?ex=10)
 
-```
+```Python
 # Create a point plot of family relationship vs. absences
 sns.catplot(x="famrel", y="absences",
 			data=student_data,
@@ -204,7 +204,7 @@ plt.show()
 
 ### [Point plots with subgroups](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/visualizing-a-categorical-and-a-quantitative-variable?ex=11)
 
-```
+```Python
 # Create a point plot that uses color to create subgroups
 sns.catplot(x="romantic", y="absences",
 			data=student_data,

@@ -6,7 +6,7 @@ Time series data is data that is recorded. Visualizing this type of data helps c
 
 ### [Read data with a time index](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=2)
 
-```
+```Python
 # Import pandas as pd
 import pandas as pd
 
@@ -16,7 +16,7 @@ climate_change = pd.read_csv('climate_change.csv', parse_dates=['date'], index_c
 
 ### [Plot time-series data](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=3)
 
-```
+```Python
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
 
@@ -35,7 +35,7 @@ plt.show()
 
 ### [Using a time index to zoom in](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=4)
 
-```
+```Python
 import matplotlib.pyplot as plt
 
 # Use plt.subplots to create fig and ax
@@ -53,7 +53,7 @@ plt.show()
 
 ### [Plotting two variables](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=6)
 
-```
+```Python
 import matplotlib.pyplot as plt
 
 # Initalize a Figure and Axes
@@ -73,7 +73,7 @@ plt.show()
 
 ### [Defining a function that plots time-series data](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=7)
 
-```
+```Python
 # Define a function called plot_timeseries
 def plot_timeseries(axes, x, y, color, xlabel, ylabel):
 
@@ -92,7 +92,7 @@ def plot_timeseries(axes, x, y, color, xlabel, ylabel):
 
 ### [Using a plotting function](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=8)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Plot the CO2 levels time-series in blue
@@ -109,7 +109,7 @@ plt.show()
 
 ### [Annotating a plot of time-series data](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=10)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Plot the relative temperature data
@@ -123,7 +123,7 @@ plt.show()
 
 ### [Plotting time-series: putting it all together](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib/plotting-time-series?ex=11)
 
-```
+```Python
 fig, ax = plt.subplots()
 
 # Plot the CO2 levels time-series in blue

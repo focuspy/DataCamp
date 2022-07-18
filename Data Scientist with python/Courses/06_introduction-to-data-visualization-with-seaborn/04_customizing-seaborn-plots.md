@@ -6,7 +6,7 @@ In this final chapter, you will learn how to add informative plot titles and axi
 
 ### [Changing style and palette](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=2)
 
-```
+```Python
 # Set the style to "whitegrid"
 sns.set_style("whitegrid")
 
@@ -62,7 +62,7 @@ plt.show()
 
 ### [Changing the scale](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=3)
 
-```
+```Python
 # Set the context to "paper"
 sns.set_context("paper")
 
@@ -112,7 +112,7 @@ plt.show()
 
 ### [Using a custom palette](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=4)
 
-```
+```Python
 # Set the style to "darkgrid"
 sns.set_style("darkgrid")
 
@@ -131,7 +131,7 @@ plt.show()
 
 ### [FacetGrids vs. AxesSubplots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=6)
 
-```
+```Python
 # Create scatter plot
 g = sns.relplot(x="weight", 
                 y="horsepower", 
@@ -152,7 +152,7 @@ A:sns.catplot()
 
 ### [Adding a title to a FacetGrid object](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=7)
 
-```
+```Python
 # Create scatter plot
 g = sns.relplot(x="weight",
                 y="horsepower",
@@ -168,7 +168,7 @@ plt.show()
 
 ### [Adding a title and axis labels](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=9)
 
-```
+```Python
 # Create line plot
 g = sns.lineplot(x="model_year", y="mpg_mean", 
                  data=mpg_mean,
@@ -201,7 +201,7 @@ plt.show()
 
 ### [Rotating x-tick labels](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=10)
 
-```
+```Python
 # Create point plot
 sns.catplot(x="origin",
             y="acceleration",
@@ -219,7 +219,7 @@ plt.show()
 
 ### [Box plot with subgroups](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=12)
 
-```
+```Python
 # Set palette to "Blues"
 sns.set_palette("Blues")
 
@@ -239,7 +239,7 @@ plt.show()
 
 ### [Bar plot with subgroups and subplots](https://campus.datacamp.com/courses/introduction-to-data-visualization-with-seaborn/customizing-seaborn-plots-4?ex=13)
 
-```
+```Python
 # Set the figure style to "dark"
 sns.set_style("dark")
 

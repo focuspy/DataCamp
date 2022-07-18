@@ -6,7 +6,7 @@ In this chapter, you'll learn to write functions with default arguments so that 
 
 ### [Pop quiz on understanding scope](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope)
 
-```
+```Python
 Q: What are the values printed out when you call func1() and func2()?
 What is the value of num in the global scope after calling func1() and func2()?
 A: func1() prints out 3, func2() prints out 10, and the value of num in the global scope is 6.
@@ -14,7 +14,7 @@ A: func1() prints out 3, func2() prints out 10, and the value of num in the glob
 
 ### [The keyword global](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=3)
 
-```
+```Python
 # Create a string: team
 team = "teen titans"
 
@@ -40,14 +40,14 @@ print(team)
 
 ### [Python's built-in scope](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=4)
 
-```
+```Python
 Q: Which of the following names is NOT in the module builtins?
 A: 'array'
 ```
 
 ### [Nested Functions I](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=6)
 
-```
+```Python
 # Define three_shouts
 def three_shouts(word1, word2, word3):
     """Returns a tuple of strings
@@ -67,7 +67,7 @@ print(three_shouts('a', 'b', 'c'))
 
 ### [Nested Functions II](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=7)
 
-```
+```Python
 # Define echo
 def echo(n):
     """Return the inner_echo function."""
@@ -94,7 +94,7 @@ print(twice('hello'), thrice('hello'))
 
 ### [The keyword nonlocal and nested functions](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=8)
 
-```
+```Python
 # Define echo_shout()
 def echo_shout(word):
     """Change the value of a nonlocal variable"""
@@ -126,7 +126,7 @@ echo_shout("hello")
 
 ### [Functions with one default argument](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=10)
 
-```
+```Python
 # Define shout_echo
 def shout_echo(word1, echo=1):
     """Concatenate echo copies of word1 and three
@@ -154,7 +154,7 @@ print(with_echo)
 
 ### [Functions with multiple default arguments](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=11)
 
-```
+```Python
 # Define shout_echo
 def shout_echo(word1, echo=1, intense=False):
     """Concatenate echo copies of word1 and three
@@ -187,7 +187,7 @@ print(big_no_echo)
 
 ### [Functions with variable-length arguments (*args)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=12)
 
-```
+```Python
 # Define gibberish
 def gibberish(*args):
     """Concatenate strings in *args together."""
@@ -215,7 +215,7 @@ print(many_words)
 
 ### [Functions with variable-length keyword arguments (**kwargs)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=13)
 
-```
+```Python
 # Define report_status
 def report_status(**kwargs):
     """Print out the status of a movie character."""
@@ -238,7 +238,7 @@ report_status(name="anakin", affiliation="sith lord", status="deceased")
 
 ### [Bringing it all together (1)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=15)
 
-```
+```Python
 # Define count_entries()
 def count_entries(df, col_name="lang"):
     """Return a dictionary with counts of
@@ -277,7 +277,7 @@ print(result2)
 
 ### [Bringing it all together (2)](https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=16)
 
-```
+```Python
 # Define count_entries()
 def count_entries(df, *args):
     """Return a dictionary with counts of
