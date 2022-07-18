@@ -6,7 +6,7 @@ An introduction to the basic concepts of Python. Learn how to use Python interac
 
 ### [The Python Interface](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=2)
 
-```
+```Python
 # Example, do not modify!
 print(5 / 8)
 
